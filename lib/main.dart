@@ -7,6 +7,7 @@ import 'package:full_gospel_hymnal/screens/home_screen.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:full_gospel_hymnal/models/hymn.dart';
 import 'package:flutter/services.dart';
+import 'package:full_gospel_hymnal/screens/LanguageSelectionScreen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,12 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // We listen to the theme choice here
-    final selectedTheme = context.watch<SettingsProvider>().selectedTheme;
+    final settings = context.watch<SettingsProvider>();
+    final bool isFirstRun = Hive.box('settings').get('isFirstRun', defaultValue: true);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: _buildThemeData(selectedTheme),
-      home: const HomeScreen(),
+      theme: _buildThemeData(settings.selectedtheme),
+      //If it's first run, show a selection screen, else go home
+      home: isFirstRun ? const LanguageSelectionScreen() : const HomeScreen(),
     );
   }
 
@@ -47,6 +50,7 @@ void main() async {
 
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
+  await Hive.box('settings').clear();
   //await Hive.deleteBoxFromDisk('hymnsBox');
 
   WindowOptions windowOptions = const WindowOptions(

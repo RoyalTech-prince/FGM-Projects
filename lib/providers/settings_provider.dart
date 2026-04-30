@@ -2,53 +2,73 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
 enum AppThemeType { white, red, black }
+enum AppLanguage { en, fr }
 
 class SettingsProvider extends ChangeNotifier {
   // Use a single box reference for cleaner code
-  final Box _box = Hive.box('settings');
+  final Box _settingsBox = Hive.box('settings');
 
-  // --- STATE GETTERS ---
+  double _fontSize = 18.0;
 
-  // Fetches from Hive, defaults to red if null
-  AppThemeType get selectedTheme {
-    final themeIndex = _box.get('themeIndex', defaultValue: AppThemeType.red.index);
-    return AppThemeType.values[themeIndex];
+  //Global app language
+  AppLanguage _defaultLanguage = AppLanguage.en;
+  //Reading hymn language
+  AppLanguage _currentLanguage = AppLanguage.en;
+
+  AppThemeType _selectedTheme = AppThemeType.red;
+
+  SettingsProvider(){
+    _loadSettings();
   }
 
-  // Fetches from Hive, defaults to 18.0
-  double get fontSize => _box.get('fontSize', defaultValue: 18.0);
+  void _loadSettings() {
+    //Load language
+    final langIndex = _settingsBox.get('languageIndex', defaultValue: 0);
+    _defaultLanguage = AppLanguage.values[langIndex];
+    _currentLanguage = _defaultLanguage; //Here the reding hymn language is reset to default on relaunch
 
-  // Language preference: true = English, false = French
-  bool get isEnglish => _box.get('isEnglish', defaultValue: true);
-
-  // --- METHODS ---
-
-  /// Persists the selected theme index to Hive
-  void setTheme(AppThemeType theme) {
-    _box.put('themeIndex', theme.index);
+    _fontSize = _settingsBox.get('fontSize', defaultValue: 18.0);
+    //Load Theme
+    final themeIndex = _settingsBox.get('themeIndex', defaultValue: 0);
+    _selectedTheme = AppThemeType.values[themeIndex];
     notifyListeners();
   }
 
-  /// Global language toggle for the LyricsScreen
-  void toggleLanguage() {
-    bool current = isEnglish;
-    _box.put('isEnglish', !current);
+  //When the user chages their primary language in settings
+  void updateDefaultLanguage(AppLanguage lang) {
+    _defaultLanguage = lang;
+    _currentLanguage = lang;
+    _settingsBox.put('languageIndex', lang.index);
     notifyListeners();
   }
 
-  /// Updated to handle Delta (+1/-1) and persist to Hive
-  void adjustFontSize(double delta) {
-    double newSize = fontSize + delta;
+  //Toggle language management
+  void toggleCurrentLanguage(){
+    _currentLanguage = (_currentLanguage == AppLanguage.en)
+        ? AppLanguage.fr : AppLanguage.en;
+    notifyListeners();
+  }
 
-    // Production-standard safety limits
-    if (newSize >= 16.0 && newSize <= 40.0) {
-      _box.put('fontSize', newSize);
-      notifyListeners();
+  //The app theme
+  void updateTheme(AppThemeType theme){
+    _selectedTheme = theme;
+    _settingsBox.put('themeIndex', theme.index);
+    notifyListeners();
+  }
+
+  void updateFontSize(bool increase){
+    if (increase){
+      if (_fontSize < 40) _fontSize +=1;
+    }else {
+      if (_fontSize > 12) _fontSize -=1;
     }
+    _settingsBox.put('fontSize', _fontSize);
+    notifyListeners();
   }
 
-  /// Helper for your LyricsScreen buttons (+/-)
-  void updateFontSize(bool increase) {
-    adjustFontSize(increase ? 1.0 : -1.0);
-  }
+  AppLanguage get defaultLanguage => _defaultLanguage;
+  AppLanguage get currentLanguage => _currentLanguage;
+  AppThemeType get selectedtheme => _selectedTheme;
+  bool get isEnglish => _currentLanguage == AppLanguage.en;
+  double get fontSize => _fontSize;
 }

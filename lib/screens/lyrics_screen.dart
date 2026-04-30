@@ -13,17 +13,14 @@ class LyricsScreen extends StatelessWidget {
     final settings = context.watch<SettingsProvider>();
     final theme = Theme.of(context);
     
-    // Gets the height of the status bar (time/battery area)
     final double topPadding = MediaQuery.of(context).padding.top;
 
-    // Define the status bar icon color based on the theme brightness
     final statusBarTheme = SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      // If the top bar is white (light), icons must be dark. If dark, icons must be light.
       statusBarIconBrightness: theme.brightness == Brightness.dark 
           ? Brightness.light 
           : Brightness.dark,
-      statusBarBrightness: theme.brightness, // For iOS
+      statusBarBrightness: theme.brightness,
     );
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -32,7 +29,6 @@ class LyricsScreen extends StatelessWidget {
         backgroundColor: theme.scaffoldBackgroundColor,
         body: Column(
           children: [
-            // TOP BAR: Extended to the very top of the device
             Container(
               width: double.infinity,
               padding: EdgeInsets.only(top: topPadding, bottom: 5),
@@ -59,7 +55,6 @@ class LyricsScreen extends StatelessWidget {
   }
 
   Widget _buildTopBarContent(BuildContext context, ThemeData theme, SettingsProvider settings) {
-    // Determine icon color based on cardColor (White in Red theme, Dark in Black theme)
     final Color iconColor = theme.brightness == Brightness.dark ? Colors.white : Colors.black;
 
     return Padding(
@@ -97,7 +92,8 @@ class LyricsScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(4),
       ),
       child: InkWell(
-        onTap: () => settings.toggleLanguage(),
+        // UPDATED: Now calls the specific temporary toggle method
+        onTap: () => settings.toggleCurrentLanguage(), 
         child: Row(
           children: [
             Text(
@@ -114,9 +110,10 @@ class LyricsScreen extends StatelessWidget {
   Widget _buildHymnHeader(ThemeData theme, SettingsProvider settings) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(vertical: 0), // Touches the top bar
       padding: const EdgeInsets.symmetric(vertical: 12),
-      color: theme.brightness == Brightness.light ? const Color.fromARGB(230, 240, 239, 239) : Colors.grey[800],
+      color: theme.brightness == Brightness.light 
+          ? const Color.fromARGB(230, 240, 239, 239) 
+          : Colors.grey[800],
       child: Text(
         "${hymn.number.toString().padLeft(2, '0')}. ${settings.isEnglish ? hymn.titleEn : hymn.titleFr}",
         textAlign: TextAlign.center,
@@ -132,30 +129,33 @@ class LyricsScreen extends StatelessWidget {
   Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
     return Expanded(
       child: Container(
-        margin: const EdgeInsets.fromLTRB(25, 20, 25, 20),
-        padding: const EdgeInsets.symmetric(horizontal:10),
+        margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           color: theme.cardColor,
-          borderRadius: BorderRadius.circular(15), // Professional high-radius "Cut"
+          borderRadius: BorderRadius.circular(15),
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: ScrollConfiguration(
             behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
             child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Text(
-              settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: settings.fontSize,
-              height: 1.5,
-              color: theme.brightness == Brightness.dark ? Colors.white : Colors.black,
-            ),
+              physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics(),
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: Text(
+                settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: settings.fontSize,
+                  height: 1.5,
+                  color: theme.brightness == Brightness.dark ? Colors.white : Colors.black,
+                ),
+              ),
             ),
           ),
         ),
-      ),
       ),
     );
   }
