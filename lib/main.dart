@@ -28,9 +28,25 @@ class MyApp extends StatelessWidget {
 
   ThemeData _buildThemeData(AppThemeType type) {
     if (type == AppThemeType.red) {
-      return ThemeData(scaffoldBackgroundColor: const Color(0xFFD32F2F));
+      return ThemeData(
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: const Color(0xFFD32F2F),
+      primaryColor: Colors.white,
+      cardColor: Colors.white,
+      dividerColor: Colors.grey[300],
+      textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.black),
+      bodyLarge: TextStyle(color: Colors.black87)),
+      iconTheme: const IconThemeData(color: Color(0xFFD32F2F)),
+      );
     } else if (type == AppThemeType.black) {
-      return ThemeData(scaffoldBackgroundColor: Colors.black);
+      return ThemeData(
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: Colors.black,
+      cardColor: const Color(0xFF1E1E1E),
+      dividerColor: Colors.white10,
+      textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
+      iconTheme: const IconThemeData(color: Colors.white),
+      );
     } else {
       return ThemeData(scaffoldBackgroundColor: Colors.white);
     }
@@ -51,7 +67,7 @@ void main() async {
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
   await Hive.box('settings').clear();
-  //await Hive.deleteBoxFromDisk('hymnsBox');
+  await Hive.deleteBoxFromDisk('hymnsBox');
 
   WindowOptions windowOptions = const WindowOptions(
     size: Size(400, 700),

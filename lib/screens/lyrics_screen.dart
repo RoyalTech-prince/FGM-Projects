@@ -12,6 +12,9 @@ class LyricsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final settings = context.watch<SettingsProvider>();
     final theme = Theme.of(context);
+
+    final isWhiteTheme = settings.selectedtheme == AppThemeType.white;
+    final isRedTheme = settings.selectedtheme == AppThemeType.red;
     
     final double topPadding = MediaQuery.of(context).padding.top;
 
@@ -26,7 +29,7 @@ class LyricsScreen extends StatelessWidget {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: statusBarTheme,
       child: Scaffold(
-        backgroundColor: theme.scaffoldBackgroundColor,
+        backgroundColor: isWhiteTheme ? Colors.grey[200] : (isRedTheme ? const Color(0xFFD32F2F) : Colors.black),
         body: Column(
           children: [
             Container(
@@ -55,7 +58,9 @@ class LyricsScreen extends StatelessWidget {
   }
 
   Widget _buildTopBarContent(BuildContext context, ThemeData theme, SettingsProvider settings) {
-    final Color iconColor = theme.brightness == Brightness.dark ? Colors.white : Colors.black;
+    final isRedTheme = settings.selectedtheme == AppThemeType.red;
+    final isDark = theme.brightness == Brightness.dark;
+    final Color iconColor = isRedTheme ? const Color(0xFFD32F2F) : (theme.brightness == Brightness.dark ? Colors.white : Colors.black);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -66,7 +71,7 @@ class LyricsScreen extends StatelessWidget {
             icon: Icon(Icons.arrow_back, color: iconColor),
             onPressed: () => Navigator.pop(context),
           ),
-          _languageDropdown(settings),
+          _languageToggle(settings, isRedTheme, isDark),
           Row(
             children: [
               IconButton(
@@ -84,55 +89,65 @@ class LyricsScreen extends StatelessWidget {
     );
   }
 
-  Widget _languageDropdown(SettingsProvider settings) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: const Color(0xFF007A92),
-        borderRadius: BorderRadius.circular(4),
-      ),
-      child: InkWell(
-        // UPDATED: Now calls the specific temporary toggle method
-        onTap: () => settings.toggleCurrentLanguage(), 
-        child: Row(
-          children: [
-            Text(
-              settings.isEnglish ? "EN" : "FR",
-              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+  Widget _languageToggle(SettingsProvider settings, bool isRedTheme, bool isDark){
+    return InkWell(
+      onTap: () => settings.toggleCurrentLanguage(),
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        decoration: BoxDecoration(
+          //Giving a transparent background
+          border: Border.all(
+            color: isRedTheme ? const Color(0xFFD32F2F) : (isDark ? Colors.white54 : Colors.black26),
+            width: 1.5,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 200),
+          child: Text(
+            settings.isEnglish ? "EN" : "FR",
+            key: ValueKey(settings.isEnglish),
+            style: TextStyle(
+              fontSize: 14,
+              color: isRedTheme ? const Color(0xFFD32F2F) : (isDark ? Colors.white : Colors.black),
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.1,
             ),
-            const Icon(Icons.arrow_drop_down, color: Colors.white),
-          ],
+          ),
         ),
       ),
     );
   }
 
   Widget _buildHymnHeader(ThemeData theme, SettingsProvider settings) {
+    final isThemeRed = settings.selectedtheme == AppThemeType.red;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 12),
-      color: theme.brightness == Brightness.light 
-          ? const Color.fromARGB(230, 240, 239, 239) 
-          : Colors.grey[800],
+      color: isThemeRed ? Colors.white : (theme.brightness == Brightness.dark ? Colors.black : const Color.fromARGB(255, 218, 216, 216)),
       child: Text(
         "${hymn.number.toString().padLeft(2, '0')}. ${settings.isEnglish ? hymn.titleEn : hymn.titleFr}",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.w900, 
           fontSize: 18,
-          color: theme.brightness == Brightness.dark ? Colors.white : Colors.black,
+          color: isThemeRed ? Colors.black : (theme.brightness == Brightness.dark ? Colors.white : Colors.black),
         ),
       ),
     );
   }
 
   Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
+    final isBlackTheme = settings.selectedtheme == AppThemeType.black;
+    final isRedTheme = settings.selectedtheme == AppThemeType.red;
+
     return Expanded(
       child: Container(
         margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
-          color: theme.cardColor,
+          color: isRedTheme ? Colors.white : (isBlackTheme ? const Color(0xFF121212) : Colors.white),
           borderRadius: BorderRadius.circular(15),
         ),
         child: ClipRRect(
@@ -150,7 +165,7 @@ class LyricsScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: settings.fontSize,
                   height: 1.5,
-                  color: theme.brightness == Brightness.dark ? Colors.white : Colors.black,
+                  color: isBlackTheme ? Colors.white : Colors.black,
                 ),
               ),
             ),

@@ -13,36 +13,40 @@ class SettingsScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final lang = settings.defaultLanguage;
 
+    final isRedTheme = settings.selectedtheme == AppThemeType.red;
+    final isWhiteTheme = settings.selectedtheme == AppThemeType.white;
+    final contentColor = isRedTheme ? Colors.white : (theme.brightness == Brightness.dark ? Colors.white : Colors.black);
+
     return Scaffold(
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        title: Text(AppStrings.settings(lang)),
-        // AppBar color adapts to the theme
-        backgroundColor: theme.brightness == Brightness.dark 
-            ? Colors.black 
-            : const Color(0xFFD32F2F),
+        backgroundColor: isRedTheme ? const Color(0xFFD32F2F) : theme.scaffoldBackgroundColor,
         elevation: 0,
+        iconTheme: IconThemeData(color: contentColor),
+        title: Text(AppStrings.settings(lang), style: TextStyle(color: contentColor)),
       ),
       body: ListView(
         children: [
-          _buildSectionHeader(AppStrings.appearance(lang), theme),
-          
+          _buildSectionHeader(AppStrings.appearance(lang), 
+          isRedTheme ? Colors.white70 : const Color(0xFFD32F2F)
+          ),
           // --- THEME SELECTION ---
           ListTile(
-            leading: const Icon(Icons.palette),
-            title: Text(AppStrings.theme(lang)),
+            leading: Icon(Icons.palette, color: contentColor),
+            title: Text(AppStrings.theme(lang), style: TextStyle(color: contentColor)),
             subtitle: Text(_getThemeName(settings.selectedtheme, lang)),
             onTap: () => _showThemeDialog(context, settings),
           ),
 
           // --- FONT SIZE ADJUSTMENT ---
           ListTile(
-            leading: const Icon(Icons.format_size),
+            leading: Icon(Icons.format_size, color: contentColor),
             title: Text(lang == AppLanguage.en ? "Lyrics Font Size" : "Taille de la police"),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.remove_circle_outline),
+                  icon: Icon(Icons.remove_circle, color: isRedTheme ? Colors.white : Colors.red),
                   onPressed: () => settings.updateFontSize(false),
                 ),
                 Text(
@@ -50,15 +54,20 @@ class SettingsScreen extends StatelessWidget {
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
                 ),
                 IconButton(
-                  icon: const Icon(Icons.add_circle_outline),
+                  icon: Icon(Icons.add_circle, color: isRedTheme ? Colors.white : Colors.red),
                   onPressed: () => settings.updateFontSize(true),
                 ),
               ],
             ),
           ),
 
-          const Divider(),
-          _buildSectionHeader(AppStrings.language(lang), theme),
+          Divider(
+            color: isWhiteTheme ? const Color.fromARGB(77, 14, 13, 13) : Colors.white,
+            thickness: 1,      // Optional: makes the line clearer
+            indent: 19,         // Optional: adds spacing from the left
+            endIndent: 19,      // Optional: adds spacing from the right
+          ),
+          _buildSectionHeader(AppStrings.language(lang), isRedTheme ? Colors.white70 : const Color(0xFFD32F2F)),
 
           // --- DEFAULT LANGUAGE SELECTION ---
           RadioListTile<AppLanguage>(
@@ -66,7 +75,7 @@ class SettingsScreen extends StatelessWidget {
             subtitle: const Text("Set as default language"),
             value: AppLanguage.en,
             groupValue: settings.defaultLanguage,
-            activeColor: const Color(0xFFD32F2F),
+            activeColor: isWhiteTheme ?const Color(0xFFD32F2F) : Colors.white,
             onChanged: (val) {
               if (val != null) settings.updateDefaultLanguage(val);
             },
@@ -76,7 +85,7 @@ class SettingsScreen extends StatelessWidget {
             subtitle: const Text("Définir comme langue par défaut"),
             value: AppLanguage.fr,
             groupValue: settings.defaultLanguage,
-            activeColor: const Color(0xFFD32F2F),
+            activeColor: isWhiteTheme ?const Color(0xFFD32F2F) : Colors.white,
             onChanged: (val) {
               if (val != null) settings.updateDefaultLanguage(val);
             },
@@ -87,15 +96,13 @@ class SettingsScreen extends StatelessWidget {
   }
 
   // Helper for Section Titles (APPEARANCE, LANGUAGE, etc.)
-  Widget _buildSectionHeader(String title, ThemeData theme) {
+  Widget _buildSectionHeader(String title, Color headerColor) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
       child: Text(
         title.toUpperCase(),
         style: TextStyle(
-          color: theme.brightness == Brightness.dark 
-              ? Colors.redAccent 
-              : const Color(0xFFD32F2F),
+          color: headerColor,
           fontWeight: FontWeight.bold,
           fontSize: 13,
           letterSpacing: 1.2,

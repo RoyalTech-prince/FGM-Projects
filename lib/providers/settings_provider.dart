@@ -29,7 +29,7 @@ class SettingsProvider extends ChangeNotifier {
 
     _fontSize = _settingsBox.get('fontSize', defaultValue: 18.0);
     //Load Theme
-    final themeIndex = _settingsBox.get('themeIndex', defaultValue: 0);
+    final themeIndex = _settingsBox.get('themeIndex', defaultValue: AppThemeType.red.index);
     _selectedTheme = AppThemeType.values[themeIndex];
     notifyListeners();
   }
