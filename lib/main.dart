@@ -7,6 +7,7 @@ import 'package:full_gospel_hymnal/providers/settings_provider.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:full_gospel_hymnal/models/hymn.dart';
 import 'package:flutter/services.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -80,6 +81,9 @@ void main() async {
   await Hive.openBox('settings');
   //await Hive.box('settings').clear();
   //await Hive.deleteBoxFromDisk('hymnsBox');
+  
+  //WakelockPlus keeps the screen on while the app is open
+  WakelockPlus.enable();
 
   WindowOptions windowOptions = const WindowOptions(
     size: Size(400, 700),
