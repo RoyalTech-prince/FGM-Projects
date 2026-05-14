@@ -1,54 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:full_gospel_hymnal/providers/hymn_provider.dart';
+import 'package:full_gospel_hymnal/screens/splash_screen.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:full_gospel_hymnal/providers/settings_provider.dart';
-import 'package:full_gospel_hymnal/screens/home_screen.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:full_gospel_hymnal/models/hymn.dart';
 import 'package:flutter/services.dart';
-import 'package:full_gospel_hymnal/screens/LanguageSelectionScreen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // We listen to the theme choice here
     final settings = context.watch<SettingsProvider>();
-    final bool isFirstRun = Hive.box('settings').get('isFirstRun', defaultValue: true);
+    // Check if it's the first time the app is opened
+    //final bool isFirstRun = Hive.box('settings').get('isFirstRun', defaultValue: true);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: _buildThemeData(settings.selectedtheme),
-      //If it's first run, show a selection screen, else go home
-      home: isFirstRun ? const LanguageSelectionScreen() : const HomeScreen(),
+      // NEW FLOW: 
+      // 1. Always show SplashScreen first for branding/animation.
+      // 2. The SplashScreen will then decide to go to LanguageSelection or Home.
+      home: const SplashScreen(), 
     );
   }
 
   ThemeData _buildThemeData(AppThemeType type) {
     if (type == AppThemeType.red) {
       return ThemeData(
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: const Color(0xFFD32F2F),
-      primaryColor: Colors.white,
-      cardColor: Colors.white,
-      dividerColor: Colors.grey[300],
-      textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.black),
-      bodyLarge: TextStyle(color: Colors.black87)),
-      iconTheme: const IconThemeData(color: Color(0xFFD32F2F)),
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFFD32F2F),
+        primaryColor: Colors.white,
+        cardColor: Colors.white,
+        dividerColor: Colors.grey[300],
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(color: Colors.black),
+          bodyLarge: TextStyle(color: Colors.black87),
+        ),
+        iconTheme: const IconThemeData(color: Color(0xFFD32F2F)),
       );
     } else if (type == AppThemeType.black) {
       return ThemeData(
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: Colors.black,
-      cardColor: const Color(0xFF1E1E1E),
-      dividerColor: Colors.white10,
-      textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
-      iconTheme: const IconThemeData(color: Colors.white),
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
+        cardColor: const Color(0xFF1E1E1E),
+        dividerColor: Colors.white10,
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
+        iconTheme: const IconThemeData(color: Colors.white),
       );
     } else {
-      return ThemeData(scaffoldBackgroundColor: Colors.white);
+      // PROFESSIONAL WHITE THEME
+      return ThemeData(
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: const Color(0xFFF1F3F5), // Soft Gray Background
+        cardColor: Colors.white,
+        primaryColor: const Color(0xFF2D3436),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(color: Color(0xFF2D3436)), // Charcoal Text
+        ),
+      );
     }
   }
 }
@@ -66,8 +78,8 @@ void main() async {
 
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
-  await Hive.box('settings').clear();
-  await Hive.deleteBoxFromDisk('hymnsBox');
+  //await Hive.box('settings').clear();
+  //await Hive.deleteBoxFromDisk('hymnsBox');
 
   WindowOptions windowOptions = const WindowOptions(
     size: Size(400, 700),

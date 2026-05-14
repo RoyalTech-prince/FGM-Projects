@@ -42,6 +42,7 @@ dependencies:
   #State management
   provider: ^6.1.1
   window_manager: ^0.5.1
+  google_fonts: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +63,14 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+    - assets/images/FGM.png
     - assets/hymns.json
+    - assets/images/MusicNote.png
+    - assets/images/HolySpirit.png
+  fonts:
+    - family: Limelight
+      fonts:
+        - asset: assets/fonts/Limelight-Regular.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
