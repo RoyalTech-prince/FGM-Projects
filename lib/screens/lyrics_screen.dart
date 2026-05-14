@@ -29,7 +29,7 @@ class LyricsScreen extends StatelessWidget {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: statusBarTheme,
       child: Scaffold(
-        backgroundColor: isWhiteTheme ? Colors.grey[200] : (isRedTheme ? const Color(0xFFD32F2F) : Colors.black),
+        backgroundColor: isWhiteTheme ? const Color(0xFFF1F3F5) : (isRedTheme ? const Color(0xFFD32F2F) : Colors.black),
         body: Column(
           children: [
             Container(
@@ -132,46 +132,54 @@ class LyricsScreen extends StatelessWidget {
         style: TextStyle(
           fontWeight: FontWeight.w900, 
           fontSize: 18,
-          color: isThemeRed ? Colors.black : (theme.brightness == Brightness.dark ? Colors.white : Colors.black),
+          color: isThemeRed ? Colors.black : (theme.brightness == Brightness.dark ? Colors.white : const Color(0xFF2D3436)),
         ),
       ),
     );
   }
 
-  Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
-    final isBlackTheme = settings.selectedtheme == AppThemeType.black;
-    final isRedTheme = settings.selectedtheme == AppThemeType.red;
+ Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
+  final isBlackTheme = settings.selectedtheme == AppThemeType.black;
+  final isRedTheme = settings.selectedtheme == AppThemeType.red;
 
-    return Expanded(
-      child: Container(
-        margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        decoration: BoxDecoration(
-          color: isRedTheme ? Colors.white : (isBlackTheme ? const Color(0xFF121212) : Colors.white),
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: ScrollConfiguration(
-            behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-            child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(
-                parent: AlwaysScrollableScrollPhysics(),
-              ),
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: Text(
-                settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: settings.fontSize,
-                  height: 1.5,
-                  color: isBlackTheme ? Colors.white : Colors.black,
-                ),
+  return Expanded(
+    child: Container(
+      // 1. Forced width ensures the card doesn't change size with text
+      width: double.infinity, 
+      margin: const EdgeInsets.fromLTRB(15, 10, 15, 20),
+      decoration: BoxDecoration(
+        color: isRedTheme ? Colors.white : (isBlackTheme ? const Color(0xFF121212) : Colors.white),
+        borderRadius: BorderRadius.circular(15),
+        // Adding a subtle shadow makes the "fixed" area feel more grounded
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            // 2. Padding stays constant, font size only affects internal scrolling
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            child: Text(
+              settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: settings.fontSize,
+                height: 1.6, // Increased line height for better readability
+                color: isBlackTheme ? Colors.white : Colors.black,
               ),
             ),
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }

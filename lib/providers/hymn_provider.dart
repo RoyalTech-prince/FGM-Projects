@@ -19,21 +19,28 @@ class HymnProvider extends ChangeNotifier {
 
   /// Optimized search implementation for production
   void search(String query) {
-    _searchQuery = query.trim().toLowerCase();
-    
-    if (_searchQuery.isEmpty) {
-      _filteredHymns = [];
-    } else {
-      // Searching across number, English title, and French title for full coverage
-      _filteredHymns = _hymns.where((hymn) {
-        return hymn.number.toString().contains(_searchQuery) ||
-               hymn.titleEn.toLowerCase().contains(_searchQuery) ||
-               hymn.titleFr.toLowerCase().contains(_searchQuery);
-      }).toList();
-    }
-    
-    notifyListeners();
+  _searchQuery = query.trim().toLowerCase();
+  
+  if (_searchQuery.isEmpty) {
+    _filteredHymns = [];
+  } else {
+    // Searching across number, titles, AND lyrics for full coverage
+    _filteredHymns = _hymns.where((hymn) {
+      final matchesNumber = hymn.number.toString().contains(_searchQuery);
+      
+      final matchesTitle = hymn.titleEn.toLowerCase().contains(_searchQuery) ||
+                           hymn.titleFr.toLowerCase().contains(_searchQuery);
+      
+      // Logic to check lyrics fields
+      final matchesLyrics = hymn.lyricsEn.toLowerCase().contains(_searchQuery) ||
+                            hymn.lyricsFr.toLowerCase().contains(_searchQuery);
+
+      return matchesNumber || matchesTitle || matchesLyrics;
+    }).toList();
   }
+  
+  notifyListeners();
+}
 
   /// Initializing the local DB from assets if empty
   Future<void> initHymns() async {
