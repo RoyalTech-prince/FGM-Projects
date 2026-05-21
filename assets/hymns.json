@@ -1,457 +1,747 @@
 [
   {
-    "number": 1,
+    "id": 1,
+    "number": "1",
     "titleEn": "To God Be the Glory",
     "titleFr": "À Dieu soit la gloire",
     "lyricsEn": "To God be the glory, great things He has done!\nSo loved He the world that He gave us His Son,\nWho yielded His life an atonement for sin,\nAnd opened the life gate that all may go in.\n\nChorus:\nPraise the Lord! Praise the Lord!\nLet the earth hear His voice!\nPraise the Lord! Praise the Lord!\nLet the people rejoice!\nO come to the Father, through Jesus the Son,\nAnd give Him the glory, great things He has done.\n\nO perfect redemption, the purchase of blood,\nTo every believer the promise of God;\nThe vilest offender who truly believes,\nThat moment from Jesus a pardon receives.\n\nGreat things He has taught us, great things He has done,\nAnd great our rejoicing through Jesus the Son;\nBut purer, and higher, and greater will be\nOur wonder, our transport, when Jesus we see.",
     "lyricsFr": "À Dieu soit la gloire, par Son grand amour,\nDans mon âme noire, s'est levé le jour.\nJésus, à ma place, mourut sur la croix,\nIl m'offre Sa grâce et je la reçois!\n\nRefrain:\nGloire à Dieu! Gloire à Dieu!\nTerre écoute Sa voix!\nGloire à Dieu! Gloire à Dieu!\nMonde réjouis-toi!\nOh! Venez au Père, Jésus est vainqueur;\nQue toute la terre chante en Son honneur!\n\nParfaite rédemption, Christ a racheté\nPour Dieu par Son sang les gens de toute tribu;\nCelui qui de sa bouche confesse Jésus,\nEt qui croit dans son cœur, sera pardonné.\n\nDe Jésus la joie remplit notre cœur,\nQu'importe qu'on voie tout notre bonheur,\nSelon Sa promesse Jésus changera\nDeuil en allégresse, quand Il reviendra."
   },
   {
-    "number": 2,
+    "id": 2,
+    "number": "2",
     "titleEn": "The Name of Jesus",
     "titleFr": "Le nom de Jésus",
     "lyricsEn": "The name of Jesus is so sweet.\nI love its music to repeat.\nIt makes my joys full and complete.\nThe precious name of Jesus.\n\nChorus:\nJesus! Oh, how sweet the name!\nJesus! Every day the same;\nJesus! Let all saints proclaim,\nIts worthy praise for ever.\n\nI love the name of Him whose heart\nKnows all my griefs and bears a part;\nWho bids all anxious fears depart,\nI love the name of Jesus.\n\nThat name I fondly love to hear.\nIt never fails my heart to cheer;\nIts music dries the falling tear;\nExalt the name of Jesus!\n\nNo word of man can ever tell\nHow sweet the name I love so well;\nOh, let its praises ever swell!\nOh, praise the name of Jesus!",
     "lyricsFr": "Le nom de Jésus est si doux!\nDe Dieu désarmant le courroux;\nIl nous appelle au rendez-vous,\nPrécieux nom de Jésus!\n\nRefrain:\nJésus! Béni soit Ton nom!\nJésus! Oh merveilleux don!\nJésus! Suprême rançon,\nSois adoré pour toujours.\n\nJ'aime ce nom dans le chagrin,\nIl me soutient sur le chemin,\nSa musique est un son divin,\nPrécieux nom de Jésus!\n\nJ'aime le nom de mon Sauveur,\nJe suis le nom de Jésus!\nCar Lui seul connaît tout mon cœur;\nLui seul me rend plus que vainqueur,\nPrécieux nom de Jésus!\n\nEt si parfois j'ai succombé,\nSi dans le mal je suis tombé,\nSon nom puissant m'a relevé:\nPrécieux nom de Jésus!"
   },
   {
-    "number": 3,
+    "id": 3,
+    "number": "3",
     "titleEn": "Low in the Grave (Christ Arose)",
     "titleFr": "Christ est ressuscité",
     "lyricsEn": "Low in the grave He lay\nJesus my Savior!\nWaiting the coming day\nJesus my Lord!\n\nChorus:\nUp from the grave He arose,\nWith a mighty triumph o'er His foes;\nHe arose a Victor from the dark domain,\nAnd He lives forever with His saints to reign.\nHe arose! He arose!\nHallelujah! Christ arose!\n\nVainly they watch His bed\nJesus, my Savior!\nVainly they seal the dead\nJesus my Lord!\n\nDeath cannot keep his prey\nJesus, my Savior!\nHe tore the bars away\nJesus my Lord!",
     "lyricsFr": "Christ est ressuscité!\nQu'en des chants joyeux,\nSon triomphe en tous lieux\nSoit exalté.\n\nRefrain:\nÀ toi la gloire et l'honneur,\nO Sauveur, ô puissant Rédempteur!\nDu sépulcre, tu sortis vainqueur,\nPrince de vie et Prince de paix.\nGloire à toi! Gloire à toi!\nGloire à toi! Gloire à jamais!\n\nChrist est ressuscités!\nCherche en lui toujours,\nÔ peuple racheté,\nForce et secours!\n\nChrist est ressuscité!\nPar lui, nous vivrons\nEt dans l'éternité,\nNous régnerons."
   },
   {
-    "number": 4,
+    "id": 4,
+    "number": "4",
     "titleEn": "THE GREAT PHYSICIAN",
     "titleFr": "O VOUS QUI N'AVEZ PAS LA PAIX",
     "lyricsEn": "The great Physician now is near,\nthe sympathizing Jesus;\nHe speaks the drooping heart to cheer,\noh! hear the voice of Jesus.\n\nChorus:\nSweetest note in seraph song,\nsweetest name on mortal tongue;\nsweetest carol ever sung,\nJesus, blessed Jesus.\n\nYour many sins are all forgiven,\noh! hear the voice of Jesus;\ngo on your way in peace to Heaven,\nand wear a crown with Jesus.\n\nAll glory to the risen Lamb!\nI now believe in Jesus;\nI love the blessed Savior's name,\nI love the name of Jesus.\n\nHis name dispels my guilt and fear,\nno other name but Jesus;\noh! how my soul delights to hear\nthe charming name of Jesus.",
     "lyricsFr": "Ô vous qui n'avez pas la paix,\nVenez, Jésus la donne.\nPure, profonde et pour jamais:\nVenez, Jésus pardonne.\n\nRefrain:\nQuand Jésus remplit un cœur,\nIl déborde de bonheur,\nEt l'effroi ne l'atteint plus,\nGloire, gloire à Jésus!\n\nVenez, Jésus délivre,\nCelui qui se jette en Ses bras,\nPeut à toujours Le suivre.\n\nVous qui craignez le lendemain,\nVenez: Jésus rassure;\nPas à pas, la main dans sa main,\nLa route devient sûre.\n\nVous qui tremblez sous la terreur\nQue la mort vous inspire,\nVenez, votre Libérateur,\na détruit son empire!\n\nAvec Lui nous revivrons, Avec Lui\nnous régnerons,\nEt la mort ne sera plus:\nGloire, gloire à Jésus!"
   },
   {
-    "number": 5,
+    "id": 5,
+    "number": "5",
     "titleEn": "COME TO JESUS",
     "titleFr": "VIENS À JÉSUS",
     "lyricsEn": "Come to Jesus, Come to Jesus\nCome to Jesus just now\nJust now come to Jesus\nCome to Jesus just now\n\nHe will save you, He will save you\nHe will save you just now\nJust now He will save you\nHe will save you just now\n\nOnly trust Him, Only trust Him\nOnly trust Him just now\nJust now only trust Him\nOnly trust Him just now\n\nHe will cleanse you, He will cleanse you\nHe will cleanse you just now\nJust now He will cleanse you\nHe will cleanse you just now",
     "lyricsFr": "Viens à Jésus, il t'appelle;\nIl t'appelle aujourd'hui.\nTrop longtemps tu fus rebelle\nAujourd'hui viens à lui.\n\nJésus t'aime, Jésus t'aime,\nJésus t'aime aujourd'hui\nMalgré ta misère extrême,\nAujourd'hui viens à lui.\n\nIl pardonne, il pardonne,\nIl pardonne aujourd'hui.\nReçois le salut qu'il donne\nAujourd'hui viens à lui.\n\nIl efface, il efface,\nIl efface aujourd'hui.\nCe jour est un jour de grâce:\nAujourd'hui viens à lui."
   },
   {
-    "number": 6,
+    "id": 6,
+    "number": "6",
     "titleEn": "COME TO THE SAVIOR",
     "titleFr": "VENEZ AU SAUVEUR",
     "lyricsEn": "Come to the Savior, make no delay;\nHere in His Word He's shown us the way;\nHere in our midst He's standing today,\nTenderly saying, \"Come!\"\n\nChorus:\nJoyful, joyful will the meeting be\nWhen from sin our hearts are pure and free,\nAnd we shall gather, Savior, with Thee,\nIn our eternal home.\n\n\"Suffer the children!\" O hear His voice,\nLet every heart leap forth and rejoice,\nAnd let us freely make Him our choice;\nDo not delay, but come.\n\nThink once again, He's with us today;\nHeed now His blest commands, and obey,\nHear now His accents tenderly say,\n\"Will you, my children, come?\"",
     "lyricsFr": "Venez au Sauveur qui vous aime,\nVenez, Il a brisé vos fers\nIl veut vous recevoir Lui-même,\nSes bras vous sont ouverts.\n\nRefrain:\nOh! quel beau jour, Sauveur fidèle,\nQuand, nous appuyant sur ton bras,\nDans la demeure paternelle\nNous porterons nos pas!\n\nVenez, pécheurs, Il vous appelle,\nLe bonheur est dans son amour.\nAh! donnez-lui ce cœur rebelle,\nDonnez-le sans retour.\n\nLe temps s'enfuit, l'heure s'écoule,\nQui sait si nous vivrons demain?\nJésus est là! dans cette foule\nAh! saisissez sa main!"
   },
   {
-    "number": 7,
+    "id": 7,
+    "number": "7",
     "titleEn": "DOWN AT THE CROSS WHERE MY SAVIOR DIED",
     "titleFr": "À LA CROIX OÙ MOURUT MON SAUVEUR",
     "lyricsEn": "Down at the cross\nwhere my Savior died,\nDown where for cleansing\nFrom sin I cried,\nThere to my sin\nwas the blood applied:\nGlory to His name!\n\nChorus:\nGlory to His name,\nGlory to His name;\nThere to my sin\nwas the blood applied;\nGlory to His name!\n\nI am so wondrously saved from sin,\nJesus so sweetly abides within;\nThere at the cross where He took me in:\nGlory to His name.\n\nOh, precious fountain\nthat saves from sin,\nI am so glad I have entered in;\nThere Jesus saves me and keeps me clean:\nGlory to His name.\n\nCome to this fountain,\nso rich and sweet;\nCast thy poor soul\nat the Savior's feet;\nPlunge in today,\nand be made complete;\nGlory to His name.",
     "lyricsFr": "À la croix où mourut mon Sauveur,\nJe suis venu, brisé de douleur;\nLà son sang purifia mon cœur.\nÀ son nom la gloire!\n\nRefrain:\nÀ son nom la gloire!\nÀ son nom la gloire!\nLà son sang purifia mon cœur.\nÀ son nom la gloire!\n\nQuelle merveille! Il vint me sauver;\nQuand de sa croix je me fus chargé,\nEn moi Jésus vint pour demeurer.\nÀ son nom la gloire!\n\nÔ fontaine effaçant le péché,\nDonnant la vie au cœur desséché!\nLà, Jésus me retient attaché.\nÀ son nom la gloire!\n\nPauvre âme, viens aux pieds du Sauveur,\nÀ la source ouverte à tout pécheur;\nViens t'y plonger, trouver le bonheur.\nÀ son nom la gloire!"
   },
   {
-    "number": 8,
+    "id": 8,
+    "number": "8",
     "titleEn": "TELL IT TO JESUS",
     "titleFr": "ES-TU LASSÉ, REMPLI DE TRISTESSE",
     "lyricsEn": "Are you weary, are you heavy hearted?\nTell it to Jesus, Tell it to Jesus.\nAre you grieving\nOver joys departed?\nTell it to Jesus alone.\n\nChorus:\nTell it to Jesus,\nTell it to Jesus,\nHe is a friend that's well-known;\nYou've no other\nSuch a friend or brother,\nTell it to Jesus alone.\n\nDo the tears flow\nDown your cheeks unbidden?\nTell it to Jesus, Tell it to Jesus.\nHave you sins that\nTo men's eyes are hidden?\nTell it to Jesus alone.\n\nDo you fear the\nGathering clouds of sorrow?\nTell it to Jesus, Tell it to Jesus.\nAre you anxious what\nShall be tomorrow?\nTell it to Jesus alone.\n\nAre you troubled, At the thought of dying?\nTell it to Jesus, Tell it to Jesus.\nFor Christ's coming\nKingdom are you sighing?\nTell it to Jesus alone.",
     "lyricsFr": "Es-tu lassé, Rempli de tristesse?\nDis tout à Jésus! Dis tout à Jésus!\nSon cœur est ouvert\nÀ ta voix sans cesse.\nOh! Dis tout à Jésus!\n\nRefrain:\nDis tout à Jésus!\nOh! Dis-lui tout!\nCombien son accueil est doux!\nIl peut comprendre,\nIl aime à t'entendre:\nDis-lui simplement tout!\n\nIl voit tes yeux, Rougis par les larmes;\nDis tout à Jésus! Dis tout à Jésus!\nIl connaît ton cœur,\nIl sait tes alarmes.\nOh! Dis tout à Jésus!\n\nSi ton passé surgit, Comme une ombre:\nDis tout à Jésus! Dis tout à Jésus!\nIl peut effacer\nTes péchés sans nombre.\nOh! Dis tout à Jésus!\n\nEt pour demain, Ce que tu redoutes:\nDis tout à Jésus! Dis tout à Jésus!\nIl est près de toi\nLe long de la route.\nOh! Dis tout à Jésus!"
   },
   {
-    "number": 9,
+    "id": 9,
+    "number": "9",
     "titleEn": "NOTHING BUT THE BLOOD OF JESUS",
     "titleFr": "RIEN QUE LE SANG DE JÉSUS",
     "lyricsEn": "What can wash away my sin?\nNothing but the blood of Jesus.\nWhat can make me whole again?\nNothing but the blood of Jesus.\n\nChorus:\nOh! Precious is the flow\nThat makes me white as snow;\nNo other fount I know,\nNothing but the blood of Jesus.\n\nFor my pardon, this I see,\nNothing but the blood of Jesus;\nFor my cleansing this my plea,\nNothing but the blood of Jesus.\n\nNothing can for sin atone,\nNothing but the blood of Jesus;\nNaught of good that I have done,\nNothing but the blood of Jesus.\n\nThis is all my hope and peace,\nNothing but the blood of Jesus;\nThis is all my righteousness,\nNothing but the blood of Jesus.\n\nNow by this I'll overcome\nNothing but the blood of Jesus,\nNow by this I'll reach my home\nNothing but the blood of Jesus.",
     "lyricsFr": "Rien ne peut sauver mon âme,\nRien que le sang de Jésus!\nPour elle je ne réclame,\nRien que le sang de Jésus!\n\nRefrain:\nPrécieux sang de l'Agneau,\nQui me donne un cœur nouveau;\nRien d'autre, je ne veux plus;\nRien que le sang de Jésus!\n\nPour mon pardon je ne vois\nRien que le sang de Jésus!\nPour mon salut je ne crois\nRien que le sang de Jésus!\n\nJe ne veux pour ma justice,\nRien que le sang de Jésus!\nQui me rendra Dieu propice?\nRien que le sang de Jésus!\n\nMon Dieu, je ne Te présente\nRien que le sang de Jésus!\nRien ici ne me contente,\nRien que le sang de Jésus!\n\nJe n'ai pour toute espérance,\nRien que le sang de Jésus!\nPour appui, pour confiance,\nRien que le sang de Jésus!"
   },
   {
-    "number": 10,
+    "id": 10,
+    "number": "10",
     "titleEn": "BLESS IS THE FOUNTAIN OF BLOOD",
     "titleFr": "JÉSUS PAR TON SANG PRÉCIEUX",
     "lyricsEn": "Blessed be the fountain of blood,\nTo a world of sinners revealed,\nBlessed be the dear Son of God:\nOnly by His stripes we are healed.\nTho' I've wandered far from His fold,\nBringing to my heart pain and woe,\nWash me in the blood of the Lamb,\nAnd I shall be whiter than snow.\n\nChorus:\nWhiter than the snow,\nWashed in the blood of the Lamb,\nAnd I shall be whiter than snow.\n\nThorny was the crown that He wore,\nAnd the cross His body o'ercame.\nGrievous were the sorrows He bore,\nBut He suffered thus not in vain.\n\nMay I to that fountain be led,\nMade to cleanse my sins here below;\nWash me in the blood that He shed,\nAnd I shall be whiter than snow.\n\nFather, I have wandered from Thee,\nOften has my heart gone astray;\nCrimson do my sins seem to be:\nWater cannot wash them away.\n\nJesus, to the fountain I fly,\nLeaning on Thy promise I go;\nCleanse me by Thy washing, or I die;\nAnd I shall be whiter than snow.",
     "lyricsFr": "Jésus, par Ton sang précieux,\nEnlève mon iniquité,\nRegarde-moi du haut des cieux,\nDis-moi que Tu m'as pardonné.\nJ'ai longtemps erré, cœur rebelle,\nMais j'entends Ta voix qui m'appelle,\nAu pied de Ta croix maintenant,\nTout confus, brisé, je me rends.\n\nRefrain:\nBlanc, plus blanc que neige,\nLavé dans le sang de l'Agneau,\nJe serai plus blanc que la neige!\n\nOh! Le fardeau de mon péché,\nDieu très Saint, est trop grand pour moi.\nJe veux en être délivré,\nÀ cette heure, oh! Révèle-Toi!\n\nJésus viens! Sois ma délivrance,\nSeul Tu peux calmer ma souffrance.\nAu pied de Ta croix maintenant,\nTout confus, brisé, je me rends.\n\nOh! Jésus Ton sang précieux,\nA lavé mon iniquité,\nOui, Tu m'as répondu des cieux,\nTon amour m'a tout pardonné.\nJe Te contemple et je puis croire,\nQu'en Toi j'ai complète victoire.\nAu pied de Ta croix maintenant,\nJe me relève triomphant."
   },
   {
-    "number": 11,
+    "id": 11,
+    "number": "11",
     "titleEn": "JUST AS I AM",
     "titleFr": "TEL QUE JE SUIS",
     "lyricsEn": "Just as I am, without one plea,\nBut that Thy blood was shed for me,\nAnd that Thou bidst me come to Thee,\nO Lamb of God, I come, I come.\n\nJust as I am, poor, wretched, blind;\nSight, riches, healing of the mind,\nYea, all I need in Thee to find,\nO Lamb of God, I come, I come.\n\nJust as I am, Thou wilt receive,\nWilt welcome, pardon, cleanse, relieve;\nBecause Thy promise I believe,\nO Lamb of God, I come, I come.\n\nJust as I am, Thy love unknown\nHath broken every barrier down;\nNow, to be Thine, yea, Thine alone,\nO Lamb of God, I come, I come.",
     "lyricsFr": "Tel que je suis, sans rien à moi,\nSinon Ton sang versé pour moi:\nEt Ta voix qui m'appelle à Toi,\nAgneau de Dieu, je viens, je viens!\n\nTel que je suis, bien vacillant,\nEn proie au doute à chaque instant,\nLutte au dehors, crainte au dedans,\nAgneau de Dieu, je viens, je viens!\n\nTel que je suis, Ton cœur est prêt\nÀ prendre le mien tel qu'il est.\nPour tout changer, Sauveur parfait!\nAgneau de Dieu, je viens, je viens!\n\nTel que je suis, Ton grand amour\nA tout pardonné sans retour.\nJe veux être à Toi dès ce jour:\nAgneau de Dieu, je viens, je viens!"
   },
   {
-    "number": 12,
+    "id": 12,
+    "number": "12",
     "titleEn": "BLESSED ASSURANCE",
     "titleFr": "ROC SÉCULAIRE",
     "lyricsEn": "Blessed assurance, Jesus is mine!\nOh what a fore-taste of glory divine!\nHeir of salvation, purchase of God,\nBorn of His Spirit, washed in His blood.\n\nChorus:\nThis is my story, this is my song,\nPraising my Saviour all the day long;\nThis is my story, this is my song,\nPraising my Saviour all the day long.\n\nPerfect submission, perfect delight,\nVisions of rapture, burst on my sight;\nAngels descending bring from above,\nEchoes of mercy, whispers of love.\n\nPerfect submission, all is at rest,\nI in my Saviour am happy and blest.\nWatching and waiting, looking above,\nFilled with His goodness, lost in His love.",
     "lyricsFr": "Roc séculaire, frappé pour moi\nSur le Calvaire, je viens à Toi.\nTu sais mes chutes, ô mon Sauveur!\nTu vois mes luttes et ma douleur.\n\nRefrain:\nRoc séculaire, frappé pour moi\nSur le Calvaire, je viens à Toi.\n\nOh! Purifie, lave, Seigneur,\nEt sanctifie mon pauvre cœur.\nMa main tremblante ne T'offre rien;\nTa croix sanglante est mon seul bien.\n\nDans la détresse sois mon Berger,\nMa forteresse, dans le danger,\nEt qu'à toute heure, que chaque jour\nMon cœur demeure en Ton amour."
   },
   {
-    "number": 13,
+    "id": 13,
+    "number": "13",
     "titleEn": "THERE IS POWER, POWER",
     "titleFr": "VEUX-TU BRISER",
     "lyricsEn": "Would you be free\nfrom your burden of sin?\nThere's power in the blood;\nPower in the blood.\nWould you o'er evil a victory win?\nThere's wonderful power in the blood.\n\nChorus:\nThere is power, power,\nWonder-working power\nIn the blood of the Lamb.\nThere is power, power,\nWonder-working power\nIn the precious blood of the Lamb!\n\nWould you be free from\nyour passion and pride?\nThere's power in the blood;\npower in the blood.\nCome for a cleansing to Calvary's tide;\nThere's wonderful power in the blood.\n\nWould you be whiter,\nmuch whiter than snow?\nThere's power in the blood;\npower in the blood.\nSin-stains are lost in its life-giving flow;\nThere's wonderful power in the blood.\n\nWould you do service\nfor Jesus, your King?\nThere's power in the blood;\npower in the blood.\nWould you live daily His praises to sing?\nThere's wonderful power in the blood.",
     "lyricsFr": "Veux-tu briser du péché le pouvoir?\nLa force est en Christ!\nLa force est en Christ!\nSi dans ton cœur tu veux Le recevoir:\nLa force est dans le sang de Christ!\n\nRefrain:\nJe suis fort, fort! Oui,\nplus que vainqueur,\nPar le sang de Jésus!\nJe suis fort, fort!\nOui, plus que vainqueur,\nPar le sang de Jésus mon Sauveur!\n\nVeux-tu braver et la mort et l'enfer?\nLa force est en Christ!\nLa force est en Christ!\nJésus, d'un mot\nfait tomber tous tes fers:\nLa force est dans le sang de Christ!\n\nVeux-tu marcher\ntoujours pur, triomphant?\nLa force est en Christ!\nLa force est en Christ!\nPour te garder,\nJésus est tout-puissant:\nLa force est dans le sang de Christ!\n\nVeux-tu du ciel\nt'approcher chaque jour?\nLa force est en Christ!\nLa force est en Christ!\nAvec Jésus demeurer pour toujours:\nLa force est dans le sang de Christ!"
   },
   {
-    "number": 14,
+    "id": 14,
+    "number": "14",
     "titleEn": "SHOWERS OF BLESSING",
     "titleFr": "FRAÎCHES ROSÉES",
     "lyricsEn": "There shall be showers of blessing:\nThis is the promise of love;\nThere shall be seasons refreshing,\nSent from the Saviour above.\n\nChorus:\nShowers of blessing,\nShowers of blessing we need;\nMercy-drops round us are falling,\nBut for the showers we plead.\n\nThere shall be showers of blessing,\nPrecious reviving again;\nOver the hills and the valleys,\nSound of abundance of rain.\n\nThere shall be showers of blessing!\nSend them upon us, O Lord!\nGrant to us now a refreshing;\nCome, and now honor Thy word!\n\nThere shall be showers of blessing!\nOh that today they might fall,\nNow as to God we're confessing,\nNow as on Jesus we call.",
     "lyricsFr": "Comme une terre altérée\nSoupire après l'eau du ciel,\nNous appelons la rosée\nDe Ta grâce, Emmanuel!\n\nRefrain:\nFraîches rosées,\nDescendez sur nous tous!\nÔ divines rosées,\nVenez, arrosez-nous!\n\nDescends, ô pluie abondante,\nCoule à flots dans notre cœur,\nDonne à l'âme languissante\nUne nouvelle fraîcheur.\n\nNe laisse en nous rien d'aride\nQui ne soit fertilisé,\nQue le cœur le plus avide\nSoit pleinement arrosé.\n\nOui, que les déserts fleurissent\nSous Tes bienfaisantes eaux,\nQue les lieux secs reverdissent\nEt portent des fruits nouveaux."
   },
   {
-    "number": 15,
+    "id": 15,
+    "number": "15",
     "titleEn": "JESUS, YOUR HOLY PRESENCE",
     "titleFr": "JÉSUS, TA SAINTE PRÉSENCE",
     "lyricsEn": "Lord Jesus Your holy presence\nIs the source of happiness.\nUnto the heart, Lord, it brings rest,\nWhen in joy, when in distress.\n\nChorus:\nCause Your face to shine upon me,\nLord Jesus, O Lamb of God!\nMy place is at Your feet only,\nWhere I found pleasure, O God!\n\nOn those who from You don't depart,\nO send forth Your cheering ray;\nSaviour, make Your temple heart,\nAnd lead them in the right way.\n\nYour presence is needed each hour\nFor Your service, Lord of hosts!\nFor it's a strength and a power,\nTo redeem those that are lost.\n\nWhen Lord in the sky You appear,\nIt will be by Your presence\nThat You will draw us, and where",
     "lyricsFr": "Jésus, Ta sainte présence\nEst la source du bonheur,\nDans la joie et la souffrance,\nElle est le repos du cœur.\n\nRefrain:\nFais briller sur moi Ta face,\nÔ Jésus, Agneau de Dieu!\nÀ Tes pieds, c'est là ma place,\nPrès de Toi mon ciel est bleu.\n\nSur celui qui Te contemple,\nDescend un rayon divin.\nTu fais de son cœur Ton temple,\nTon doigt pointe son chemin.\n\nIl faut aussi Ta présence,\nPour Ton service, ô Jésus!\nCar elle est une puissance\nPour relever les perdus!\n\nQuand dans l'étendue immense,\nÔ Jésus, Tu paraîtras,\nC'est encor par Ta présence\nQue Tu nous attireras!"
   },
   {
-    "number": 16,
+    "id": 16,
+    "number": "16",
     "titleEn": "TAKE MY LIFE AND LET IT BE",
     "titleFr": "PRENDS MA VIE",
     "lyricsEn": "Take my life, and let it be\nConsecrated, Lord, to Thee.\nTake my moments and my days;\nLet them flow in ceaseless praise.\n\nTake my hands, and let them move\nAt the impulse of Thy love.\nTake my feet, and let them be\nSwift and beautiful for Thee.\n\nTake my voice, and let me sing\nAlways, only, for my King.\nTake my lips, and let them be\nFilled with messages from Thee.\n\nTake my silver and my gold;\nNot a mite would I withhold.\nTake my intellect, and use\nEvery power as Thou shalt choose.\n\nTake my will, and make it Thine;\nIt shall be no longer mine.\nTake my heart, it is Thine own;\nIt shall be Thy royal throne.\n\nTake my love, my Lord, I pour\nAt Thy feet its treasure store.\nTake myself, and I will be\nEver, only, all for Thee.",
     "lyricsFr": "Prends ma vie, elle doit être\nÀ Toi seul, ô divin Maître,\nQue sur le flot de mes jours,\nTon regard brille toujours!\n\nQue mes mains à Ton service\nS'offrent pour le sacrifice,\nQu'à Te suivre pas à pas\nMes pieds ne faiblissent pas!\n\nPrends ma voix et qu'elle chante\nTa grâce auguste et touchante,\nPar mes lèvres que Ton nom\nParle au pécheur de pardon!\n\nQue mon esprit s'illumine\nDe Ta sagesse divine;\nPrends mon argent et mon or,\nEt Toi seul, sois mon trésor.\n\nQue ma volonté devienne\nLa servante de la Tienne;\nFais Ton trône de mon cœur:\nIl T'appartient, bon Sauveur.\n\nQu'ainsi mon amour répande\nÀ Tes pieds son humble offrande:\nPrends-moi, dès mes premiers jours!\nTout à Toi seul, pour toujours!"
   },
   {
-    "number": 17,
+    "id": 17,
+    "number": "17",
     "titleEn": "PRECIOUS JESUS",
     "titleFr": "PRÉCIEUX JÉSUS JE T'AIME",
     "lyricsEn": "I love You O precious Jesus;\nFill my heart with Your great love,\nAnd let, Lord, the Holy Spirit\nDescend on me like a dove.\n\nChorus:\nPrecious Jesus, O my Saviour,\nBe the treasure of my heart!\n\nTo You my Lord, I surrender\nAll my heart and all my will;\nMay Your Spirit, my Redeemer,\nDirect me to do your will.\n\nI reach out my hand without fear,\nO Lord, to touch Your garment.",
     "lyricsFr": "Précieux Jésus je T'aime,\nRemplis-moi de Ton amour.\nJe Te donne mon cœur même,\nAccepte-le sans retour.\n\nRefrain:\nSeigneur Jésus, ô mon Sauveur,\nSois le trésor de mon cœur!\n\nPrends pour Toi, Sauveur aimable,\nTout mon cœur, mes volontés.\nQue Ton Esprit adorable\nRemplisse mes facultés.\n\nJ'avance ma main sans crainte,\nPour saisir Ton vêtement.\nDe Toi sort la vertu sainte,\nQui guérit entièrement.\n\nL'amour qui remplit mon âme\nM'est si doux, ô mon Sauveur!\nViens en moi, je Te réclame,\nAccomplis tout dans mon cœur.\n\nTa sainte et nouvelle aurore,\nOui, déjà vient luire en moi;\nJoyeux, je répète encore:\nMon Sauveur! Je suis à Toi.\n\nJe ne veux plus autre chose\nQu'accomplir Tes volontés;\nQue le Saint-Esprit dépose,\nDe toutes mes facultés."
   },
   {
-    "number": 18,
+    "id": 18,
+    "number": "18",
     "titleEn": "BRING THEM IN",
     "titleFr": "ÉCOUTEZ L'APPEL DU BERGER",
     "lyricsEn": "Hark! 'tis the Shepherd's voice I hear,\nOut in the desert dark and drear,\nCalling the sheep who've gone astray,\nFar from the Shepherd's fold away.\n\nChorus:\nBring them in, bring them in,\nBring them in from the fields of sin;\nBring them in, bring them in,\nBring the wandering ones to Jesus.\n\nWho'll go and help this Shepherd kind,\nHelp Him the wandering ones to find?\nWho'll bring the lost ones to the fold,\nWhere they'll be sheltered from the cold?\n\nOut in the desert hear their cry,\nOut on the mountains wild and high;\nHark! 'tis the Master speaks to thee,\n\"Go find My sheep wherever they be.\"",
     "lyricsFr": "Écoutez l'appel du Berger!\nIl sait Ses brebis en danger;\nIl les appelle avec amour,\nEspérant toujours leur retour.\n\nRefrain:\nCherchons-les! Cherchons-les!\nSavons-nous le prix d'une âme?\nCherchons-les! Cherchons-les!\nLe bon Berger les réclame.\n\nMourant de froid, de soif, de faim,\nLes brebis appellent en vain.\nJésus nous veut pour les sauver.\nQui va L'aider à les trouver?\n\nNe peut-Il pas compter sur nous?\nNe voulons-nous pas aller tous\nDire à tous ceux qui sont perdus\nQue nous les voulons pour Jésus!"
   },
   {
-    "number": 19,
+    "id": 19,
+    "number": "19",
     "titleEn": "EARTHLY PLEASURES VAINLY",
     "titleFr": "QU'IL FAIT BON À TON SERVICE",
     "lyricsEn": "Earthly pleasures vainly call me,\nI'd be like Jesus;\nNothing worldly shall enthrall me,\nI'd be like Jesus.\n\nChorus:\nBe like Jesus, this is my song,\nI'd be like Jesus;\nBe like Jesus, all day long!\nI'd be like Jesus.\n\nHe has broken every fetter,\nI'd be like Jesus;\nThat my soul may serve Him better,\nI'd be like Jesus.\n\nAll the way from earth to glory,\nI'd be like Jesus;\nTelling o'er and o'er the story,\nI'd be like Jesus.\n\nThat in heaven He may meet me,\nI'd be like Jesus;\nThat His words \"Well done\" may greet me,\nI'd be like Jesus.",
     "lyricsFr": "Qu'il fait bon à ton service,\nJésus, mon Sauveur!\nQu'il est doux le sacrifice\nQue t'offre mon cœur!\n\nRefrain:\nPrends, ô Jésus, prends ma vie,\nElle est toute à toi!\nEt dans ta grâce infinie,\nDu mal garde-moi!\n\nMon désir, mon vœu suprême,\nC'est la sainteté!\nRien je ne veux et je n'aime\nQue ta volonté!\n\nComme l'ange au vol rapide,\nJe veux te servir.\nLes yeux fixés sur mon guide,\nToujours obéir!\n\nTravail, douleur et souffrance,\nNon, je ne crains rien\nToi, Jésus, mon espérance,\nTu es mon seul bien!"
   },
   {
-    "number": 20,
+    "id": 20,
+    "number": "20",
     "titleEn": "MY SPIRIT, SOUL AND BODY",
     "titleFr": "C'EST MON JOYEUX SERVICE",
     "lyricsEn": "My spirit, soul, and body,\nJesus, I give to Thee,\nA consecrated offering,\nThine evermore to be.\n\nChorus:\nMy all is on the altar;\nLord, I am all Thine own;\nOh, may my faith ne'er falter!\nLord, keep me Thine alone.\n\nO Jesus, mighty Saviour,\nI trust in Thy great name,\nI look for Thy salvation,\nThy promise now I claim.\n\nNow, Lord, I yield my members,\nFrom sin's dominion free,\nFor warfare and for triumph,\nAs weapons unto Thee.\n\nI'm Thine, O blessed Jesus,\nWashed in Thy precious blood,\nSealed by Thy Holy Spirit,\nA sacrifice to God.",
     "lyricsFr": "C'est mon joyeux service\nD'offrir à Jésus-Christ,\nEn vivant sacrifice,\nMon corps et mon esprit.\n\nRefrain:\nAccepte mon offrande,\nBien-aimé Fils de Dieu!\nEt que sur moi descende,\nLa flamme du saint lieu!\n\nJ'abandonne ma vie,\nSans regret, ni frayeur,\nÀ Ta grâce infinie,\nÔ mon Libérateur!\n\nQu'un feu nouveau s'allume\nPar Ton amour en moi,\nEt dans mon cœur consume,\nCe qui n'est pas à Toi!\n\nViens, Jésus! Sois mon Maître,\nPar Ton sang racheté,\nÀ Toi seul je veux être,\nEt pour l'éternité."
   },
   {
-    "number": 21,
+    "id": 21,
+    "number": "21",
     "titleEn": "ALL TO JESUS I SURRENDER",
     "titleFr": "ENTRE TES MAINS",
     "lyricsEn": "All to Jesus I surrender\nAll to Him I freely give\nI will ever love and trust Him\nIn His presence daily live\n\nChorus:\nI surrender all\nI surrender all\nAll to Thee, my blessed Savior\nI surrender all\n\nAll to Jesus I surrender\nHumbly at His feet I bow\nWorldly pleasures all forsaken\nTake me, Jesus, take me now\n\nAll to Jesus I surrender\nMake me, Savior, wholly Thine\nLet me feel the Holy Spirit\nTruly know that Thou art mine\n\nAll to Jesus I surrender\nLord, I give myself to Thee\nFill me with Thy love and power\nLet Thy blessing fall on me\n\nAll to Jesus I surrender\nNow I feel the sacred flame\nOh, the joy of full salvation\nGlory, glory, to His Name",
     "lyricsFr": "Entre Tes mains j'abandonne\nTout ce que j'appelle mien.\nOh! Ne permets à personne,\nSeigneur d'en reprendre rien!\n\nRefrain:\nOui, prends tout, Seigneur,\nEntre Tes mains j'abandonne,\nSans rien garder, je Te livre,\nTout avec bonheur.\n\nJe n'ai pas peur de Te suivre\nSur le chemin de la croix,\nC'est pour Toi que je veux vivre,\nJe connais, j'aime Ta voix.\n\nTu connais mieux que moi-même\nTous les besoins de mon cœur,\nEt pour mon bonheur suprême,\nTu veux me rendre vainqueur.\n\nJe ne vis plus pour moi-même,\nMais pour mon Sauveur.\n\nPrends mon corps et prends mon âme,\nQue tout en moi soit à Toi.\nQue par Ta divine flamme\nTout mal soit détruit en moi!\n\nPrends mon corps et prends mon âme:\nRègne sur mon cœur!"
   },
   {
-    "number": 22,
+    "id": 22,
+    "number": "22",
     "titleEn": "AU PIED DE LA CROIX SANGLANTE",
     "titleFr": "AU PIED DE LA CROIX SANGLANTE",
     "lyricsEn": "",
     "lyricsFr": "Au pied de la croix sanglante,\nOù tu t'es donné pour moi,\nMon âme émue et tremblante,\nÔ Jésus se livre à Toi.\n\nRefrain:\nLe parfait bonheur,\nLe parfait bonheur,\nC'est de mettre tout mon être\nÀ tes pieds, Seigneur!\n\nMe voici pour ton service,\nJe ne garde rien pour moi,\nSur l'autel du sacrifice\nJe me place par la foi.\n\nPrends, Seigneur, ma vie entière,\nMets sur moi ton divin sceau\nFais d'un fils de la poussière,\nUn enfant du Dieu très-haut.\n\nÀ la gloire, aux biens du monde,\nJe renonce pour jamais;\nQue le Saint-Esprit m'inonde\nDe ta joie et de ta paix!\n\nSi ma faiblesse est bien grande,\nTa force est plus grande encor.\nÔ Jésus, qu'elle me rende\nFidèle jusqu'à la mort!\n\nÔ félicité suprême!\nTa grâce est mon bouclier.\nEt je t'appartiens, je t'aime,\nToi qui m'aimas le premier."
   },
   {
-    "number": 23,
+    "id": 23,
+    "number": "23",
     "titleEn": "O LORD, MY GOD",
     "titleFr": "DIEU TOUT PUISSANT",
     "lyricsEn": "O Lord my God,\nwhen I in awesome wonder,\nConsider all the worlds\nThy hands have made;\nI see the stars, I hear the rolling thunder,\nThy power throughout\nthe universe displayed.\n\nChorus:\nThen sings my soul,\nMy Saviour God, to Thee,\nHow great Thou art!\nHow great Thou art!\n\nWhen through the woods\nand forest glades I wander,\nAnd hear the birds sing sweetly in the trees;\nfrom lofty mountain grandeur,\nAnd hear the brook,\nand feel the gentle breeze.\n\nAnd when I think that\nGod His Son not sparing,\nSent Him to die,\nI scarce can take it in;\nThat on the cross,\nmy burden gladly bearing,\nHe bled and died to take away my sin.\n\nWhen Christ shall come\nwith shout of acclamation\nAnd take me home\nand take me home\nwhat joy shall fill my heart.\nThen I shall bow in humble adoration\nAnd there proclaim my God,\nhow great Thou art!",
-    "lyricsFr": "Dieu tout puissant,\nQuand mon cœur considère,\nTout l'univers créé par Ton pouvoir,\nLe ciel d'azur, les éclairs, le tonnerre,\nLe clair matin ou les ombres du soir:\n\nRefrain:\nDe tout mon être,\nalors s'élève un chant,\nDieu tout puissant, que Tu es grand.\n\nQuand par les bois, dans la forêt profonde,\nJ'erre et j'entends\ntous les oiseaux chanter;\nQuand sur les monts,\nla source avec son onde,\nLivre au zéphyr, son chant doux et léger:\n\nMon cœur heureux\ns'écrie à chaque instant,\nÔ Dieu d'amour, que Tu es grand.\n\nEt quand je songe, ô sublime mystère!\nQu'un Dieu si grand a pu penser à moi,\nQue Son Fils est devenu mon Frère,\nEt que je suis l'héritier du grand Roi.\n\nAlors mon cœur redit la nuit, le jour:\nQue Tu es bon,\nÔ Dieu d'amour.\n\nQuand mon Sauveur éclatant de lumière,\nSe lèvera de Son trône éternel,\nEt que laissant les douleurs de la terre,\nJe pourrai voir les splendeurs de Son ciel:\n\nJe redirai dans Son divin séjour,\nRien n'est plus grand\nque Son amour."
+    "lyricsFr": "Dieu tout puissant,\nQuand mon cœur considère,\nTout l'univers créé par Ton pouvoir,\nLe ciel d'azur, les éclairs, le tonnerre,\nLe clair matin ou les ombres du soir:\n\nRefrain:\nDe tout mon être,\nalors s'élève un chant,\nDieu tout puissant, que Tu es grand.\n\nQuand par les bois, dans la forêt profonde,\nJ'erre et j'entends\ntous les oiseaux chanter;\nQuand sur les monts,\nla source avec son onde,\nLivre au zéphir, son chant doux et léger:\n\nMon cœur heureux\ns'écrie à chaque instant,\nÔ Dieu d'amour, que Tu es grand.\n\nEt quand je songe, ô sublime mystère!\nQu'un Dieu si grand a pu penser à moi,\nQue Son Fils est devenu mon Frère,\nEt que je suis l'héritier du grand Roi.\n\nAlors mon cœur redit la nuit, le jour:\nQue Tu es bon,\nÔ Dieu d'amour.\n\nQuand mon Sauveur éclatant de lumière,\nSe lèvera de Son trône éternel,\nEt que laissant les douleurs de la terre,\nJe pourrai voir les splendeurs de Son ciel:\n\nJe redirai dans Son divin séjour,\nRien n'est plus grand\nque Son amour."
   },
   {
-    "number": 24,
+    "id": 24,
+    "number": "24",
     "titleEn": "THERE IS A CITY BRIGHT",
     "titleFr": "JE M'APPROCHE DE TOI",
     "lyricsEn": "There is a city bright:\nclosed are its gates to sin;\nNaught that defileth, NO,\ncan ever enter in.\n\nChorus:\nSaviour, I come to Thee:\nO Lamb of God I pray,\nCleanse me and save me now,\nwash all my sins away.\n\nLord, make me, from this hour,\nThy loving child to be,\nKept by Thy mighty power\nfrom all that grieveth Thee.\n\nLord, make me wholly Thine!\nMy Redeemer I pray,\nLet Thy will be mine,\nhear Thee I want to stay.\n\nTill in the snow white dress\nThy redeeming love,\nFaultless and stainless\nsafe in that happy land!",
     "lyricsFr": "Je m'approche de Toi,\nJe m'approche de Toi\nSource de vie,\nmon Sauveur, bénis-moi!\n\nRefrain:\nFais silence en mon cœur,\nFais silence en mon cœur\nViens et me purifie,\nÔ mon divin Sauveur!\n\nRends-moi conforme à Toi,\nRends-moi conforme à Toi\nPar Ton image. Seigneur\nmets Ton image en moi!\n\nRends-moi parfait, Seigneur!\nRends-moi souillant, Seigneur\nPour Ton service,\nque je parte en vainqueur!\n\nEt quand Tu reviendras,\nEt quand Tu reviendras\nDans Tes milices,\nTu me reconnaîtras!"
   },
   {
-    "number": 25,
+    "id": 25,
+    "number": "25",
     "titleEn": "ALL MY DOUBTS I GIVE",
     "titleFr": "LA VOIX DU SEIGNEUR",
     "lyricsEn": "All my doubts I give to Jesus,\nI've His gracious promise heard,\nI shall not be confounded,\nI am trusting in that word.\n\nChorus:\nI am trusting, fully trusting,\nSweetly trusting in His word,\nI am trusting, fully trusting,\nSweetly trusting in His word.\n\nAll my sin I lay on Jesus,\nHe doth cleanse me in His blood,\nHe will keep me pure and holy,\nHe will bring me home to God.\n\nAll my fears I give to Jesus,\nRests my weary soul on Him;\nThough my way be hid in darkness,\nNever can His light grow dim.\n\nAll my joys I give to Jesus,\nHe is all I want of bliss;\nHe of all the worlds is Master,\nHe has all I need in this.\n\nAll I am I give to Jesus,\nAll my body, all my soul,\nAll I have and all I hope for,\nWhile eternal ages roll.",
     "lyricsFr": "La voix du Seigneur m'appelle\nPrends ta croix et viens suis-Moi!\nJe réponds: 'Sauveur fidèle,\nMe voilà, j'obéis à Toi!'\n\nRefrain:\nJusqu'au bout je veux Te suivre,\nDans les bons comme aux mauvais jours,\nÀ Toi pour mourir ou vivre,\nÀ Toi, Jésus pour toujours.\n\nMais le chemin du Calvaire\nEst étroit et périlleux,\nC'est un combat solitaire,\nDifficile et ténébreux.\n\nIl faut quitter ceux qu'on aime,\nSavoir être mal jugé,\nEndurer l'injure même,\nDu monde être méprisé.\n\nOui, perdre sa propre vie,\nConsacrer à Jésus-Christ,\nN'avoir qu'une seule envie:\nAimer Jésus, le seul bien!\n\nJésus donne grâce et gloire\nPour Le suivre pas à pas,\nAvec Lui, joie et victoire,\nPaix et bonheur ici-bas!"
   },
   {
-    "number": 26,
+    "id": 26,
+    "number": "26",
     "titleEn": "I HEAR THY WELCOME VOICE",
     "titleFr": "J'ENTENDS TA DOUCE VOIX",
     "lyricsEn": "I hear Thy welcome voice,\nThat calls me, Lord, to Thee,\nFor cleansing in Thy precious blood\nThat flowed on Calvary.\n\nChorus:\nI am coming, Lord,\nComing now to Thee;\nTrusting only in the blood\nThat flowed on Calvary.\n\nThough many weak and vile,\nThou dost my strength assure;\nThou dost my vileness fully cleanse,\nTill spotless all and pure.\n\n'Tis Jesus calls me on\nTo perfect faith and love,\nTo perfect hope, and peace, and trust,\nFor earth and heaven above.",
     "lyricsFr": "J'entends Ta douce voix,\nJésus, je viens à Toi,\nPour être purifié, mon Roi,\nDans le sang de Ta croix!\n\nRefrain:\nJésus, Roi des rois,\nQui mourut pour moi,\nJe veux demeurer avec Toi,\nAvec Toi sur la croix.\n\nJ'entends Ta douce voix,\nQui me dit: 'Crois en Moi!'\nJe crois, Seigneur, soutiens ma foi,\nTiens-moi près de Ta croix!\n\nJ'entends Ta douce voix,\nElle parle pour moi\nEt me dit d'aimer comme Toi,\nÀ l'ombre de la croix!"
   },
   {
-    "number": 27,
+    "id": 27,
+    "number": "27",
     "titleEn": "BEHOLD THE LAMB OF GOD",
     "titleFr": "L'AGNEAU DE DIEU",
     "lyricsEn": "Behold! Behold the Lamb of God,\nOn the cross.\nFor us He sheds His precious blood\nOn the cross.\n\nChorus:\nO hear His all important cry,\nWhy perish, blood bought sinner, why?\nDraw near and see your Savior die\nOn the cross.\n\nCome, sinners, see Him lifted up\nOn the cross.\nHe drinks for you the bitter cup\nOn the cross.\n\nThe rocks do rend, the mountains quake,\nWhile Jesus doth atonement make,\nWhilst earth does suffer for our sake\nOn the cross.\n\nWhere'er I go I'll tell the story\nOf the cross.\nIn nothing else my soul shall glory\nSave the cross.\n\nYes, this my constant theme shall be\nThrough time and eternity,\nThat Jesus tasted death for me\nOn the cross.",
     "lyricsFr": "L'Agneau de Dieu, le Christ expire\nSur la croix.\nLe voici qui va se déchire\nÀ la croix.\n\nRefrain:\nLe lieu très saint de Dieu s'ouvrit,\nL'accès à Dieu nous est ouvert\nPar Jésus, qui T'es offert\nSur la croix.\n\nTu fus élevé de la terre\nSur la croix.\nPour nous Tu bus la coupe amère\nSur la croix.\n\nTon amour a tout achevé;\nDans Ton sang le croyant lavé,\nSait qu'il est à jamais sauvé\nPar la croix.\n\nDans la honte a brillé Ta gloire\nSur la croix.\nÀ Toi, Jésus, fut la victoire\nSur la croix.\n\nÀ Toi, gloire! et l'éternité,\nSoient force, honneur et majesté\nPour le triomphe remporté\nSur la croix!"
   },
   {
-    "number": 28,
+    "id": 28,
+    "number": "28",
     "titleEn": "ONWARD, ONWARD",
     "titleFr": "SANS ATTENDRE",
     "lyricsEn": "Onward, onward, without delay,\nto the promised land,\nWhoever marches on always,\nwill be rewarded.\n\nChorus:\nWhen I pray, God hears me,\nFrom every ill, defends me,\nI'm happy to go forward! I'll go,\nThus without doubt onward I'll go,\nFor great is the goal.\n\nA crown of righteousness awaits him,\nWho overcomes;\nNever give up! Stand up for Me,\nSaid Jesus our Lord.\nFearless and faithful I'll be,\nAlways obeying God's word,\nThe faithful Savior is calling us\nTo reign with Him.\n\nFirm and steadfast, to the Homeland,\nonward will I go,\nBlessed Saviour, watch over me,\nFrom falling, keep me.\nLet this world and its attractions,\nNever, never seduce me.\nIf the clouds gather over me,\nLet me go in peace.\n\nMerciful God, let Your face shine\nupon Your servant;\nCome and take me, gentle Father,\nBy Your mighty hand.\nAll powers to You belong,\nStrengthen me all the day long;\nMy victory, Lord, it's Your glory,\nJesus, most Holy.",
     "lyricsFr": "Sans attendre, je veux tendre\nau bonheur promis,\nQui s'élance, qui s'avance\nobtiendra le prix.\n\nRefrain:\nQuand je prie, Dieu m'entend;\nOn m'attaque, il me défend;\nDonc en route, point de doute,\nle but est si grand!\n\nPrès du Trône,\nla couronne attend le vainqueur,\nNulle trêve! Qu'on se lève!\nA dit le Seigneur:\nD'obéir soyons heureux;\nPoint de tièdes, de peureux;\nLe Fidèle nous appelle\nà régner aux cieux.\n\nD'un pas ferme, jusqu'au terme,\nil faut s'avancer.\nDieu m'observe, qu'Il preserve\nmon pied de glisser.\nQue ce monde et ses attraits\nNe me séduisent jamais!\nSi sa haine se déchaîne,\nque je parte en paix!\n\nDieu de grâce, que Ta face,\nluise en mon chemin,\nPère tendre, viens me prendre\npar Ta forte main.\nToute puissance est à Toi,\nSubviens à ma faible foi,\nMa victoire, c'est Ta gloire,\nJésus, Roi des rois."
   },
   {
-    "number": 29,
+    "id": 29,
+    "number": "29",
     "titleEn": "HOLD THE FORT",
     "titleFr": "LE SIGNAL DE LA VICTOIRE",
     "lyricsEn": "Ho, my comrades! See the signal\nWaving in the sky!\nReinforcements now appearing,\nVictory is nigh.\n\nChorus:\n\"Hold the fort, for I am coming,\"\nJesus signals still;\nWave the answer back to heaven,\n\"By Thy grace we will.\"\n\nSee the mighty host advancing,\nSatan leading on;",
     "lyricsFr": "Le signal de la victoire\nDéjà brille aux cieux,\nLa couronne de la gloire\nParaît à nos yeux.\n\nRefrain:\nJe viens, combattez encore!\nDit Jésus à tous.\nOui, mon Sauveur, je T'implore,\nJe lutte à genoux.\n\nQue l'ennemi plein de rage\nRedouble ses coups,\nNous ne perdons point courage,\nChrist est avec nous.\n\nSuivons, amis, la bannière\nDu Sauveur en croix,\nEt que notre armée entière\nSe range en sa voix.\n\nRude et longue est la mêlée:\nVoici le secours!\nDans nos rangs l'âme ébranlée\nQui vainquit toujours!"
   },
   {
-    "number": 30,
+    "id": 30,
+    "number": "30",
     "titleEn": "WHO CAN CONQUER",
     "titleFr": "QUI ME RELÈVE",
     "lyricsEn": "Who can conquer my doubts and my fears?\nIt's Jesus Christ.\nWho can share my joys and dry my tears?\nIt's Jesus Christ.\n\nChorus:\nHe's promised to put my foes to flight,\nAnd to change my darkness into light;\nFor my shield, my everlasting might,\nIs Jesus Christ.\n\nI go to the Father, and my way\nIs Jesus Christ,\nI'm happy every day, every day\nIs Jesus Christ.\nAnd even if my heart through suffering\nCan tell me of assurance and sing,\nIt's because I am only trusting\nIn Jesus Christ.\n\nSaved by grace, I can only glory\nIn Jesus Christ.\nWhether to live or die, I'll only\nTrust Jesus Christ.\nI shall soon say, 'Goodbye, earthly things!'\nAway from you I will take up wings,\nGladly towards eternal dwellings,\nTo Jesus Christ.",
     "lyricsFr": "Qui me relève dans mes chutes?\nC'est Jésus-Christ,\nQui combat pour moi dans les luttes?\nC'est Jésus-Christ.\n\nRefrain:\nJésus a perdu le vieux croire\nQue je plus lutter pour Sa gloire,\nCar mon bouclier, ma victoire,\nC'est Jésus-Christ.\n\nJe vais à mon Père, et ma voie\nC'est Jésus-Christ.\nJe suis bienheureux, et ma joie\nC'est Jésus-Christ.\nEt si, même dans la souffrance,\nMon âme chante me confiance,\nC'est que j'ai mis ma confiance\nEn Jésus-Christ.\n\nSauvé, je ne glorifie\nQu'en Jésus-Christ,\nPour la terre et le ciel, ma vie\nC'est Jésus-Christ.\nBientôt adieu, choses mortelles!\nLoin de vous je prendrai des ailes\nVers les demeures éternelles,\nVers Jésus-Christ."
   },
   {
-    "number": 31,
+    "id": 31,
+    "number": "31",
     "titleEn": "WHO CAN CONQUER",
     "titleFr": "À CELUI QUI SERA VAINQUEUR",
     "lyricsEn": "Sa promesse est scellée!\nRevêtu d'un vêtement blanc,\nResplendissant de gloire,\nSera celui qui par le sang\nRemporta la victoire!\n\nAvec Christ, celui qui vaincra\nS'assiéra sur son trône,\nEt de ses mains il recevra\nL'immortelle couronne.",
     "lyricsFr": "À celui qui sera vainqueur,\nEt qui me glorifie,\nJe donne, dit le Seigneur,\nAu ciel de l'arbre de vie!\n\nRefrain:\nVictoire, force, honneur et louanges,\nGloire, gloire, puissance à toi, Jésus!\nUn caillou blanc, un nom nouveau,\nEt la manne de l'Agneau,\nLui seront donnés par l'Agneau."
   },
   {
-    "number": 32,
+    "id": 32,
+    "number": "32",
     "titleEn": "STAND UP, STAND UP",
     "titleFr": "DEBOUT, SAINTE COHORTE",
     "lyricsEn": "Stand up, stand up for Jesus!\nYe soldiers of the cross;\nLift high His royal banner,\nIt must not suffer loss.\nFrom victory unto victory\nHis army shall He lead,\nTill every foe is vanquished,\nand Christ is Lord indeed.\n\nStand up, stand up for Jesus!\nThe trumpet call obey;\nForth to the mighty conflict\nin this His glorious day!\nYe that are men, now serve Him,\nagainst unnumbered foes;\nLet courage rise with danger,\nand strength to strength oppose!\n\nStand up, stand up for Jesus!\nStand in His strength alone;\nThe arm of flesh will fail you,\nye dare not trust your own;\nPut on the Gospel armor,\nand watching unto prayer;\nWhere duty calls, or danger,\nbe never wanting there.\n\nStand up, stand up for Jesus!\nThe strife will not be long;\nThis day the noise of battle,\nthe next the victor's song;\nTo him that overcometh,\na crown of life shall be;\nHe with the King of glory\nshall reign eternally.",
     "lyricsFr": "Debout, sainte cohorte,\nsoldats du Roi des rois!\nTenez d'une main forte\nl'étendard de la croix!\nAu sentier de la gloire\nJésus-Christ vous conduit.\nDe victoire en victoire\nIl mène qui Le suit.\n\nLa trompette résonne:\nDebout! Vaillants soldats!\nL'immortelle couronne\nest le prix des combats.\nSi l'ennemi fait rage,\nsoyez fermes et forts!\nRedoublez de courage,\ns'il redouble d'efforts.\n\nDebout pour la bataille,\npartez, n'hésitez plus!\nPour que nul ne défaille,\nregardez à Jésus!\nDe l'armure invincible,\nsoldats, revêtez-vous!\nLe triomphe est possible\npour qui lutte à genoux.\n\nDebout, debout encore!\nLuttez jusqu'au matin.\nDéjà brille l'aurore\nà l'horizon lointain.\nBientôt jetant nos armes\naux pieds du Roi des rois!\nLes chants après les larmes,\nle trône après la croix!"
   },
   {
-    "number": 33,
+    "id": 33,
+    "number": "33",
     "titleEn": "LET US MOVE UP",
     "titleFr": "AVANÇONS-NOUS JOYEUX",
     "lyricsEn": "Let us move up, joyfully, joyfully,\nPressing onward to the land of beauty;\nTo the dwelling where Jesus for us prays,\nTo the Homeland where we'll rejoice always.\nUp to the bountiful Giver of life,\nYes up to the dwelling where comes no strife.\n\nSweet choruses in heaven are ringing,\nSongs of love that the beloved are singing.\nWe'll all take part in that feast full of light,\nAnd all revel in songs of pure delight.\nAnd there we shall ever be with the Lord,\nHe'll welcome us as promised in His word.\n\nUp there in heaven the Lord waits for us,\nFor He has redeemed us in Christ Jesus.\n\"Come Lord Jesus!\" It's the Church's only cry,\nWelcome us Lord to the land of beauty!\nThere in the Lord we shall rejoice always,\nIn that wonderful land of endless praise.\n\nSoon joyfully, in the blessed new land,\nWe shall take part in the feast of the Lamb,\nThere, there's no pain, no sorrow, no dying,\nNo sinful thing, nor evil, nor moaning,\nThere in the Lord we shall rejoice always,\nIn that wonderful land of endless praise.",
     "lyricsFr": "Avançons-nous joyeux, toujours joyeux,\nVers le pays de tous les bienheureux;\nVers la demeure où Jésus pour nous prie,\nMarchons, marchons c'est là notre patrie.\n\nDes chants d'amour retentissent aux cieux\nQuels doux concerts!\nHymnes des bienheureux!\nNous entendrons votre sainte harmonie\nQuand nous aurons atteint notre patrie.\n\nLà-haut! Là-haut,\nTu nous attends Seigneur!\nCar c'est à Toi qu'appartient notre cœur.\n\"Viens, ô Jésus!\" C'est le cri de l'Église,\nRecueille-nous dans la terre promise!\nLà nous serons joyeux, toujours joyeux,\nC'est le pays de tous les bienheureux.\n\nHeureux bientôt, dans un monde nouveau\nNous prendrons part au banquet de l'Agneau.\nLà plus de cris, plus de deuil, plus de larmes,\nPlus de péchés, de douleurs, ni d'alarmes!"
   },
   {
-    "number": 34,
+    "id": 34,
+    "number": "34",
     "titleEn": "AS CHRISTIAN",
     "titleFr": "POUR MOI CHRETIEN",
     "lyricsEn": "As Christian I'm in exile on the earth,\nBut all is well, but all is well;\nI'm in danger, all day long facing death,\nBut all is well, but all is well.\nWhy all the tears, or terror or sorrow?\nChrist is in me today as tomorrow;\nSoon in heaven, at His feet I shall bow,\nYes, all is well, yes all is well.\n\nHere there's weeping, distress, tribulation,\nBut all is well, but all is well;\nChrist has given me a full salvation;\nYes, all is well, yes all is well.\nVainly this world with all its false pleasure,\nTry to keep me away from God's treasure,\nI trust in God's love that's without measure,\nYes, all is well, yes all is well.\n\nI surely expect a bright tomorrow;\nAll will be well, all will be well;\nBy faith I can sing through days of sorrow,\nYes, all is well, yes all is well.\nSoon the world and its lust will pass away,\nPilgrim, move on, take courage everyday,\nThe Lord's promises shine with cheering ray,\nYes, all is well, yes all is well.",
     "lyricsFr": "Pour moi Chrétien, la terre est un exil,\nMais tout est bien, mais tout est bien.\nIl faut marcher de péril en péril;\nMais tout est bien; mais tout est bien.\nPourquoi les pleurs, la terreur ou l'ennui?\nChrist est en moi demain comme aujourd'hui;\nAu ciel bientôt je serai tout à Lui;\nOui, tout est bien, oui, tout est bien.\n\nLarmes, travail, deuil, tristesse ici-bas;\nMais tout est bien; mais tout est bien.\nDe Canaan j'approche à chaque pas;\nOui, tout est bien, oui tout est bien.\nEn vain le monde et son charme trompeur;\nDans ses liens veut retenir mon cœur;\nJ'avance en paix, les yeux sur mon Sauveur,\nOui, tout est bien, oui, tout est bien.\n\nEncore un jour, et j'atteindrai le but;\nOui, tout est bien, oui tout est bien.\nEt je verrai le pays du salut;\nOui, tout est bien; oui tout est bien.\nEncore un jour, le monde va passer;\nO pèlerin, marche sans te lasser:\nBientôt en Dieu tu vas te reposer.\nOui, tout est bien, oui tout est bien."
   },
   {
-    "number": 35,
+    "id": 35,
+    "number": "35",
     "titleEn": "ABIDE WITH US",
     "titleFr": "RESTE AVEC NOUS",
     "lyricsEn": "Abide with me; fast falls the eventide;\nThe darkness deepens; Lord with me abide.\nWhen other helpers fail and comforts flee,\nHelp of the helpless, O abide with me.\n\nSwift to its close ebbs out life's little day;\nEarth's joys grow dim; its glories pass away;\nChange and decay in all around I see;\nO Thou who changest not, abide with me.\n\nI need Thy presence every passing hour;\nWhat but Thy grace can foil the tempter's power?\nWho, like Thyself, my guide and stay can be?\nThrough cloud and sunshine, O abide with me.\n\nHold Thou Thy cross before my closing eyes;\nShine through the gloom and point me to the skies;\nHeaven's morning breaks, and earth's vain shadows flee;\nIn life, in death, O Lord, abide with me.",
     "lyricsFr": "Reste avec nous, Seigneur, le jour décline,\nLa nuit s'approche et nous menace tous;\nNous implorons Ta présence divine:\nReste avec nous, Seigneur, reste avec nous.\n\nEn Toi nos cœurs ont salué leur Maître,\nEn Toi notre âme a trouvé son Époux;\nÀ Ta lumière elle se sent renaître;\nReste avec nous, Seigneur, reste avec nous.\n\nDans nos combats si Ta main nous délaisse,\nSatan vainqueur nous tiendra sous ses coups;\nQue Ta puissance arme notre faiblesse;\nReste avec nous, Seigneur, reste avec nous.\n\nSous Ton regard la joie est sainte et bonne,\nPrès de Ton cœur les pleurs même sont doux;\nSoit que Ta main nous frappe ou nous couronne,\nReste avec nous, Seigneur, reste avec nous."
   },
   {
-    "number": 36,
+    "id": 36,
+    "number": "36",
     "titleEn": "IT IS WELL WITH MY SOUL",
     "titleFr": "QUEL REPOS CELESTE",
     "lyricsEn": "When peace, like a river, attendeth my way,\nWhen sorrows like sea billows roll;\nWhatever my lot, Thou has taught me to say,\nIt is well, it is well, with my soul.\n\nChorus:\nIt is well, with my soul, (x2)\nIt is well, it is well, with my soul.\n\nMy sin, oh, the bliss of this glorious thought!\nMy sin, not in part but the whole,\nIs nailed to the cross, and I bear it no more,\nPraise the Lord, praise the Lord, O my soul!\n\nFor me, be it Christ, be it Christ hence to live;\nIf Jordan above me shall roll,\nNo pang shall be mine, for in death as in life,\nThou wilt whisper Thy peace to my soul.\n\nBut, Lord, 'tis for Thee, for Thy coming we wait,\nThe sky, not the grave, is our goal;\nOh trump of the angel! Oh voice of the Lord!\nBlessed hope, blessed rest of my soul!",
     "lyricsFr": "Quel repos céleste\nJésus, d'être à Toi!\nÀ Toi pour la mort et la vie,\nDans les jours mauvais de chanter avec foi:\nTout est bien, ma paix est infinie!\n\nChorus:\nQuel repos, quel repos, (x2)\nQuel repos, quel céleste repos!\n\nQuel repos céleste,\nmon fardeau n'est plus!\nLibre par le sang du Calvaire,\nTous mes ennemis, Jésus les a vaincus,\nGloire et louange à Dieu notre Père!\n\nQuel repos céleste! Tu conduis mes pas,\nTu me combles de Tes richesses,\nDans Ton grand amour, chaque jour Tu sauras\nDéployer envers moi Tes tendresses.\n\nQuel repos céleste,\nquand enfin, Seigneur,\nAuprès de Toi j'aurai ma place,\nAprès les travaux, les combats, la douleur,\nÀ jamais je pourrai voir Ta face!"
   },
   {
-    "number": 37,
+    "id": 37,
+    "number": "37",
     "titleEn": "QUEL AUTRE AU CIEL AI-JE QUE TOI",
     "titleFr": "QUEL AUTRE AU CIEL AI-JE QUE TOI",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "Quel autre au ciel ai-je que toi,\nÔ mon Dieu, mon Sauveur?\nN'as-tu pas ouvert à ma foi\nLes trésors de ton cœur?\nTu t'es donné toi-même à moi,\nEt, vivant sous ta douce loi,\nJe ne prends de plaisir qu'en toi.\nÔ mon Dieu, mon Sauveur!\n\nQue me font les biens d'ici-bas,\nÔ mon Dieu, mon Sauveur?\nIls passent, tu ne passes pas;\nTu suffis à mon cœur.\nDans le deuil ou la pauvreté,\nDans l'exil ou l'adversité,\nTu restes ma félicité.\nÔ mon Dieu, mon Sauveur!\n\nJe serai toujours avec toi,\nÔ mon Dieu, mon Sauveur!\nRien, ici-bas, non rien ne doit\nM'arracher de ton cœur.\nLes vents peuvent se déchaîner,\nLes torrents peuvent déborder,\nTa grâce est mon ferme rocher,\nÔ mon Dieu, mon Sauveur!\n\nPar ta main droite, tu m'as pris,\nÔ mon Dieu, mon Sauveur!\nPar ton conseil, tu me conduis\nAu repos sur ton cœur;\nEt quand viendra le dernier jour,\nTu m'ouvriras avec amour\nLes portes du divin séjour.\nÔ mon Dieu, mon Sauveur!"
   },
   {
-    "number": 38,
+    "id": 38,
+    "number": "38",
     "titleEn": "LIKE A RIVER GLORIOUS",
     "titleFr": "COMME UN FLEUVE IMMENSE",
     "lyricsEn": "Like a river glorious, is God's perfect peace,\nOver all victorious, in its bright increase;\nPerfect, yet it floweth, fuller every day,\nPerfect, yet it groweth, deeper all the way.\n\nChorus:\nStayed upon Jehovah, hearts are fully blest,\nFinding, as He promised, perfect peace and rest.\n\nHidden in the hollow of His blessed hand,\nNever foe can follow, never traitor stand;\nNot a surge of worry, not a shade of care,\nNot a blast of hurry touch the spirit there.\n\nEvery joy or trial falleth from above,\nTraced upon our dial by the Sun of Love;\nWe may trust Him fully all for us to do.\nThey who trust Him wholly find Him wholly true.\n\nTrue pleasures abound in the rapturous sound;\nAnd who've hath found it hath paradise found.\nMy Lord Jesus to know and feel His blood flow\n'Tis life everlasting, 'tis heaven below.",
     "lyricsFr": "Comme un fleuve immense, est la paix de Dieu.\nParfaite elle avance vainqueur en tout lieu;\nParfaite elle augmente constamment son cours;\nParfaite sa pente s'abaisse toujours.\n\nChorus:\nFondés sur Dieu même, nos cœurs à jamais\nOnt pour bien suprême, Sa parfaite paix.\n\nSous Ta main meurtrie, se brise, ô mon Roi,\nToute arme ennemie qu'on forge pour moi!\nRien ne peut me nuire, ni troubler mon cœur,\nTu veux me conduire, Tu seras Vainqueur.\n\nTu traces ma voie; J'y marche avec foi;\nL'épreuve et la joie me viennent de Toi!\nCadran de nos vies, marque, chaque jour,\nLes heures bénies du Soleil d'amour!\n\nOcéan de gloire, paix de mon Sauveur!\nGage de victoire! Trésor de bonheur!\nTa grâce infinie, coulant nuit et jour,\nInonde ma vie de vagues d'amour!\n\nSelon Ta promesse, ô Jésus, mon Roi!\nJe trouve sans cesse paix parfaite en Toi!"
   },
   {
-    "number": 39,
+    "id": 39,
+    "number": "39",
     "titleEn": "FEAR NOT, I AM WITH THEE",
     "titleFr": "NE CRAINS RIEN, JE T'AIME",
     "lyricsEn": "\"Fear not, I am with thee:\" blessed golden ray,\nLike a star of glory, lighting up my way\nThrough the clouds of midnight, this bright promise shone.\nI will never leave thee, never will leave thee alone.\n\nChorus:\nNo, never alone; no, never alone\nHe promised never to leave me,\nNever to leave me alone.\nNo, never alone; no, never alone\nHe promised never to leave me,\nYes! I am never alone.\n\nRoses fade around me, lilies bloom and die,\nEarthly sunbeams vanish, radiant still the sky.\nJesus, Rose of Sharon, blooming for His own,\nJesus, heaven's sunshine, never will leave me alone.\n\nSteps unseen before me, hidden dangers near;\nNearer still my Saviour, whispering, \"Be of cheer!\"\nJoys, like birds of spring-time, to my heart have flown,\nSinging all so sweetly, He will not leave me alone.",
     "lyricsFr": "Ne crains rien, Je t'aime! Je suis avec toi!\nPromesse suprême, qui soutient ma foi.\nLa sombre vallée, n'a plus de terreur,\nL'âme consolée, je marche avec mon Sauveur.\n\nRefrain:\nNon, jamais tout seul, (x2)\nJésus, mon Sauveur me garde,\nJamais ne me laisse seul!\n\nL'aube matinière, ne luit qu'aux beaux jours,\nJésus ma lumière, m'éclaire toujours!\nQuand je perds de vue, l'astre radieux\nÀ travers la nue, Jésus me montre les cieux.\n\nLes dangers accourent, subtils, inconnus;\nDe près ils m'entourent, plus près est Jésus,\nQui dans le voyage, me redit: \"C'est Moi!\nNe crains rien: Courage, Je suis toujours avec toi!\""
   },
   {
-    "number": 40,
+    "id": 40,
+    "number": "40",
     "titleEn": "WHAT A FRIEND",
     "titleFr": "QUEL AMI FIDÈLE",
     "lyricsEn": "What a friend we have in Jesus,\nAll our sins and griefs to bear!\nWhat a privilege to carry\nEverything to God in prayer!\nOh, what peace we often forfeit,\nOh, what needless pain we bear,\nAll because we do not carry,\nEverything to God in prayer!\n\nHave we trials and temptations?\nIs there trouble anywhere?\nWe should never be discouraged;\nTake it to the Lord in prayer!\nCan we find a friend so faithful,\nWho will all our sorrows share?\nJesus knows our every weakness\nTake it to the Lord in prayer!\n\nAre we weak and heavy laden,\nCumbered with a load of care?\nPrecious Savior still our refuge\nTake it to the Lord in prayer;\nDo thy friends despise, forsake thee?\n Take it to the Lord in prayer;\nIn His arms He'll take and shield thee,\nThou wilt find a solace there.\n\nSince we've been justified through faith,\nWe have peace with God through Christ,\nWho at the right time died for us,\nTo set us free from all sin.\nIf we earnestly seek the Lord,\nAnd if our soul thirsts for Him,\nHe will answer all our prayers,\nAnd give us the victory.\n\nBlessed Savior, Thou hast promised\nThou wilt all our burdens bear,\nMay we ever, Lord, be bringing\nAll to Thee in earnest prayer.\nSoon in glory bright unclouded,\nThere will be no need for prayer;\nRapture, praise and endless worship\nWill be our sweet portion there.",
     "lyricsFr": "Quel ami fidèle et tendre, Nous avons en Jésus-Christ,\nToujours prêt à nous entendre, À répondre à notre cri!\nIl connaît nos défaillances, Nos chutes de chaque jour.\nSévère en Ses exigences, Il est riche en Son amour.\n\nQuel ami fidèle et tendre, Nous avons en Jésus-Christ,\nToujours prêt à nous comprendre, Quand nous sommes en souci!\nDisons-Lui toutes nos craintes, Ouvrons-Lui tout notre cœur,\nBientôt Ses paroles saintes, Nous rendront le vrai bonheur.\n\nQuel ami fidèle et tendre, Nous avons en Jésus-Christ,\nToujours prêt à nous défendre, Quand nous presse l'ennemi!\nIl nous suit dans la mêlée, Nous entoure de Ses bras,\nEt c'est Lui qui tient l'épée, Qui décide des combats.\n\nQuel ami fidèle et tendre, Nous avons en Jésus-Christ,\nToujours prêt à nous apprendre, À vaincre en comptant sur Lui!\nS'Il nous voit vrais et sincères, À chercher la sainteté,\nIl écoute nos prières, Et nous met en liberté.\n\nQuel ami fidèle et tendre, Nous avons en Jésus-Christ,\nBientôt Il viendra nous prendre, Pour être au ciel avec Lui.\nSuivons donc l'étroite voie, En comptant sur Son secours.\nBientôt nous aurons la joie, De vivre avec Lui toujours!"
   },
   {
-    "number": 41,
+    "id": 41,
+    "number": "41a",
     "titleEn": "I KNOW NOT WHY",
     "titleFr": "JE NE SAIS POURQUOI",
     "lyricsEn": "I know not why God's wondrous grace\nTo me He hath made known,\nNor why, unworthy, Christ in love,\nRedeemed me for His own.\n\nChorus:\nBut I know whom I have believed,\nAnd am persuaded that He is able\nTo keep that which I've committed\nUnto Him against that day.\n\nI know not how this saving faith\nTo me He did impart,\nNor how believing in His word\nWrought peace within my heart.\n\nI know not what of good or ill\nMay be reserved for me,\nOf weary ways or golden days,\nBefore His face I see.\n\nI know not when my Lord may come,\nAt night or noonday fair,\nNor if I walk the vale with Him,\nOr meet Him in the air.",
     "lyricsFr": "Je ne sais pourquoi dans Sa grâce\nJésus m'a tant aimé,\nPourquoi par Son sang Il efface\nMa dette, mon péché.\n\nRefrain:\nMais je sais qu'en Lui j'ai la vie,\nIl m'a sauvé dans Son amour;\nEt gardé par Sa main meurtrie,\nJ'attends l'heure de Son retour.\n\nJe ne sais comment la lumière\nÉclaire tout mon cœur,\nComment je compris ma misère\nEt reçus mon Sauveur!\n\nJe ne sais quelle est la mesure\nDe joie et de douleur,\nQue pour moi, faible créature,\nRéserve mon Sauveur.\n\nJe ne sais quand de la victoire,\nL'heure enfin sonnera,\nQuand l'Agneau, l'Époux, dans Sa gloire,\nAvec Lui me prendra."
   },
   {
-    "number": 412,
+    "id": 42,
+    "number": "41b",
     "titleEn": "GRAND DIEU, NOUS TE BENISSONS",
     "titleFr": "GRAND DIEU, NOUS TE BENISSONS",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "Grand Dieu, nous te bénissons,\nNous célébrons tes louanges!\nÉternel, nous t'exaltons,\nDe concert avec les anges,\nEt prosternés devant toi,\nNous t'adorons, ô grand Roi! (X2)\n\nLes saints et les bienheureux,\nLes trônes et les puissances,\nToutes les vertus des cieux,\nDisent tes magnificences,\nProclamant dans leurs concerts,\nLe grand Dieu de l'univers. (X2)\n\nSaint, saint, saint est l'Éternel,\nLe Seigneur, Dieu des armées!\nSon pouvoir est immortel;\nSes œuvres partout semées\nFont éclater sa grandeur,\nSa majesté, sa splendeur. (X2)\n\nSauve ton peuple, Seigneur,\nEt bénis ton héritage!\nQue ta gloire et ta splendeur\nSoient à jamais son partage!\nConduis-le par ton amour\nJusqu'au céleste séjour. (X2)\n\nGloire soit au Saint-Esprit!\nGloire soit à Dieu le Père!\nGloire soit à Jésus-Christ\nNotre Sauveur, notre Frère!\nSon immense charité\nDure à perpétuité. (X2)"
   },
   {
-    "number": 42,
+    "id": 43,
+    "number": "42",
     "titleEn": "I KNOW NOT THE HOUR",
     "titleFr": "JE NE SAIS PAS LE JOUR",
     "lyricsEn": "I know not the hour when my Lord will come\nTo take me away to His own dear home;\nBut I know that His presence will lighten the gloom,\nAnd that will be glory for me.\n\nChorus:\n(bis) And that will be glory for me. (bis)\nOh, that will be glory for me!\nBut I know that His presence will lighten the gloom,\nAnd that will be glory for me.\n\nI know not the song that the angels sing,\nI know not the sound of the harps' glad ring;\nBut I know there'll be mention of Jesus our King,\nAnd that will be music for me. (bis)\nOh, that will be music for me!\nBut I know there'll be mention of Jesus our King,\nAnd that will be music for me.\n\nI know not the form of my mansion fair,\nI know not the name that I then shall bear;\nBut I know that my Savior will welcome me there,\nAnd that will be heaven for me. (bis)\nOh, that will be heaven for me!\nBut I know that my Savior will welcome me there,\nAnd that will be heaven for me.",
     "lyricsFr": "Je ne sais pas le jour où je verrai mon Roi,\nMais je sais qu'Il me veut dans Sa sainte demeure;\nLa lumière vaincra les ombres à cette heure;\nCe sera la gloire pour moi... (bis)\n\nRefrain:\nCe sera la gloire pour moi...\nLa lumière vaincra les ombres à cette heure:\nCe sera la gloire pour moi.\n\nJe ne sais quels seront les chants des bienheureux,\nLes accents, les accords des hymnes angéliques,\nMais je sais que, joignant ma voix aux saints cantiques,\nBientôt j'adorerai comme eux... (bis)\n\nRefrain:\nBientôt j'adorerai comme eux...\nMais je sais que, joignant ma voix aux saints cantiques,\nBientôt j'adorerai comme eux.\n\nJe ne sais quel sera le palais éternel,\nMais je sais que mon âme y sera reconnue,\nUn regard de Jésus sera ma bienvenue,\nPour moi, pour moi s'ouvre le ciel... (bis)\n\nRefrain:\nPour moi, pour moi s'ouvre le ciel...\nUn regard de Jésus sera ma bienvenue,\nPour moi, pour moi s'ouvre le ciel."
   },
   {
-    "number": 43,
+    "id": 44,
+    "number": "43",
     "titleEn": "NEARER, MY GOD, TO THEE",
     "titleFr": "MON DIEU PLUS PRÈS DE TOI",
     "lyricsEn": "Nearer my God to Thee,\nNearer to Thee;\nE'en though it be a cross,\nthat raiseth me,\nStill all my song shall be,\nNearer, my God, to Thee.\nNearer, my God, to Thee!\nNearer to Thee!\n\nThough, like the wanderer,\nthe sun gone down,\nDarkness be over me,\nmy rest a stone,\nYet in my dream I'd be\nNearer, my God, to Thee,\nNearer, my God, to Thee!\n\nThere let the way appear\nsteps unto heaven;\nAll that Thou sendest me\nin mercy given;\nAngels to beckon me,\nNearer, my God, to Thee,\nNearer, my God, to Thee!\nNearer to Thee!\n\nThen with my waking thoughts\nBright with Thy praise,\nOut of my stony griefs Bethel I'll raise;\nSo by my woes to be nearer,\nmy God, to Thee;\nNearer, my God, to Thee!\nNearer to Thee!\n\nOr if on joyful wing,\nCleaving the sky,\nSun, moon, and stars forgot,\nupwards I fly,\nStill all my song shall be,\nNearer, my God, to Thee,\nNearer, my God, to Thee!\nNearer to Thee!",
     "lyricsFr": "Mon Dieu plus près de Toi,\nplus près de Toi!\nC'est le cri de ma foi:\nPlus près de Toi!\nDans le jour où l'épreuve\nDéborde comme un fleuve,\nGarde-moi près de Toi,\nplus près de Toi!\n\nPlus près de Toi, Seigneur,\nplus près de Toi!\nTiens-moi dans ma douleur,\nplus près de Toi!\nAlors que la souffrance,\nFait son œuvre en silence,\nToujours plus près de Toi,\nSeigneur tiens-moi!\n\nPlus près de Toi,\ntoujours, plus près de Toi!\nDonne-moi Ton secours,\nsoutiens ma foi!\nQue satan se déchaîne,\nTon amour me ramène\nToujours plus près de Toi,\nplus près de Toi!\n\nMon Dieu plus près de Toi,\ndans le désert,\nJ'ai vu, plus près de Toi,\nTon ciel ouvert.\nPèlerin bon courage!\nTon chant brave l'orage...\nMon Dieu plus près de Toi, plus près de Toi!\n\nEnfin en sûreté, près du Seigneur,\nJe vivrai sans péché,\ndans le bonheur.\nD'âge en âge, tiens-moi,\nSeigneur plus près de Toi.\nToujours plus près de Toi,\nplus près de Toi!"
   },
   {
-    "number": 44,
+    "id": 45,
+    "number": "44",
     "titleEn": "C'EST A L'OMBRE DE TES AILES",
     "titleFr": "C'EST A L'OMBRE DE TES AILES",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "C'est à l'ombre de tes ailes\nQu'est le vrai repos;\nLà plus de douleurs cruelles,\nLà plus d'angoisses mortelles,\nLà plus d'écrasants fardeaux:\nC'est le vrai repos!\n\nRefrain:\nVrai repos, paix parfaite et bonheur\nSous les ailes du Seigneur.\nVrai repos, paix parfaite et bonheur\nSous les ailes du Seigneur.\n\nC'est à l'ombre de tes ailes Qu'on trouve la paix,\nLes oiseaux dans leurs nids frêles,\nSous les plumes maternelles,\nN'épouvantent jamais: Ils dorment en paix!\nN'épouvantent jamais: Ils dorment en paix!\n\nC'est à l'ombre de tes ailes\nQu'est le vrai bonheur.\nToutes choses sont nouvelles,\nEt c'est la vie éternelle,\nQue d'être près de ton cœur,\nC'est le vrai bonheur!\nQue d'être près de ton cœur,\nC'est le vrai bonheur!"
   },
   {
-    "number": 45,
+    "id": 46,
+    "number": "45",
     "titleEn": "I NEED THEE EV'RY HOUR",
     "titleFr": "J'AI SOIF DE TA PRÉSENCE",
     "lyricsEn": "I need Thee ev'ry hour\nmost gracious Lord;\nNo tender voice like\nThine can peace afford.\n\nChorus:\nI need Thee, oh, I need Thee.\nEvery hour I need Thee.\nOh, bless me now, my Saviour!\nI come to Thee.\n\nI need Thee ev'ry hour,\nstay Thou near by;\nTemptations lose their power\nwhen Thou art nigh.\n\nI need Thee ev'ry hour,\nin joy or in pain;\nCome quickly and abide or life is vain.\n\nI need Thee ev'ry hour,\nteach me Thy will;\nAnd Thy rich promises in me fulfill.",
     "lyricsFr": "J'ai soif de Ta présence, divin Chef de ma foi.\nDans ma faiblesse immense\nque ferais-je sans Toi?\n\nRefrain:\nChaque jour, à chaque heure,\noh! J'ai besoin de Toi.\nViens Jésus, et demeure\nAuprès de moi.\n\nDes ennemis, dans l'ombre,\nrôdent autour de moi.\nAccablé par le nombre, que ferais-je sans Toi?\n\nPendant les jours d'orage,\nd'obscurité, d'effroi,\nQuand faiblit mon courage,\nque ferais-je sans Toi?\n\nÔ Jésus! Ta présence\nc'est la vie et la paix:\nLa paix dans la souffrance,\net la vie à jamais."
   },
   {
-    "number": 46,
+    "id": 47,
+    "number": "46",
     "titleEn": "NO NIGHT THERE",
     "titleFr": "CONNAIS-TU CETTE CITE",
     "lyricsEn": "In the land of fadeless day,\nLies the city four square, It shall never pass away,\nAnd there is no night there.\n\nChorus:\nGod shall wipe away all tears,\nThere's no death, no pain, nor fears;\nAnd they count not time by years,\nFor there is no night there.\n\nAll the gates of pearl are made,\nIn the city foursquare,\nAll the streets with gold are laid,\nAnd there is no night there.\n\nAll the gates shall never close,\nTo the city foursquare,\nThere life's crystal river flows,\nAnd there is no night there.\n\nThere they need no sunshine bright,\nIn that city foursquare,\nFor the Lamb is all the light,\nAnd there is no night there.",
     "lyricsFr": "1. Connais-tu cette cité, la cité céleste?\nDans ses murs tout est clarté, plus d'ombre funeste.\nPèlerins et voyageurs,\nIci-bas dans les douleurs,\nToujours ce trésor nous reste, la cité céleste.\n\n2. Connais-tu cette cité, la cité bénie,\nOù tout est félicité, sublime harmonie?\nL'Agneau seul est son soleil,\nEt son éclat sans pareil,\nIllumine et vivifie, la cité bénie.\n\n3. D'or, de perles et d'azur, est notre patrie!\nConnais-tu le fleuve pur, l'arbre de la vie?\nPlus de fardeaux à jamais,\nPour les Élus tout est paix!\nDe Dieu la cité chérie, c'est notre patrie.\n\n4. Ô Salem, repos si doux, mon cœur te désire!\nAprès son Chef, son Époux, l'Église soupire!\nÊtre à toujours devant Toi,\nMon Seigneur! Mon divin Roi,\nPour Te chanter et Te dire: Mon cœur Te désire."
   },
   {
-    "number": 47,
+    "id": 48,
+    "number": "47",
     "titleEn": "JESUS SOIT AVEC VOUS",
     "titleFr": "JESUS SOIT AVEC VOUS",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "Jésus soit avec vous à jamais,\nVous guidant avec sagesse,\nVous entourant de tendresse,\nVous remplissant toujours de sa paix!\n\nRefrain:\nAvec vous toujours, avec vous!\nOui, qu'il soit tous les jours avec vous!\nAvec vous toujours, avec vous!\nJusqu'au jour du dernier rendez-vous!\n\nAvec vous au milieu du danger,\nÀ l'heure de la détresse,\nQu'il soit votre forteresse,\nQu'il soit toujours votre bon Berger!\n\nAvec vous quand votre ciel est bleu,\nComme au jour de la tempête,\nQue son cœur soit la retraite\nOù vous retrouvez la paix de Dieu!\n\nEnfin, dans le dernier des combats,\nPour échanger cette terre\nContre la maison du Père,\nQue Jésus vous porte dans ses bras!"
   },
   {
-    "number": 48,
+    "id": 49,
+    "number": "48",
     "titleEn": "GOD BE WITH YOU",
     "titleFr": "DIEU SOIT AVEC TOI",
     "lyricsEn": "God be with you till we meet again;\nBy His counsels guide, uphold you,\nWith His sheep securely fold you;\nGod be with you till we meet again.\n\nChorus:\nTill we meet, till we meet,\nTill we meet at Jesus' feet;\nTill we meet, till we meet,\nGod be with you till we meet again.\n\nGod be with you till we meet again;\nNeath His wings protecting hide you;\nDaily manna still provide you;\nGod be with you till we meet again.\n\nGod be with you till we meet again;\nWhen life's perils thick confound you,\nPut His arms unfailing round you;\nGod be with you till we meet again.\n\nGod be with you till we meet again;\nKeep love's banner floating o'er you,\nSmite death's threatening wave before you;\nGod be with you till we meet again.",
     "lyricsFr": "Dieu soit avec toi jusqu'au revoir!\nÂme fidèle et soumise,\nQu'il te garde et te conduise\nJusqu'au grand repos du soir!\n\nRefrain:\nAu revoir, au revoir!\nDieu t'accompagne jusqu'au soir!\nAu revoir, au revoir!\nDieu soit avec toi jusqu'au revoir!\n\nDieu soit avec toi jusqu'au revoir!\nAbrite-toi sous Son aile;\nQu'en ton cœur Il renouvelle\nLa foi, l'amour et l'espoir!\n\nDieu soit avec toi jusqu'au revoir!\nSi des périls te menacent,\nSes bras éternels t'enlacent.\nContre eux, qui peut prévaloir?\n\nDieu soit avec toi jusqu'au revoir!\nBientôt Jésus va paraître:\nDans Sa gloire, notre Maître\nBientôt va nous recevoir!"
   },
   {
-    "number": 49,
+    "id": 50,
+    "number": "49",
     "titleEn": "WHEN WE ALL GET TO HEAVEN",
     "titleFr": "BIENTÔT JÉSUS",
     "lyricsEn": "Sing the wondrous love of Jesus,\nSing His mercy and His grace.\nIn the mansions bright and blessed,\nHe'll prepare for us a place.\n\nChorus:\nWhen we all get to heaven,\nWhat a day of rejoicing that will be!\nWhen we all see Jesus,\nWe'll sing and shout the victory!\n\nWhile we walk the pilgrim pathway,\nClouds will overspread the sky;\nBut when travelling days are over,\nNot a shadow, not a sigh.\n\nLet us then be true and faithful,\nTrusting, serving every day;\nJust one glimpse of Him in glory\nWill the toils of life repay.\n\nOnward to the prize before us!\nSoon His beauty we'll behold;\nSoon the pearly gates will open;\nWe shall tread the streets of gold.",
     "lyricsFr": "Bientôt Jésus va nous prendre,\nAuprès de Lui dans le ciel;\nIl nous a dit de L'attendre,\nJusqu'au jour de Son appel.\n\nRefrain:\nNous avons la victoire!\nNous vivrons avec Jésus dans le ciel!\nÀ Toi seul la gloire!\n\nOh! Viens bientôt, Emmanuel!\n\nPéchés, travaux et souffrances,\nCesseront et pour toujours.\nDevant Sa sainte présence,\nNous chanterons Son amour.\n\nCombattons avec courage,\nAttendant ce jour heureux.\nEt chantons malgré l'orage:\nNous serons victorieux!\n\nEt si l'ennemi fait rage,\nComptons toujours sur Jésus.\nAvec Lui pas de naufrage;\nLe port est déjà en vue!"
   },
   {
-    "number": 50,
+    "id": 51,
+    "number": "50",
     "titleEn": "LE SEIGNEUR M'AIME, BONHEUR",
     "titleFr": "LE SEIGNEUR M'AIME, BONHEUR",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "Le Seigneur m'aime\nBonheur suprême,\nLe Seigneur m'aime,\nIl est amour.\n\nRefrain: Je redirai toujours :\nLe Seigneur m'aime (bis)\nIl est amour!\n\nDans la misère, La plus amère,\nDans la misère J'étais plongé.\n\nDans la souffrance, sans espérance,\nDans la souffrance, je gémissais.\n\nPortant ma peine, Ma lourde chaîne,\nPortant ma peine, J'étais perdu.\n\nDieu, dans sa grâce, Prit à ma place,\nDieu dans sa grâce, Prit son cher Fils.\n\nEn sacrifice, à la justice,\nEn sacrifice Il vint s'offrir.\n\nLe poids immense, de mon offense,\nLe poids immense, Tomba sur lui.\n\nSur le Calvaire, loin de son Père,\nSur le Calvaire, il vint mourir.\n\nIl purifie, Toute ma vie,\nIl purifie, Avec son sang.\n\nÀ toi la gloire, et la victoire,\nÀ toi la gloire, Agneau de Dieu."
   },
-  {
-    "number": 51,
+    {
+    "id": 52,
+    "number": "51",
     "titleEn": "I AM SO GLAD",
     "titleFr": "JÉSUS QUITTA LE TRÔNE",
     "lyricsEn": "I am so glad that our Father in heaven\nTells of His love in the Book He has given,\nWonderful things in the Bible I see;\nThis is the dearest, that Jesus loves me.\n\nChorus:\nI am so glad that Jesus loves me,\nJesus loves me, Jesus loves me,\nI am so glad that Jesus loves me,\nJesus loves even me.\n\nThough I forget Him and wander away,\nStill He doth love me wherever I stray;\nBack to His dear loving arms would I flee,\nWhen I remember that Jesus loves me.\n\nJesus loves me and I know I love Him,\nLove brought Him down my poor soul to redeem;\nYes it was love made Him die on the tree;\nOh, I am certain that Jesus loves me.\n\nIf one should ask of me how I can tell;\nGlory to Jesus I know very well!\nGod's Holy Spirit with mine doth agree,\nConstantly witnessing Jesus loves me.\n\nOh, if there's only one song I can sing,\nWhen in His beauty I see the great King,\nThis shall my song in eternity be:\n\"Oh, what a wonder that Jesus loves me.\"",
     "lyricsFr": "Jésus quitta le trône de Son Père\nEt descendit ici-bas sur la terre;\nIl accepta la crèche pour berceau,\nLui, Roi des rois, le Fils du Dieu Très-Haut!\n\nRefrain: Oh! Oui, c'est vrai! Je sais que c'est vrai!\n\"Il est écrit\": Cela suffit!\nQue Jésus m'aime! Oh! Bonheur suprême!\nLa Bible me le dit!\n\nEn tous les lieux portant la délivrance,\nFaisant le bien, guérissant la souffrance,\nIl pardonnait au pécheur repentant,\nIl bénissait jusqu'aux petits enfants.\n\nIl fut cloué sur la croix méprisable,\nLui, Juste et Saint, mourut pour moi coupable.\nPour me sauver, Son sang fut répandu;\nC'est pourquoi j'aime le Seigneur Jésus!\n\nSi tu me demandais comment je sais\nQue Jésus m'aime, c'est le plus simple fait.\nSon Saint-Esprit témoigne dans mon cœur\nEn criant puissamment: \"Abba mon Père\".\n\nPlus que vainqueur Il sortit de la tombe,\nGloire à l'Agneau, divin Sauveur du monde!\nIl règne au ciel, intercède pour moi,\nEt vient bientôt me chercher: Je le crois!"
   },
   {
-    "number": 52,
+    "id": 53,
+    "number": "52",
     "titleEn": "JESUS WANTS ME",
     "titleFr": "JÉSUS ME DEMANDE D'ÊTRE",
     "lyricsEn": "Jesus wants me for a sunbeam,\nTo shine for Him each day;\nIn every way try to please Him,\nAt home, at school, at play.\n\nChorus:\nA sunbeam, a sunbeam,\nJesus wants me for a sunbeam;\nA sunbeam, a sunbeam,\nI'll be a sunbeam for Him.\n\nJesus wants me to be loving,\nAnd kind to all I see;\nShowing how pleasant and happy,\nHis little one can be.\n\nI will ask Jesus to help me\nTo keep my heart from sin;\nEver reflecting His goodness,\nAnd always shine for Him.\n\nI'll be a sunbeam for Jesus,\nI can if I but try;\nServing Him moment by moment,\nThen live for Him on high.",
     "lyricsFr": "Jésus me demande d'être\nUn rayon de soleil,\nQui gaiement fasse connaître\nSon amour sans pareil.\n\nRefrain: Un rayon de joie,\nUn doux rayon de soleil,\nQue Jésus envoie!\nOh! Quel bonheur sans pareil!\n\nOui, Seigneur, donne-moi d'être\nComme un rayon d'espoir,\nParaissant à la fenêtre\nQuand le ciel est tout noir.\n\nOh! Que m'oubliant moi-même,\nJe ne m'efforce plus\nQue d'être pour ceux que j'aime\nUn reflet de Jésus.\n\nQue partout mon gai sourire\nEt ma joyeuse humeur\nSoit un baume à qui soupire\nEt réjouisse un cœur!"
   },
   {
-    "number": 53,
+    "id": 54,
+    "number": "53",
     "titleEn": "OH! QUE TA MAIN PATERNELLE",
     "titleFr": "OH! QUE TA MAIN PATERNELLE",
-    "lyricsEn": "NO TRANSLATION!",
+    "lyricsEn": "",
     "lyricsFr": "Oh! que ta main paternelle\nMe bénisse à mon coucher.\nEt que ce soit sous ton aile\nQue je dorme, ô mon Berger! (bis)\n\nVeuille effacer par ta grâce\nLes péchés que j'ai commis\nEt que ton Esprit me fasse\nObéissant et soumis! (bis)\n\nFais reposer sous ta garde\nMes amis et mes parents,\nEt que ton œil les regarde,\nDe ton ciel petits et grands! (bis)\n\nQue ta faveur se déploie\nPour consoler l'affligé;\nDonne au pauvre un peu de joie\nAu malade la santé! (bis)\n\nSeigneur! j'ai fait ma prière;\nSous ton aile je m'endors,\nHeureux de savoir qu'un Père\nPlein d'amour veille au dehors. (bis)"
   },
   {
-    "number": 54,
+    "id": 55,
+    "number": "54",
     "titleEn": "NEARER, STILL NEARER",
     "titleFr": "SEIGNEUR ATTIRE",
     "lyricsEn": "Nearer, still nearer, close to Thy heart,\nDraw me, my Saviour, so precious Thou art;\nFold me, O fold me, close to Thy breast,\nShelter me safe, in that \"Haven of rest.\" (x2)\n\nNearer, still nearer, nothing I bring\nNaught as an offering to Jesus, my King;\nOnly my sinful, now contrite heart.\nGrant me the cleansing Thy blood doth impart.(x2)\n\nNearer, still nearer, Lord to be Thine;\nSin, with its follies, I gladly resign;\nAll of its pleasures, pomp and its pride.\nGive me but Jesus, my Lord crucified. (x2)\n\nNearer, still nearer, while life shall last,\nTill all its struggles and trials are past;\nThen through eternity, ever I'll be.\nNearer, my Saviour, still nearer to Thee. (x2)",
     "lyricsFr": "Seigneur, attire mon cœur à Toi,\nJe Te désire, tout près de moi.\nMa délivrance, dans le danger,\nC'est Ta présence, divin Berger. (x2)\n\nPar Ta puissance, brise, soumets\nMa résistance à tout jamais.\nCourbe mon être, ma volonté,\nSois-en le Maître incontesté. (x2)\n\nQuand je contemple, près de Ta croix,\nTon grand exemple, Jésus, mon Roi,\nAh! Je n'aspire qu'à m'immoler,\nTant je désire Te ressembler! (x2)\n\nPrompt, je m'élance pour T'obéir,\nPrompt, je m'avance pour Te servir;\nMais, sous Ton aile, loin du péché,\nSauveur fidèle, Tiens-moi caché. (x2)"
   },
   {
-    "number": 55,
+    "id": 56,
+    "number": "55",
     "titleEn": "TELL ME THE OLD, OLD STORY",
     "titleFr": "REDITES-MOI L'HISTOIRE",
     "lyricsEn": "Tell me the old, old story\nof unseen things above,\nOf Jesus and His glory,\nof Jesus and His love.\nTell me the story simply, as to a little child,\nFor I am weak and weary,\nand helpless and defiled.\n\nChorus:\nTell me the old, old story (ter)\nOf Jesus and His love.\n\nTell me the story slowly, that I may take it in,\nThat wonderful redemption,\nGod's remedy for sin.\nTell me the story often, for I forget so soon\nThe early dew of morning\nhas passed away at noon.\n\nTell me the story softly,\nwith earnest tones and grave;\nRemember I'm the sinner\nwhom Jesus came to save.\nTell me the story always,\nif you would really be,\nIn any time of trouble, a comforter to me.\n\nTell me the same old story\nwhen you have cause to fear\nThat this world's empty glory\nis costing me too dear.\nYes, and when that world's\nglory is dawning on my soul,\nTell me the old, old story:\nChrist Jesus makes thee whole.",
     "lyricsFr": "Redites-moi l'histoire\nde l'amour de Jésus;\nParlez-moi de la gloire\nqu'Il promet aux Élus.\nJ'ai besoin qu'on m'instruise,\ncar je suis ignorant;\nQu'à Christ on me conduise\ncomme un petit enfant.\n\nRefrain:\nRedites-moi l'histoire (ter)\nDe l'amour de Jésus!\n\nRedites-moi l'histoire de la crèche à la croix;\nÉveillez ma mémoire, oublieuse parfois.\nCette histoire si belle, dites-la simplement;\nElle est toujours nouvelle;\nrépétez-la souvent.\n\nRedites-moi l'histoire\nde mon divin Sauveur;\nC'est Lui dont la victoire\naffranchit le pécheur.\nCe glorieux message, oh! Redites-le moi,\nLorsque je perds courage,\nlorsque faiblit ma foi.\n\nRedites-moi l'histoire\nquand le monde trompeur\nMe vend sa vaine gloire\nau prix de mon bonheur.\nEt quand, loin de la terre,\nje prendrai mon essor,\nEn fermant la paupière,\nque je l'entende encor!"
   },
   {
-    "number": 56,
+    "id": 57,
+    "number": "56",
     "titleEn": "ONWARD, CHRISTIAN SOLDIERS",
     "titleFr": "LA LUTTE SUPRÊME",
     "lyricsEn": "Onward, Christian soldiers!\nMarching as to war,\nLooking unto Jesus, who is gone before.\nChrist, the Royal Master, leads against the foe;\nForward into battle see His banners go!\n\nChorus:\nOnward, Christian soldiers!\nMarching as to war,\nLooking unto Jesus,\nwho is gone before.\n\nAt the name of Jesus, satan's host doth flee;\nOn then, Christian soldiers, on to victory!\nHell's foundations quiver at the shout of praise;\nBrothers, lift your voices,\nloud your anthems raise!\n\nCrowns and thrones may perish,\nkingdoms rise and wane,\nBut the Church of Jesus\nconstant will remain;\nGates of hell can never against\nthat Church prevail;\nWe have Christ's own promise,\nand that cannot fail.\n\nOnward then, ye people, join our happy throng,\nBlend with ours your voices in the triumph song!",
     "lyricsFr": "La lutte suprême nous appelle tous.\nEt Jésus Lui-même marche devant nous.\n\nRefrain:\nQue Sa flamme\nEt soutienne l'âme des plus hésitants,\nDe Christ, la bannière\nse déploie au vent;\nPour la sainte guerre,\nsoldats en avant!\n\nL'ennemi redoute le nom seul du Roi.\nIl faut que déroute en cri de la foi,\nAcclamons ensemble\nJésus d'un seul cœur,\nEt que l'enfer tremble\nà ce nom vainqueur.\n\nNous suivons la trace\ndes saints d'autrefois;\nPar la même grâce, sous les mêmes lois.\nVivant de l'Eglise de Dieu,\nDe tous les obstacles,\nTriomphons en tout lieu.\n\nQue les ans s'écoulent,\nque de toutes parts,\nA grands fracas s'écroulent."
   },
   {
-    "number": 57,
+    "id": 58,
+    "number": "57",
     "titleEn": "MY JESUS, I LOVE THEE",
     "titleFr": "MON JÉSUS, JE T'AIME",
     "lyricsEn": "My Jesus, I love Thee, I know Thou art mine;\nFor Thee all the pleasures of sin I resign;\nMy gracious Redeemer, my Saviour art Thou;\nIf ever I loved Thee, my Jesus, 'tis now!\n\nI love Thee because Thou hast first loved me,\nAnd purchased my pardon on Calvary's tree;\nI love Thee for wearing the thorns on Thy brow;\nIf ever I loved Thee, my Jesus, 'tis now!\n\nI'll love Thee in life, I will love Thee in death,\nAnd praise Thee as long as Thou lendest me breath;\nAnd say when the death-dew lies cold on my brow,\n\"If ever I loved Thee, my Jesus, 'tis now!\"\n\nIn mansions of glory and endless delight,\nI'll ever adore Thee in heaven so bright;\nI'll sing with the glittering crown on my brow,\n\"If ever I loved Thee, my Jesus, 'tis now!\"",
     "lyricsFr": "Mon Jésus, je T'aime, je T'aime, ô mon Roi!\nOh, quel charme extrême me retient à Toi!\nJe brise les charmes du plaisir qui luit,\nTon amour m'inonde, je T'aime, ô Jésus!\n\nMon Jésus, je T'aime, car Tu m'as sauvé\nEn Toi seul j'ose croire, Ton sang m'a lavé!\nSur la croix infâme, pour moi, Tu mourus\nTa mort est ma vie, je T'aime, ô Jésus!\n\nQu'ici-bas je T'aime, jusque dans la mort,\nA jamais suprême, de dernier effort,\nMa voix agonisante, je te l'entendras plus,\nSachez que je chante: 'Je T'aime, ô Jésus!'\n\nJe verrai Ta face, quel ravissement!\nJe jouirai Ta grâce éternellement\nEt dirai sans cesse, avec les Élus\nL'hymne d'allégresse: 'Je T'aime, ô Jésus!'"
   },
   {
-    "number": 58,
+    "id": 59,
+    "number": "58",
     "titleEn": "SIMPLY TRUSTING",
     "titleFr": "À JÉSUS JE M'ABANDONNE",
     "lyricsEn": "Simply trusting Him every day,\nTrusting through a stormy way,\nAnd even when my faith is small,\nTrusting Jesus, that is all.\n\nChorus:\nTrusting Him as the moments fly,\nTrusting as the days go by;\nTrusting Him whatever befall,\nTrusting Jesus, that is all.\n\nBrightly does my Lord's Spirit shine\nInto this poor heart of mine,\nAnd while His leads I cannot fall,\nTrusting Jesus, that is all.\n\nTrusting Him when my sky is bright,\nTrusting through my heart is glad,\nTrusting Him in the gloom of night,\nWhen my every thought is sad.\n\nTrusting Him while life shall last,\nTrusting Him till earth is past,\nTill His gracious advent call,",
     "lyricsFr": "À Jésus je m'abandonne;\nCe qu'Il fait, je le crois,\nEt je prends ce qu'Il me donne.\nLa couronne et la croix.\n\nRefrain:\nCompter sur Lui d'heure en heure,\nTant que le jour combat;\nQue l'on vive ou que l'on meure,\nCompter sur Lui tout là.\n\nQue si l'ennemi se montre,\nMon cœur n'en est point troublé,\nAvec Christ à la rencontre,\nJe puis aller sans trembler.\n\nSuis-je en paix, vois la lumière\nMon cœur s'élève attendri,\nPour se changer en prière,\nSi l'horizon s'assombrit.\n\nQu'on m'approuve ou qu'on me blâme,\nEt demain comme aujourd'hui,\nJe ne veux quoi qu'on réclame."
   },
   {
-    "number": 59,
+    "id": 60,
+    "number": "59",
     "titleEn": "WHAT UNFATHOMABLE MERCY",
     "titleFr": "MISÉRICORDE INSONDABLE",
     "lyricsEn": "What unfathomable mercy!\nCan God forgive everything,\nOn a great sinner have pity,\nAnd pardon give for my sin?\n\nChorus:\nJesus I come, I come to You,\nJust as I am, I come to You,\nJesus I come, I come to You,\nJust as I am, You take me.\n\nLong ago, away from Your face,\nYour holy wrath, I provoked;\nKept my heart away from Your grace,\nBefore all. Yours, I wounded.\n\nTo Jesus I give my whole life,\nIn Him I want to be freed\nFrom sin that always besets me,\nForever be delivered.\n\nAlleluia! Doubt, there's no more,\nHe has removed my burden,\nAnd happily foreverermore\nI'm on my way to heaven.",
     "lyricsFr": "Miséricorde insondable!\nDieu peut-Il tout pardonner?\nAvoir une pitié si grand coupable,\nEt mes péchés oublier?\n\nRefrain:\nJésus, je viens! Je viens à Toi!\nTel que je suis, je viens à Toi!\nJésus, je viens! Je viens à Toi!\nTel que je suis, Tu prends-moi.\n\nLongtemps j'ai, loin de Ta face,\nProvoqué Ton saint courroux,\nFermé mon cœur à Ta grâce,\nBlessé le Tien avant tous.\n\nÔ Jésus, à Toi je cède,\nJe veux être libéré\nDe tout péché qui m'obsède,\nEtre à jamais délivré.\n\nAlléluia! Plus de doute,\nMon fardeau m'est enlevé,\nPour le ciel je suis en route,\nVers la vie, l'éternité."
   },
   {
-    "number": 60,
+    "id": 61,
+    "number": "60",
     "titleEn": "THE COMFORTER HAS COME",
     "titleFr": "LE GRAND JOUR S'EST LEVÉ",
     "lyricsEn": "O spread the tidings 'round,\nWherever man is found,\nWherever human hearts\nAnd human woes abound;\nLet every Christian tongue\nProclaim Him with sound,\nThe Comforter has come!\n\nChorus:\nThe Comforter has come!\nThe Holy Ghost from Heav'n,\nThe Father's promise giv'n;\nO spread the tidings 'round,\nWherever man is found\nThe Comforter has come!\n\nThe long, long night is past;\nThe morning breaks at last,\nAnd hushed the dreadful wail\nAnd fury of the blast,\nAs o'er the golden hills\n\nThe day advances fast!\nThe Comforter has come!\n\nLo, the great King of kings,\nWith healing in His wings,\nTo every captive soul\nA full deliverance brings,\nAnd through the vacant cells\nThe song of triumph rings;\nThe Comforter has come!\n\nO boundless love divine!\nHow shall this tongue of mine\nTo wondering mortals tell\nThe matchless grace divine—\nThat I, a child of sin,\nShould in His image shine!\nThe Comforter has come!",
     "lyricsFr": "Le grand jour s'est levé,\nDieu viens à visité\nVoici des temps nouveaux,\nchantions gloire à l'agneau\nNous recevons de Christ\nce qu'il avait promis\nLe Saint Esprit est là.\n\nRefrain:\nLe Saint Esprit est là\nLa mort a disparu\nDieu donne un plein salut\nEt sur le monde entier,\nle grand jour s'est levé\nLe Saint Esprit est là\n\nL'obscurité s'enfuit,\nla lumière a jailli\nChasse les heures troubles,\ntoute incrédulité\nCar Christ le Roi des rois\n\nrépand l'Esprit de foi\nLe Saint Esprit est là.\n\nLe grand consolateur\nvient remplir tous les cœurs\nL'Esprit de vérité\nnous met en liberté\nIl louve les prisons,\nrépand la guérison\nLe Saint Esprit est là.\n\nQue tous les rachetés\nchantent leur liberté\nChrist a tout accompli,\nIl a donné l'Esprit\nVoyez trembler l'enfer,\ncar dans tout l'univers\nLe Saint Esprit est là."
   },
-  {
-    "number": 61,
+    {
+    "id": 62,
+    "number": "61",
     "titleEn": "TRUST AND OBEY",
     "titleFr": "CROIRE, OBÉIR",
     "lyricsEn": "When we walk with the Lord,\nIn the light of His Word,\nWhat a glory He sheds on our way!\nWhile we do His good will,\nHe abides with us still,\nAnd with all who will trust and obey.\n\nChorus:\nTrust and obey;\nFor there's no other way\nTo be happy in Jesus,\nBut to trust and obey.\n\nNot a shadow can rise,\nNot a cloud in the skies,\nBut His smile quickly drives it away;\nNot a doubt or a fear,\nNot a sigh nor a tear,\nCan abide while we trust and obey.\n\nNot a burden we bear,\nNot a sorrow we share,\nBut our toil He doth richly repay;\nNot a grief nor a cross,\nNot a frown nor a cross,\nBut is blest if we trust and obey.\n\nBut we never can prove\nThe delights of His love\nUntil all on the altar we lay;\nFor the favour He shows,\n\nAnd the joy He bestows,\nAre for them who will trust and obey.\n\nThen in fellowship sweet\nWe will sit at His feet,\nOr we'll walk by His side in the way;\nWhat He says we will do,\nWhere He sends we will go,\nNever fear, only trust and obey.",
     "lyricsFr": "Quand la Bible ici-bas,\nIllumine nos pas,\nDe Sa gloire Dieu vient nous remplir.\nQuand je veux ce qu'Il veut,\nEn Son nom j'ai le Deux,\nSimplement il faut croire, obéir.\n\nRefrain:\nCroire, obéir,\nPour que Dieu puisse ouvrir\nLes écluses célestes,\nIl faut croire, obéir.\n\nVeux-tu la liberté,\nLe bonheur, la santé?\nQue ton seul but soit de Le servir!\nCar L'Esprit n'a le pas,\nAvec la joie, la paix,\nQu'à celui qui veut croire, obéir.\n\nLes fardeaux, les labeurs,\nLe chagrin et les pleurs,\nÀ mon bien Dieu les fait concourir.\nIls deviennent au feu,\nDes trésors éternels,\nSimplement il faut croire, obéir.\n\nNous pouvons dépasser\nNos incapacités,\nAux desseins éternels concourir;\nDe nouveaux horizons.\n\nSimplement il faut croire, obéir.\n\nÀ Ses ordres soumis\nSans aucun compromis,\nAlors le Tout-Puissant peut agir.\nIl nous ouvre les flots,\nSimplement Jéricho,\nSimplement il faut croire, obéir."
   },
   {
-    "number": 62,
+    "id": 63,
+    "number": "62",
     "titleEn": "GREAT IS THY FAITHFULNESS",
     "titleFr": "DIEU, TA FIDÉLITÉ",
     "lyricsEn": "Great is Thy faithfulness,\nO God my Father,\nThere is no shadow of turning with Thee,\nThou changest not,\nThy compassions, they fail not,\nAs Thou hast been Thou forever wilt be.\n\nChorus:\nGreat is Thy faithfulness!(x2)\nMorning by morning new mercies I see;\nAll I have needed\nThy hand hath provided,\nGreat is Thy faithfulness,\nLord, unto me!\n\nSummer and winter and\nspring-time and harvest,\nSun, moon and stars in\ntheir courses above\nJoin with all nature in manifold witness,\nTo Thy great faithfulness, mercy and love.\n\nPardon for sin and a peace that endureth,\nThy own dear presence\nto cheer and to guide;\nStrength for today and\nbright hope for tomorrow,\nBlessing all mine,\nwith ten thousand beside!",
     "lyricsFr": "Dieu, Ta fidélité va jusq'aux nues;\nPlus vaste est Ton amour que l'horizon.\nTa tendre main au jours étendue,\nInépuisable est Ta compassion.\n\nRefrain:\nDieu, Ta fidélité,\nTon amour sans bornés,\nSe renouvellent envers moi\nchaque jour,\nPar Ta bonté,\nc'est Ta main qui les comble.\nDieu, Ta fidélité dure à toujours.\n\nL'été et l'automne,\nle printemps et l'hiver,\nSoleil, lune et étoiles\ndans leurs courses,\nSe joignent à la nature, pour témoigner,\nDe Ta fidélité grande et immense.\n\nTa joie et Ton pardon\nsans incidence,\nTa présence pour me guider,\nTa chaude voix,\nTa force à chaque pas,\nTon espérance,\nPar Ta fidélité tout est à moi."
   },
   {
-    "number": 63,
+    "id": 64,
+    "number": "63",
     "titleEn": "KING OF MY LIVE",
     "titleFr": "ROI DE MA VIE",
     "lyricsEn": "King of my life, I crown Thee now,\nThine shall the glory be;\nLest I forget Thy thorn-crowned brow,\nLead me to Calvary.\n\nChorus:\nLest I forget Gethsemane,\nLest I forget Thine agony,\nLest I forget Thy love for me,\nLead me to Calvary.\n\nShow me the tomb where Thou was laid,\nTenderly mourned and wept;\nAngels in robes of white arrayed,\nGuarded Thee whilst Thou slept.\n\nLet me, like Mary, through the gloom\nCome with a gift to Thee;\nShow to me now the empty tomb,\nLead me to Calvary.\n\nMay I be willing, Lord, to bear\nDaily my cross for Thee;\nEven Thy cup of grief to share,\nThou hast borne all for me.\n\nFill me, O Lord, with Thy desire\nFor all who know not Thee;\nThen touch my lips with holy fire,\nTo speak of Calvary.",
     "lyricsFr": "Roi de ma vie, j'écoîs l'hommage,\nSois adoré, exalté!\nDe ma misère et mon esclavage,\nMourant Tu m'as sauvé.\n\nRefrain:\nQue jamais je n'oublie, ô Dieu,\nTon grand amour si merveilleux!\nGarde toujours devant mes yeux\nLe Christ mourant en croix!\n\nAgonissant sur le calvaire,\nJe vois souffrir pour moi,\nBuvant la coupe, si pleine, amère,\nToi, Sauveur, à la croix.\n\nDéposé dans un froid tombeau,\nAyant rendu Ton âme,\nTon corps brisé reçoit le repos\nAprès une' mort infâme.\n\nSauveur, je Te prie, aide-moi\nÀ suivre ton modèle,\nPortant à chaque instant ma croix,\nRestant toujours fidèle.\n\nEt chauffe en moi un feu vivant,\nAllumé au calvaire,\nPour annoncer aux cœurs errants\nTon amour salutaire."
   },
   {
-    "number": 64,
+    "id": 65,
+    "number": "64",
     "titleEn": "THE LORD'S OUR ROCK",
     "titleFr": "DIVIN ROCHER",
     "lyricsEn": "The Lord's our Rock, in Him we hide:\nA shelter in the time of storm!\nSecure whatever ill betide,\nA shelter in the time of storm!\n\nChorus:\nJesus is the Rock in a weary land,\nA weary land, a weary land;\nJesus Christ is the Rock in a weary land,\nA shelter in the time of storm!\n\nA shade by day, defense by night,\nA shelter in the time of storm;\nNo fears alarm, no foes affright,\nA shelter in the time of storm!\n\nA raging storms may round us beat,\nA shelter in the time of storm!\nWe'll never leave our safe retreat,\nA shelter in the time of storm!\n\nO Rock divine, O Refuge dear:\nA shelter in the time of storm!\nBe Thou our helper ever near,\nA shelter in the time of storm.",
     "lyricsFr": "Divin Rocher, Refuge sûr:\nL'abri pour nous dans la tempête!\nNotre défense en combat dur:\nL'abri pour nous dans la tempête!\n\nRefrain:\nOui Jésus est le Roc dans un pays troublé,\nUn pays troublé, un pays troublé.\nJésus-Christ est le Roc dans un pays troublé:\nL'abri pour nous dans la tempête!\n\nUne ombre au jour un mur la nuit:\nL'abri pour nous dans la tempête!\nNulle peur donc de l'ennemi:\nL'abri pour nous dans la tempête!\n\nSi l'orage éclate alentour:\nL'abri pour nous dans la tempête!\nNous restons forts par Son secours:\nL'abri pour nous dans la tempête!\n\nDivin Rocher, Refuge aimé:\nL'abri pour nous dans la tempête!\nSois notre aide à tout jamais:\nL'abri pour nous dans la tempête!"
+  },
+  {
+    "id": 66,
+    "number": "65",
+    "titleEn": "O HAPPY DAY",
+    "titleFr": "Ô JOUR HEUREUX",
+    "lyricsEn": "O happy day that fixed my choice\nOn Thee, my Saviour and my God!\nWell may this glowing heart rejoice,\nAnd tell its raptures all abroad.\n\nChorus:\nHappy day, happy day,\nWhen Jesus washed my sins away!\nHe taught me how to watch and pray,\nAnd live rejoicing every day;\nHappy day, happy day,\nWhen Jesus washed my sins away!\n\n'Tis done, the great transaction's done,\nI am my Lord's and He is mine;\nHe drew me and I followed on,\nCharmed to confess the voice divine.\n\nNow rest, my long-divided heart,\nFixed on this blissful centre rest;\nNor ever from thy Lord depart,\nWith Him of every good possessed.\n\nHigh heaven that heard the solemn vow,\nThat vow renewed shall daily hear,\nTill in life's latest hour I bow,\nAnd bless in death a bond so dear.",
+    "lyricsFr": "Ô jour heureux, jour de bonheur,\nLumière, paix, joie ineffable!\nAu Fils de Dieu, saint, adorable,\nJésus j'ai donné mon cœur.\n\nRefrain:\nQuel beau jour! Quel beau jour!\nOù j'ai connu mon Sauveur!\nOui, dans ma nouvelle patrie,\nJésus m'attend et pour moi prie.\nQuel beau jour! Quel beau jour!\nOù d'ai connu mon Sauveur!\n\nOh! Comprenez mon heureux sort,\nC'est avec joie que je raconte\nLa vie éternelle Il la donne\nA celui qui le craint, qui le craint?\n\nAu ciel des chants ont retenti:\nAlléluia! Disent les anges,\nEnfermant de saintes louanges,\nCar un pécheur s'est converti.\n\nChez mon Père, j'ai réservé\nLe Fils de Dieu m'appelle frère,\nQuand je serai chez le Calvaire,\nIl est à moi et je suis à Lui."
+  },
+  {
+    "id": 67,
+    "number": "66",
+    "titleEn": "THOU MY EVERLASTING",
+    "titleFr": "JÉSUS-CHRIST EST MA SAGESSE",
+    "lyricsEn": "Thou, my everlasting portion,\nMore than friend or life to me,\nAll along my pilgrim journey,\nSaviour, let me walk with Thee.\n\nChorus:\nClose to Thee, close to Thee,\nAll along my pilgrim journey,\nSaviour, let me walk with Thee.\n\nNot for ease or worldly pleasure,\nNot for fame my prayer shall be;\nGladly will I toil and suffer,\nOnly let me walk with Thee.\n\nLead me through the vale of shadows,\nBear me o'er life's fitful sea;\nThen the gate of life eternal\nMay I enter, Lord, with Thee.",
+    "lyricsFr": "Jésus-Christ est ma sagesse,\nIl éclaire mon chemin,\nEt je marche, en ma faiblesse,\nConduit par Sa sûre main.\n\nRefrain:\nIl éclaire mon chemin,\nEt je marche, en ma faiblesse,\nConduit par Sa sûre main.\n\nJésus-Christ est ma justice;\nSon sang a coulé pour moi;\nJe trouve en Son sacrifice\nSon sang a coulé pour moi;\nJe trouve en Son sacrifice\nPaix et pardon par la foi.\n\nJésus-Christ me sanctifie;\nAu divin Cep attaché,\nJe reçois de Toi la vie\nQui m'affranchit du péché."
+  },
+  {
+    "id": 68,
+    "number": "67",
+    "titleEn": "REDEEMED, REDEEMED",
+    "titleFr": "QUEL SORT MERVEILLEUX",
+    "lyricsEn": "Redeemed, how I love to proclaim it,\nRedeemed by the blood of the Lamb;\nRedeemed through His infinite mercy,\nHis child and forever I am.\n\nChorus:\nRedeemed, redeemed,\nRedeemed by the blood of the Lamb.\nRedeemed, redeemed,\nHis child and forever I am.\n\nRedeemed and so happy in Jesus,\nNo language my rapture can tell,\nI know that the light of His presence\nWith me doth continually dwell.\n\nI think of my blessed Redeemer,\nI think of Him all the day long;\nI sing, for I cannot be silent,\nHis love is the theme of my song.\n\nI know there's a crown that is waiting\nIn yonder bright mansion for me,\nAnd soon with the spirit made perfect,\nAt home with the Lord I shall be.\n\nI know I shall see in His beauty,\nThe King in whose law I delight;\nWho lovingly guardeth my footsteps,\nAnd giveth me songs in the night.",
+    "lyricsFr": "Quel sort merveilleux d'être sauvé,\nSauvé par le sang de l'Agneau,\nSauvé par Sa grâce infinie,\nÀ jamais un enfant de Dieu!\n\nRefrain:\nSauvé, sauvé,\nSauvé par le sang de l'Agneau!\nSauvé, sauvé,\nÀ jamais un enfant de Dieu!\n\nSauvé, quelle joie ineffable!\nDans Christ mon âme l'exprimer.\nJe sais que Sa douce présence\nM'accompagnera à jamais.\n\nJe pense à mon Sauveur sublime,\nLe louant tout le jour enchanté,\nJe chante, je ne peux pas me taire,\nSon amour m'a rendu heureux.\n\nAu ciel, réservé par le Maître,\nM'attend la couronne de vie.\nEt joint à la troupe des fidèles,\nJe demeurerai près de Lui.\n\nJe sais, je verrai dans Sa gloire\nLe seul Roi qui règne sur moi,\nEt qui par Sa pleine victoire\nMe donne fort de garder Ses lois."
+  },
+  {
+    "id": 69,
+    "number": "68",
+    "titleEn": "SING, OH SING",
+    "titleFr": "CHANTONS, CHANTONS",
+    "lyricsEn": "Sing, oh sing of my Redeemer,\nWith His blood He purchased me.\nOn the cross He sealed my pardon,\nPaid the debt and made me free.\n\nChorus:\nI will sing of my Redeemer,\nAnd His wondrous love to me;\nOn the cruel cross He suffered,\nFrom the curse to set me free.\n\nI will tell the wondrous story,\nHow my lost estate to save,\nIn His boundless love and mercy,\nHe the ransom freely gave.\n\nI will praise my dear Redeemer,\nHis triumphant power I'll tell,\nHow the victory He giveth\nOver sin, and death and hell.\n\nI will sing of my Redeemer,\nAnd His heavenly love to me;\nHe from death to life hath brought me,\nSon of God with Him to be.",
+    "lyricsFr": "Chantons, chantons d'un cœur joyeux\nLe grand amour du Rédempteur,\nQui vint à nous du haut des cieux,\nEt nous racheta du destructeur!\n\nRefrain:\nOh! Quel bonheur de Le connaître,\nL'Ami qui ne saurait changer,\nDe L'avoir ici-bas pour Maître,\nPour Défenseur et pour Berger!\n\nDans la misère et l'ignorance,\nNous nous débattions sans espoir,\nLa mort au cœur, l'âme en souffrance,\nQuand à nos yeux vint Le voir.\n\nIl nous apprend la bannière,\nLa victoire et la liberté,\nGrande est la poussière,\nPour toujours satan fut dompté.\n\nVers l'avenir marchons sans crainte,\nEt sans garde au lendemain,\nPas de soucis dans l'empreinte\nDe Ses pieds sur notre chemin."
+  },
+  {
+    "id": 70,
+    "number": "69",
+    "titleEn": "THERE IS A NAME I LOVE",
+    "titleFr": "UN NOM SI DOUX",
+    "lyricsEn": "There is a name I love to hear,\nI love to sing its worth;\nIt sounds like music in mine ear,\nThe sweetest name on earth.\n\nChorus:\nOh, how I love Jesus,\nOh, how I love Jesus,\nOh, how I love Jesus,\nBecause He first loved me.\n\nIt tells me of a Saviour's love,\nWho died to set me free;\nIt tells me of His precious blood,\nThe sinner's perfect plea.\n\nIt tells me what my Father hath\nIn store for every day,\nAnd though I tread a darksome path,\nYields sunshine all the way.\n\nIt tells of one whose loving heart\nCan feel my deepest woe;\nWho in each sorrow bears a part,\nThat none can bear below.\n\nIt bids my trembling heart rejoice,\nIt dries each rising tear,\nIt tells me, in a 'still small voice,'\nTo trust and never fear.\n\nThis Name shall shed its fragrance still\nAlong this thorny road,\nShall sweetly smooth the rugged hill\nThat leads me up to God.\n\nAnd there with all the blood-bought throng,\nFrom sin and sorrow free,\nI'll sing the new eternal song\nOf Jesus' love for me.",
+    "lyricsFr": "Un nom si doux réjouit mon cœur,\nMa foi premier Ses louanges,\nBrille d'une auguste splendeur\nLe plus beau nom Jésus.\n\nRefrain:\nQui j'aime Jésus,\nQui j'aime Jésus,\nQui j'aime Jésus, le premier.\n\nCe nom parle d'amour suprême,\nDe Lui qui m'a sauvé,\nQui a versé Son sang précieux\nPour tous mes péchés.\n\nEt Il me parle de ce que\nLe Père a pour l'enfant,\nDe Sa grâce, de Son Esprit\nPour vaincre à chaque instant.\n\nEt Il me parle d'un ami\nM'assiste en chaque épreuve,\nQu'Il me soutient dans mon chagrin,\nDe la peine, Il m'enlève.\n\nIl remplit mon cœur d'allégresse,\nIl sèche toutes mes larmes,\nEt Il me dit d'une' voix si douce,\nÔ Mon enfant, ne crains.\n\nToujours, ce Nom m'aplanira\nLe sentier rocailleux,\nSur le chemin, Il polira,\nTout ce qui est tortueux.\n\nLà-haut avec les Rachetés,\nLibres de tous fardeaux,\nNous chanterons sur l'éternité\nLe cantique' de l'Agneau."
+  },
+  {
+    "id": 71,
+    "number": "70",
+    "titleEn": "YOU WHO MADE",
+    "titleFr": "TOI QUI DISPOSES",
+    "lyricsEn": "You who made all things, heavenly Father,\nAnd give them to us day and night,\nO let our gift to You Lord and Redeemer,\nBe acceptable in Your sight.\n\nThe marvelous gift, all, that Your hand gave,\nIt's Your forgiveness, it's Your peace.\nThe greatest treasure, that we can not fathom,\nIs the completeness of Your grace.\n\nMay Your own grace, the instant qui passe\nHelp to bring us closer to You!\nLet us every day keep thy commandment,\nAnd live by faith to behold You.",
+    "lyricsFr": "Toi qui disposes, de toutes choses\nEt nous les donnes chaque jour,\nReçois, ô Père! Notre prière,\nReçois, Seigneur, notre amour!\n\nLe don suprême, que Ta main sème\nC'est Ton pardon, ô c'est Ta paix.\nEt Ta merveille, trésor immense,\nEst le plus grand de Tes bienfaits.\n\nQue par Ta grâce, l'instant qui passe\nServe à nous rapprocher de Toi!\nEt qu'à chaque heure, vers Ta demeure\nNos cœurs s'élèvent par la foi!"
+  },
+  {
+    "id": 72,
+    "number": "71",
+    "titleEn": "A WONDERFUL SAVIOUR",
+    "titleFr": "SAUVEUR ADORABLE",
+    "lyricsEn": "A wonderful Saviour is Jesus, my Lord,\nA wonderful Saviour to me;\nHe hideth my soul in the cleft of the rock,\nWhere rivers of pleasure I see.\n\nChorus:\nHe hideth my soul in the cleft of the rock,\nThat shadows a dry, thirsty land;\nHe hideth my life with His own,\nAnd covers me there with His hand.\n\nA wonderful Saviour is Jesus, my Lord\nHe taketh my burden away;\nHe holdeth me up, and I shall not be moved,\nHe giveth me strength as my day.\n\nWith numberless blessings\neach moment He crowns,\nAnd filled with His fullness divine,\nI sing in my rapture, oh, glory to God\nFor such a Redeemer as mine.\n\nWhen clothed in His brightness,\ntransported I rise\nTo meet Him in clouds of the sky,\nHis perfect salvation, His wonderful love,\nI'll shout with the millions on high.",
+    "lyricsFr": "Sauveur adorable, ô Jésus mon Roi,\nMon Dieu plein d'amour, plein de grâce,\nEn Toi je me cache Rocher de ma foi,\nCherchant le regard de Ta face.\n\nRefrain:\nEn Toi je me cache, Rocher de ma foi,\nDans Ton sein béni j'ai ma place,\nTu couvres ma vie,\nest Ta grâce; Ton amour\nRassasie mon âme avide.\n\nSauveur adorable, ô Jésus mon Roi,\nTu ôtes mes fardeaux et chaînes.\nTon Esprit me soutient,\net Il guide' mes pas,\nTa tendresse soulage ma peine.\n\nRempli de Ta bonté, ô vie de bonheur,\nQui déborde de Tes richesses!\nJe chante alléluia! Gloire au Seigneur!\nEt loue mon Sauveur sans cesse.\n\nQuand Il reviendra,\nj'entendrai Son appel,\nEt j'irai vers Lui dans les nuages,\nEn chantant l'hymne à vic avec Lui au ciel!\nRegardant toujours Son visage."
+  },
+  {
+    "id": 73,
+    "number": "72",
+    "titleEn": "WHEN I SURVEY",
+    "titleFr": "Ô FILS DE DIEU",
+    "lyricsEn": "When I survey the wondrous cross,\nOn which the Prince of glory died,\nMy richest gain I count but loss,\nAnd pour contempt on all my pride.\n\nForbid it, Lord, that I should boast\nSave in the death of Christ, my God;\nAll the vain things that charm me most,\nI sacrifice them to His blood.\n\nSee, from His head, His hands, His feet,\nSorrow and love flow mingled down;\nDid e'er such love and sorrow meet,\nOr thorns compose so rich a crown?\n\nWere the whole realm of nature mine,\nThat were an offering far too small;\nLove so amazing, so divine,\nDemands my soul, my life, my all.",
+    "lyricsFr": "Ô Fils de Dieu quand nous voyons,\nLa grande œuvre et Ton trépas,\nPour nous donner Ta pleine gloire,\nQue sommes-nous? Que valons-nous?\n\nPour Toi, Jésus, furent les pleurs,\nPour Toi, les clous et la lance cruelle,\nPour nous, c'est la vie éternelle,\nCe sont les célestes faveurs.\n\nDu monde sussions-nous tous les biens,\nTrop petits seraient nos offrande,\nEt même l'œuvre si grande\nQue déploie Ton amour pour les tiens.\n\nMagnifique donc, et pour jamais\nAutour de Ta sainte personne,\nSeigneur Jésus, l'Église résonne\nUn chant d'allégresse et de paix."
+  },
+  {
+    "id": 74,
+    "number": "73",
+    "titleEn": "SUFFERING, DYING",
+    "titleFr": "PRÈS DU TRÔNE",
+    "lyricsEn": "Suffering, dying on the cross of Calvary,\nJesus set me free from satan's slavery;\nWashing sin and guilt away,\nCleansing heart and soul to stay\nIn forever, making me a child of God.\n\nChorus:\nTherefore come, friend, come along with me,\nTherefore come, friend, come along with me.\nTherefore come, O friend, come!\nSinner, wait with me the narrow road of life.\n\nWhat the Lord has done for me on Calvary,\nBrought salvation throughout all eternity.\nThough the devil still may fight,\nJesus conquers at my side;\nNothing ever shall destroy my faith in God.\n\nWorldly pleasures, earthly follies be ye gone!\nSatisfaction and true gladness grant ye none.\nI will walk the narrow road\nThat my Lord has gone before me to,\nThough it be the way of suffering and the cross.\n\nSoon, one day, my race of faith on earth will end,\nGladly then my knees before my Lord I'll bend,\nThen rejoicing I shall go\nThroughout all eternity",
+    "lyricsFr": "Près du trône de la grâce et de la paix,\nj'ai reçu la promesse d'un Dieu parfait,\nEn Jésus j'ai la victoire\nPar Sa mort expiatoire,\nPrès du trône de la grâce et de la paix.\n\nRefrain:\nViens, oh! Viens, viens avec moi,\nViens, oh! Viens, viens à la croix!\nÀ la croix viens et vois,\nViens cher ami, viens avec moi à la croix!\n\nPuis le monde, vanité des vanités;\nPoint de paix pour l'âme en ses frivolités.\nPar lui sont nous captives,\nNous conduisant à l'abîme,\nFuis le monde, vanité des vanités!\n\nJe veux être un vaillant soldat du Sauveur,\nLutter, combattre toujours avec ferveur.\nEt rempli de confiance,\nJ'accepterai la souffrance,\nJe veux être un vaillant soldat du Sauveur.\n\nQuand viendra ému l'heureux moment les portes d'or,\nEt qu'enfin j'attendrai ce bonheur port,\nUn bonheur pur et sans ombre\nRemplissera le nombre."
+  },
+  {
+    "id": 75,
+    "number": "74",
+    "titleEn": "THE LORD HAS DONE",
+    "titleFr": "SEIGNEUR, TA MORT",
+    "lyricsEn": "The Lord has done so much for me,\nForever shall I love Him.\nHe died for me on Calvary,\nForever shall I love Him.\n\nChorus:\nForever shall I love Him,\nJesus Christ, my Saviour;\nForever shall I love Him,\nFor He did so much for me.\n\nHe saved my life from death and hell;\nForever shall I love Him,\nHe healed my soul and made me well,\nForever shall I love Him.\n\nHe keeps and guards me every day;\nForever shall I love Him.\nRestores my strength and leads the way,\nForever shall I love Him.\n\nThere is no friend like Christ, my Lord,\nForever shall I love Him.\nHe is my strength and my comfort,\nForever shall I love Him.\n\nThough many may not know my God;\nForever shall I love Him.\nIn spite of my nature so odd,\nForever shall I love Him.",
+    "lyricsFr": "Seigneur, Ta mort à Golgotha,\nMe fait T'aimer sans cesse.\nEt ne permet mon grand Roi,\nQue jamais je Te laisse.\n\nRefrain:\nJe T'aimerai sans cesse,\nJésus-Christ, mon Sauveur;\nJe T'aimerai sans cesse,\nPour tous Tes grands bienfaits.\n\nDu châtiment de mes péchés,\nQui étaient mon mérite,\nTon sang m'a sauvé\nDans Ta plus forte lutte.\n\nTon sang versé m'a purifie\nDe toutes mes souillures,\nTon corps brisé pour moi acquit\nPardon de Ses blessures.\n\nY a-t-il comme Toi un autre ami\nQui sans réserve m'aime,\nQui m'aide dans toute ma vie,\nDonnant Ses biens suprêmes?\n\nBeaucoup peuvent T'abandonner,\nPour T'aimer sans cesse.\nPour Ton amour et Ta bonté,\nÀ jamais je Te confesse."
+  },
+  {
+    "id": 76,
+    "number": "75",
+    "titleEn": "WHOSOEVER WILL",
+    "titleFr": "PUBLIEZ BIEN HAUT",
+    "lyricsEn": "Whosoever heareth, shout, shout the sound!\nSpread the blessed tidings all the world around;\nSpread the joyful news\nwherever man is found:\n\"Whosoever will may come.\"\n\nChorus:\n\"Whosoever will, whosoever will,\"\nSend the proclamation over vale and hill;\n'Tis a loving Father,\ncalls the wanderer home:\n\"Whosoever will, may come.\"\n\nWhosoever cometh need not delay,\nNow the door is open, enter while you may;\nJesus is the true, the only living Way:\n\"Whosoever will may come.\"\n\n\"Whosoever will,\" the promise is secure;\n\"Whosoever will,\" forever must endure;\n\"Whosoever will,\" 'tis life forevermore;\n\"Whosoever will may come.\"",
+    "lyricsFr": "Publiez bien haut la grande nouvelle:\nLe ciel est ouvert à tout être humain.\nLa route est tracée, un guide fidèle\nVous conduira par la main.\n\nRefrain:\nLe salut pour tous, le salut par grâce,\nÀ tous est offert, à tous est donné.\nOh! Venez, pécheurs,\nvenez, le temps passe,\nEt vous serez pardonnés.\n\nPubliez bien haut la grande nouvelle:\nLe sang de Jésus a tout effacé.\nOù que vous soyez,\nc'est vous qu'il appelle,\nVous qu'Il avec offense.\n\nPubliez bien haut la grande nouvelle:\nÀ tous ses rachetés, faites-le courir.\nPartout où se trouve une âme rebelle,\nUn pécheur à secourir."
+  },
+    {
+    "id": 77,
+    "number": "76",
+    "titleEn": "HAVE YOU ANY ROOM",
+    "titleFr": "ENTENDS-TU? JÉSUS T'APPELLE",
+    "lyricsEn": "Have you any room for Jesus,\nHe who bore your load of sin?\nAs He knocks and asks permission,\nSinner, will you let Him in?\n\nChorus:\nRoom for Jesus, King of glory,\nHasten now, His word obey;\nSwing the heart's door widely open,\nBid Him enter while you may.\n\nRoom for pleasure, room for business,\nBut for Christ the crucified,\nNot a place that He can enter,\nIn your heart, for which He died?\n\nHave you any room for Jesus,\nAs in grace He calls again?\nOh, to-day is time accepted,\nTomorrow you may call in vain.\n\nRoom and time now give to Jesus,\nSoon will pass God's day of grace;\nSoon thy heart left cold and silent,\nAnd thy Saviour's pleading cease.",
+    "lyricsFr": "Entends-tu? Jésus t'appelle,\nViens, ô pécheur! Il t'attend.\nQuelle grâce! Il est fidèle.\nTu résistas trop souvent.\n\nRefrain:\nLaisse entrer le Roi de gloire,\nLaisse tont cœur s'émouvoir,\nLaisse entrer le Roi de gloire,\nHâte-toi ne tarde plus.\n\nPour le péché, pour le monde,\nTu trouves en ton cœur,\nPoint pour le Sauveur du monde,\nRien pour l'humble de douleur!\n\nJésus frappe, Il frappe encore.\nOuvre à Ton Libérateur,\nEt pour toi luire l'aurore\nDu véritable bonheur.\n\nAujourd'hui, c'est jour de grâce.\nNe compte pas sur demain,\nPeut-être que ton Sauveur passe,\nSaisie ta présente main!"
+  },
+  {
+    "id": 78,
+    "number": "77",
+    "titleEn": "SOFTLY AND TENDERLY",
+    "titleFr": "DOUCEMENT, TENDREMENT",
+    "lyricsEn": "Softly and tenderly Jesus is calling,\nCalling for you and for me;\nPatiently Jesus is waiting and watching,\nWatching for you and for me.\n\nChorus:\n\"Come home! Come home!\nYe who are weary, come home!\"\nEarnestly, tenderly Jesus is calling,\nCalling, \"O sinner, come home!\"\n\nWhy should we tarry\nWhen Jesus is pleading,\nPleading for you and for me?\n\nWhy should we linger\nAnd heed not His mercies,\nMercies for you and for me?\n\nTime is now fleeting,\nThe moments are passing,\nPassing from you and from me;\nShadows are gathering,\nWeatherbeds are coming,\nComing for you and for me.\n\nOh for the wonderful\nLove He has promised,\nPromised for you and for me!\nThough we have sinned,\nHe has mercy and pardon,\nPardon for you and for me.",
+    "lyricsFr": "Doucement, tendrement Jésus appelle,\nNous appelle, vous et moi,\nPatiemment Jésus attend le rebelle,\nIl nous attend, vous et moi!\n\nRefrain:\nVenez, venez à Moi!\nFatigués, chargés, venez à Moi!\nDoucement, tendrement\nJésus appelle, venez,\noh! Venez à Moi!\n\nN'hésitons plus puisque\nle Sauveur plaide,\n\nPlaide pour vous et pour moi;\nPar des soupirs l'Esprit Saint intercède,\nEt sa faveur vous suit pour moi.\n\nLe monde, hélas!\nN'est qu'une ombre qui passe,\nPasse pour vous et pour moi,\nGloire à Jésus! Au ciel est une place,\nPrête pour vous et pour moi.\n\nAu vrai bonheur,\nJésus-Christ nous convie,\nBonheur pour vous et pour moi;\nIl nous l'acquit quand Il donna Sa vie,\nSa vie est pour vous et moi."
+  },
+  {
+    "id": 79,
+    "number": "78",
+    "titleEn": "PASS ME NOT",
+    "titleFr": "SUR LA PLACE DU VILLAGE",
+    "lyricsEn": "Pass me not, O gentle Saviour,\nHear my humble cry;\nWhile on others Thou art calling,\nDo not pass me by.\n\nChorus:\nSaviour, Saviour,\nHear my humble cry;\nWhile on others Thou art calling,\nDo not pass me by.\n\nLet me at Thy throne of mercy\nFind a sweet relief,\nKneeling there in deep contrition;\nHelp my unbelief.\n\nTrusting only in Thy merit,\nWould I seek Thy face;\nHeal my wounded, broken spirit,\nSave me by Thy grace.\n\nThou, the spring of all my comfort,\nMore than life to me,\nWhom have I on earth beside Thee?\nWhom in heaven but Thee?",
+    "lyricsFr": "Sur la place du village,\nIls sont accourue,\nLes malheureux de tout âge,\nCriant à Jésus.\n\nRefrain:\nSeigneur, doux Maître!\nEn Toi seul j'ai foi.\nDaigne restaurer mon être.\nSeigneur, guéris-moi!\n\n\"Qu'il vous soit fait\", dit le Maître,\n\"Selon votre foi\".\nSa parole les pénètre,\nBannit leur effroi.\n\nIl pose Ses mains bénies,\nSur leurs fronts brûlants\nEt chasse la maladie\nDe leurs corps souffrants.\n\nEt soudain la vie divine,\nRestaure leurs corps.\nComme hier en Palestine,\nIl guérit encore."
+  },
+  {
+    "id": 80,
+    "number": "79",
+    "titleEn": "MY FAITH LOOKS UP TO THEE",
+    "titleFr": "SEIGNEUR, À TON APPEL",
+    "lyricsEn": "My faith looks up to Thee,\nThou Lamb of Calvary, Saviour divine!\nNow hear me while I pray,\ntake all my sin away,\nOh, let me from this day be wholly Thine.\n\nMay Thy rich grace impart\nStrength to my fainting heart, my zeal inspire!\nAs Thou hast died for me,\nO may my love to Thee,\nPure, warm, and changeless be, a living fire.\n\nWhile life's dark maze I tread,\nAnd griefs around me spread, be Thou my guide;\nBid darkness turn to day,\nwipe sorrow's tears away,\nNor let me ever stray from Thee aside.\n\nWhen ends life's transient dream,\nwhen death's cold sullen stream shall o'er me roll;\nBlest Saviour, then in love, fear and\ndistrust remove;\nO bear me safe above, a ransomed soul!",
+    "lyricsFr": "Seigneur, à Ton appel,\nTon peuple universel de l'Éternel,\nNous voici pour la guerre,\nuni mes Frères en Père,\nBrisé de l'adversaire le joug cruel.\n\nTu nous as engendrés,\nÀ Tes pieds demeure. Guide fidèle,\nConduis-moi tendre et fort.\n\nNous voici tes guerriers!\nQui combat et qui prie, Tu les soutiens!\n\nNous vivons à Ton lieu, Rédempteur,\nAnnoncer au pécheur le seul Sauveur;\nPuis être envoyé pour\npuis être Ton Saint empire\nOù il tutte et se expire,\nTout tutte est en trouve!\n\nSauveur, divin Modèle,\nÀ Tes pieds demeure. Guide fidèle,\nConduis-moi tendre et fort.\nà Toi seul je veux vivre,\nEt vivre toute ma vis pour Toi, doux Maître!\n\nRay Palmer (1830), L. Mason (1832)"
+  },
+  {
+    "id": 81,
+    "number": "80",
+    "titleEn": "HAVE THINE OWN WAY, LORD",
+    "titleFr": "JÉSUS POUR MAÎTRE",
+    "lyricsEn": "Have Thine own way,\nLord! Have Thine own way!\nThou art the Potter, I am the clay.\nMould me and make me after Thy will,\nWhile I am waiting, yielded and still.\n\nHave Thine own way,\nLord! Have Thine own way!\nSearch me and try me, Master, to-day!\nWhiter than snow, Lord, wash me just now,\nAs in Thy presence humbly I bow.\n\nHave Thine own way,\nLord! Have Thine own way!\nWounded and weary, help me I pray!\nPower - all power - surely is Thine!\nTouch me and heal me, Saviour divine!\n\nHave Thine own way,\nLord! Have Thine own way!\nHold over my being absolute sway!\nFill with Thy Spirit till all shall see\nChrist only, always, living in me!",
+    "lyricsFr": "Jésus pour Maître,\nrègne sur moi,\nSoumets mon être,\nsois-en le Roi.\n\nJe suis l'argile, Toi, le Potier,\nRends-moi docile, Ton prisonnier.\n\nJésus, Lumière, pénètre en moi,\nÉprouve, éclaire ma faible foi,\nPlus blanc que neige,\nrends-moi, Seigneur,\nEt de tout piège,\ngarde mon cœur.\n\nÔ Jésus source de guérison,\nSois dans ma course, santé, pardon!\nPar Ta puissance protège-moi!\nEt Ta présence révèle-Toi!\n\nJe m'abandonne, Jésus à Toi,\nDétruis, pardonne tout mal en moi,\nRemplis ma vie de Ton Esprit."
+  },
+  {
+    "id": 82,
+    "number": "81",
+    "titleEn": "OH, WHAT FELLOWSHIP",
+    "titleFr": "QUELLE COMMUNION",
+    "lyricsEn": "Oh, what fellowship, oh, what joy is mine,\nResting in the everlasting arms!\nOh, what blessedness,\nOh, what peace is mine,\nResting in the everlasting arms!\n\nChorus:\nSafe and secure from all alarms;\nResting, resting,\nResting in the everlasting arms!\n\nOh, how safe am I in this pilgrim way,\nResting in the everlasting arms!\nOh, how bright the path\ngrows from day to day,\nResting in the everlasting arms!\n\nWhat have I to dread, what have I to fear,\nResting in the everlasting arms?\nI have perfect peace with my Saviour near,\nResting in the everlasting arms!",
+    "lyricsFr": "Quelle communion! Quelle joie profonde!\nDans les bras puissants de l'Éternel.\nQuel repos céleste! Quelle paix abonde!\nDans les bras sacrés de l'Éternel.\n\nRefrain:\nGardé, gardé\nDe toute alarme par l'Éternel!\nGardé, gardé,\nGardé dans les bras\npuissants de l'Éternel!\n\nQuelle sûreté dans chaque menace!\nDans les bras puissants de l'Éternel!\nQuelle victoire, par Sa pleine grâce,\nDans les bras sacrés de l'Éternel.\n\nQue craindrais-je donc,\nsur mon chemin de vie,\nDans les bras puissants de l'Éternel.\nTous mes besoins sont en Lui remplis,\nDans les bras sacrés de l'Éternel!"
+  },
+  {
+    "id": 83,
+    "number": "82",
+    "titleEn": "HAVE WE HEARD",
+    "titleFr": "ENTENDS-TU LE CHANT",
+    "lyricsEn": "We have heard the joyful sound,\nJesus saves, Jesus saves,\nSpread the tidings all around,\nJesus saves, Jesus saves,\nBear the news to every land,\nClimb the steeps and cross the waves,\nOnward! 'tis our Lord's command;\nJesus saves, Jesus saves.\n\nWaft it on the rolling tide,\nJesus saves, Jesus saves,\nTell to sinners far and wide,\nJesus saves, Jesus saves,\nSing, ye islands of the sea,\nEcho back, ye ocean caves,\nEarth shall keep her jubilee,\nJesus saves, Jesus saves.\n\nSing above the battle's strife,\nJesus saves, Jesus saves,\nBy His death and endless life,\nJesus saves, Jesus saves,\nSing it softly thro' the gloom,\nWhen the heart for mercy craves,\nSing in triumph o'er the tomb,\nJesus sauve aujourd'hui!\n\nGive the winds a mighty voice,\nJesus saves, Jesus saves;\nLet the nations now rejoice,\nJesus saves, Jesus saves;\nShout salvation full and free,\nHighest hills and deepest caves,\nThis our song of victory,\nJesus saves, Jesus saves.",
+    "lyricsFr": "Entends-tu le chant joyeux?\nJésus sauve aujourd'hui!\nIl retentit en tout lieu,\nJésus sauve aujourd'hui!\nC'est un cri de délivrance,\nUn cantique d'espérance\nQui remplit l'espace immense,\nJésus sauve aujourd'hui!\n\nPartout élève la voix,\nJésus sauve aujourd'hui!\nVaillant Héraut de la croix,\nJésus sauve aujourd'hui!\nÀ parler Jésus t'appelle,\nRépands au loin la nouvelle,\nEn connais-tu de plus belle,\nJésus sauve aujourd'hui!\n\nRépète au pécheur contrit!\nJésus sauve aujourd'hui!\nCeux que le mal asservit,\nJésus sauve aujourd'hui!\n\nVa jusqu'à l'île lointaine\nBriser le captif la chaîne\nRacine au cœur dans le peine,\nJésus sauve aujourd'hui!\n\nJusqu'aux confins des déserts,\nJésus sauve aujourd'hui!\nJusque par-delà les mers,\nJésus sauve aujourd'hui!\nQue d'un pôle à l'autre pôle\nOn porte la Sainte Parole\nQui guérit, instruit, console,\nJésus sauve aujourd'hui!"
+  },
+  {
+    "id": 84,
+    "number": "83",
+    "titleEn": "FAR, FAR AWAY IN HEATHEN",
+    "titleFr": "LEVEZ LES YEUX SUR TOUT",
+    "lyricsEn": "Far, far away in heathen darkness\ndwelling,\nMillions of souls forever may be lost,\nWho, who will go salvation's story telling,\nLooking to Jesus, counting not the cost?\n\nChorus:\n\"All power is given unto Me!\nGo ye into all the world\nAnd preach the Gospel,\nAnd I am with you always.\"\n\nSee o'er the world\nwide open doors inviting\nSoldiers of Christ, arise and enter in!\nChristians, awake! Your forces all uniting,\nSend forth the Gospel, break the chains of sin!\n\n\"Why will ye die?\"\nThe voice of God is calling;\n\"Why will ye die?\" Re-echo in His name;\nJesus has died to save\nfrom death appalling;\nLife and salvation therefore go proclaim.\n\nGod speed the day when\nthose of every nation,\n\"Glory to God\" triumphantly shall sing;\nRansomed, redeemed,\nrejoicing in salvation,\nShout, \"Alleluia! For the Lord is King.'",
+    "lyricsFr": "Levez les yeux sur tout le vaste monde:\nVers les pays où règne encore la nuit,\nJésus attend que\nsa voix leur réponde:\n\"Seigneur, j'irai, conduit par Ton Esprit.\"\n\nRefrain:\n\"Je suis avec vous tous les jours,\nCommencez Mon puissant secours.\nAllez partout prêcher le saint Évangile,\nD'une ville à l'autre ville!\"\n\nLevez les yeux car\nla moisson est mûre\nPourquoi rester sans\nrien faire aujourd'hui?\nAvec Jésus, Ouvrier bon dure,\nN'hésitez plus.\nNe comptez que sur Lui!\n\nLevez les yeux,\nsonnez de la trompette,\nPour rallier sous l'étendard sanglant\nDe Jésus-Christ,\ntout héros et prophète,\nPrêt à mourir, s'il faut, en combattant!\n\nLevez les yeux sur\nl'immense détresse,\nDe tout mortel ignorant du salut.\nRéveillez-vous! Hâtez la bonne nouvelle!\nAllez! Partez! Courez droit vers le but!"
+  },
+  {
+    "id": 85,
+    "number": "84",
+    "titleEn": "THOU CHRIST OF BURNING",
+    "titleFr": "SEIGNEUR CE QUE MON COEUR",
+    "lyricsEn": "Thou Christ of burning, cleansing flame,\nSend the fire!\nThy blood-bought gift today we claim,\nSend the fire!\nLook down and see this waiting host,\nSend us the promised Holy Ghost,\nWe want another Pentecost,\nSend the fire!\n\nGod of Elijah, hear our cry,\nSend the fire!\nHe'll make us fit to live or die,\nSend the fire!\nTo burn up every trace of sin,\nTo bring the light and glory in,\nThe revolution now begin,\nSend the fire!\n\n'Tis fire we want, for fire we plead.\nSend the fire!\nThe fire will meet our ev'ry need,\nSend the fire!\nFor strength to always do the right,\nFor grace to conquer in the fight,\nFor pow'r to walk the world in white,\nSend the fire!",
+    "lyricsFr": "Seigneur ce que mon cœur réclame,\nC'est le feu.\nQue sur nous descende la flamme\nDe Ton feu.\nAinsi que dans la chambre haute,\nQu'une nouvelle Pentecôte\nFasse de nous de vrais apôtres,\nPleinss de feu!\n\nLe seul pouvoir de la victoire,\nC'est le feu!\nNous voulons refléter Ta gloire\nPar le feu!\nDieu Tout-Puissant, Toi qui nous aimes,\nViens nous affranchir de nous-mêmes,\nRemplis-nous de Ton amour suprême,\nPar le feu!\n\nNous voulons porter l'espérance,\nPar le feu!\nEt proclamer la délivrance,\nPar le feu!\nTon règne vienne sur la terre,\nTa volonté soit faite, ô Père,\nExauce enfin notre prière,\nPar le feu!"
+  },
+  {
+    "id": 86,
+    "number": "85",
+    "titleEn": "REVIVE THY WORK, O LORD",
+    "titleFr": "RÉVEILLE-NOUS, SEIGNEUR",
+    "lyricsEn": "Revive Thy work, O Lord!\nNow to Thy saints appear;\nOh, speak with pow'r to every soul,\nAnd let Thy people hear.\n\nChorus:\nRevive Thy work, O Lord!\nWhile here to Thee we bow;\nDescend, O gracious Lord,\ndescend,\nOh come, and bless us now!\n\nRevive Thy work, O Lord!\nExalt Thy precious name!\nAnd may Thy love in every heart\nBe kindled to a flame.\n\nRevive Thy work, O Lord!\nAnd bless to all Thy word!\nAnd may its pure and sacred truth\nIn living faith be heard!",
+    "lyricsFr": "Réveille-nous, Seigneur!\nFais remuer Ta puissance!\nÀ Ta parole ouvre nos cœurs,\nEt parle avec puissance.\n\nRefrain:\nRéveille-nous, Seigneur!\nPendant que nous prions\nDescends, Seigneur, descends vers\nnous!\nViens glorifier Ton nom!\n\nRéveille-nous, Seigneur!\nPour exalter Ton nom,\nMets Ton amour dans chaque cœur,\nFais de nous des flambeaux.\n\nRéveille-nous, Seigneur!\nEt bénis Ta parole,\nQue, par Sa force et vérité,\nElle, nos vies contrôle."
+  },
+  {
+    "id": 87,
+    "number": "86",
+    "titleEn": "THERE IS A LAND",
+    "titleFr": "BEAU PAYS DE LUMIÈRE",
+    "lyricsEn": "There's a land that is fairer than day,\nAnd by faith we can see it afar;\nFor the Father waits over the way,\nTo prepare us a dwelling place there.\n\nChorus:\nIn the sweet by-and-by,\nWe shall meet on that beautiful shore.\nIn the sweet by-and-by,\nWe shall meet on that beautiful shore.\n\nWe shall sing on that beautiful shore\nThe melodious songs of the blest,\nAnd our spirits shall sorrow no more,\nNot a sigh for the blessing of rest.\n\nTo our bountiful Father above,\nWe will offer our tribute of praise,\nFor the glorious gift of His love,\nAnd the blessings that hallow our days.",
+    "lyricsFr": "Beau pays de lumière et d'amour,\nPar la foi nous voyons ton rivage,\nNos besoins, Jésus arment chaque jour,\nAux bien-aimés de Son héritage.\n\nRefrain:\nOh! Doux patrie rendez-vous,\nAprès notre terrestre voyage,\nOh! doux patrie rendez-vous,\nTon céleste repos est pour nous\n\nEt le beau cantique de l'Agneau,\nNous le chanterons avec les anges,\nLe bonheur sera toujours nouveau,\nJamais ne cesseront les louanges.\n\nOui, nous voulons bénir le Seigneur;\nLouer d'un cœur joyeux notre Père,\nPour tant de trésors de Son Sauveur,\nJésus-Christ qui Se livra pour nous."
+  },
+  {
+    "id": 88,
+    "number": "87",
+    "titleEn": "WHEN THE TRUMPET",
+    "titleFr": "QUAND LA TROMPETTE",
+    "lyricsEn": "When the trumpet of the Lord shall sound\nAnd time shall be no more,\nAnd the morning breaks,\neternal, bright and fair;\nWhen the saved of earth shall gather\nOver on the other shore,\nAnd the roll is called up yonder,\nI'll be there.\n\nChorus:\nWhen the roll is called up yonder,\nWhen the roll is called up yonder,\nWhen the roll is called up yonder,\nI'll be there.\n\nOn that bright and cloudless morning\nWhen the dead in Christ shall rise,\nAnd the glory of His resurrection share;\nWhen His chosen ones shall gather\nTo their homes beyond the skies,\nAnd the roll is called up yonder,\nI'll be there.\n\nLet me labour for the Master\nFrom the dawn till setting sun,\nLet me talk of all His wondrous love and care,\nThen when all of life is over,\nAnd my work on earth is done,\nAnd the roll is called up yonder,\nI'll be there.",
+    "lyricsFr": "Quand la trompette céleste\nAnnoncera les temps nouveaux,\nQuand se lèvera l'aurore de l'éternité,\nEt que s'ouvrira le grand\nLivre où sera de l'Agneau,\nPourrons-nous répondre\nà l'appel: 'Je suis prêt!'\n\nRefrain:\nÀ l'appel de la trompette,\nQuand Jésus-Christ reviendra\nJe serai prêt.\n\nOh! Quel glorieux réveil:\nLes morts en Christ se lèveront,\nEt nous qui serons vivants,\nTous ensemble nous monterons,\nserons changés.\nEn un clin d'œil nous monterons,\nPour être avec Lui toujours.\nSeras-tu prêt?\n\nTravaillons pour notre Maître\nTandis qu'il fait encore jour,\nParlons des âmes pour l'éternité!\nS'il ne t'épargne à tous postes,\nAvance et prouve Ton amour,\nQuand Il viendra nous chercher,\nSeras-tu prêt?"
+  },
+  {
+    "id": 89,
+    "number": "88",
+    "titleEn": "PRAISE TO THE LORD",
+    "titleFr": "BÉNISSONS DIEU, NOTRE ROI",
+    "lyricsEn": "Praise to the Lord, the Almighty,\nThe King of creation!\nO my soul, praise Him\nFor He is thy health and salvation!\nAll ye who hear,\nNow to His temple draw near;\nPraise Him in glad adoration.\n\nPraise to the Lord, who o'er all\nAll things so wondrously reigneth,\nShelters thee under His wings,\nYea, so gently sustaineth!\nHast thou not seen\nHow thy desires e'er have been\nGranted in what He ordaineth?\n\nPraise to the Lord, who doth prosper\nThy work and defend thee;\nSurely His goodness and mercy\nHere daily attend thee.\nPonder anew\nWhat the Almighty can do,\nIf with His love He befriend thee.",
+    "lyricsFr": "Bénissons Dieu, notre Roi,\nLe grand Roi de gloire,\nDe Ses bienfaits incessants,\nCélébrons la mémoire!\nC'est que en tous lieux,\nSur la terre et dans les cieux,\nMontent les chants de louange!\n\nPrisons les Seigneur, Roi,\nDont la main étendue,\nPuissant sur les faibles enfants,\nComme l'aigle en la nue!\nTous guéris,\nSon pouvoir est infini,\nIl nous remplit d'allégresse.\n\nBénissons Dieu, notre Roi!\nCélébrons Ses louanges,\nCar Il demeure à jamais\nQuand tout passe et tout change.\nJe voudrais pouvoir\nAdressons-Lui notre chant,\nL'unissons nos voix à Ses anges!"
+  },
+  {
+    "id": 90,
+    "number": "89",
+    "titleEn": "THE LOVE OF GOD IS GREATER",
+    "titleFr": "L'AMOUR DE DIEU DE LOIN",
+    "lyricsEn": "The love of God is greater far\nThan tongue or pen can ever tell;\nIt goes beyond the highest star,\nAnd reaches to the lowest hell.\nThe guilty pair, bowed down with care,\nGod gave His Son to win;\nHis erring child He reconciled,\nAnd pardoned from his sin.\n\nChorus:\nO love of God, how rich and pure!\nHow measureless and strong!\nIt shall for evermore endure,\nThe saints' and angels' song.\n\nWhen hoary time shall pass away,\nAnd earthly thrones and kingdoms fall,\nWhen men who here refuse to pray,\nOn rocks and hills and mountains call,\nGod's love so sure, shall still endure,\nAll measureless and strong;\nRedeeming grace to Adam's race,\nThe saints' and angels' song.\n\nCould we with ink the ocean fill,\nAnd were the skies of parchment made,\nWere every stalk on earth a quill,\nAnd every man a scribe by trade,\nTo write the love of God above\nWould drain the ocean dry.\nNor could the scroll contain the whole,\nThough stretched from sky to sky.",
+    "lyricsFr": "L'amour de Dieu de loin surpasse,\nCe que peut dire un cœur humain.\nIl est plus grand que les espaces,\nMême en l'abîme il nous atteint.\nPour le péché de notre monde,\nDieu nous donne Jésus.\nIl nous pardonne, oh paix profonde,\nIl sauve les perdus.\n\nRefrain:\nL'amour de Dieu si fort si tendre,\nEst un amour sans fin:\nTel est le chant que font entendre,\nLes anges et les saints.\n\nEt si le monde un jour chancelle,\nOu tremble, il est roi,\nQuand les rebelles, tous les rebelles,\nLa moindre pareille un grand effroi,\nDe Dieu l'amour qui rien ne lasse,\nPour nous encore vivra.\nÂme alléluia.\n\nVersez de l'encre dans les ondes,\nChangez les cieux en parchemin,\nTendez la plume à tout le monde,\nEt que tout écrive et écrivain.\nVous dire tout l'amour du Père,\nTarirait l'océan!\nEt jamais sur le parchemin rouleau,\nSur ces divins rouleaux."
+  },
+  {
+    "id": 91,
+    "number": "90",
+    "titleEn": "A PILGRIM WAS I",
+    "titleFr": "PÈLERIN J'ERRAIS LOIN",
+    "lyricsEn": "A pilgrim was I, and a wandering,\nIn the cold night of sin I did roam,\nWhen Jesus Christ the kind Shepherd found me,\nAnd now here's my way home.\n\nChorus:\nSurely goodness and\nmercy shall follow me,\nAll the days, all the days of my life.\nAnd I shall dwell\nthe house of God forever,\nAnd I shall feast at the table spread for me.\nSurely goodness and\nmercy shall follow me\nAll the days, all the days of my life.\n\nJesus restores my soul when I'm weary,\nMy Saviour gives me strength day by day.\nJesus leads me besides the still waters,\nAnd He guards me each step of the way.\n\nWhen I walk through\nthe dark lonesome valley,\nMy Redeemer will walk with me there,\nAnd safely His mighty hand will lead me\nTo the mansions He's gone to prepare.",
+    "lyricsFr": "Pèlerin j'errais loin de mon Père,\nDans le froid de la nuit du péché.\nMaintenant je suis dans la lumière\nDu bon Berger qui m'a retrouvé.\n\nRefrain:\nOui, le bonheur et la grâce,\nm'accompagneront\ntous les jours,\ntous les jours de ma vie.\nJ'habiterai dans la maison de l'Éternel,\nJ'habiterai dans la maison du Père.\nOui le bonheur et la grâce\nm'accompagneront\ntous les jours,\ntous les jours de ma vie.\n\nIl me conduit près des sources calmes,\nJe me repose près de l'amour.\nChaque jour Il restaure mon âme,\nEt dans Ses sentiers j'ai le secours.\n\nDans la vallée de l'ombre de la mort,\nJe ne crains aucun mal, aucun mal,\nJe suis environné de Ton bras fort,\nEt ma coupe déborde de joie."
+  },
+  {
+    "id": 92,
+    "number": "91",
+    "titleEn": "WHEN ALL MY LABOURS",
+    "titleFr": "IL VA VENIR, LE SEIGNEUR",
+    "lyricsEn": "When all my labours and trials are o'er,\nAnd I am safe on that beautiful shore,\nJust to be near the dear Lord I adore,\nWill through the ages be glory for me.\n\nChorus:\nO that will be glory for me,\nGlory for me, glory for me,\nWhen by His grace\nI shall look on His face,\nThat will be glory, be glory for me.\n\nWhen by the gift of His infinite grace,\nI am accorded in heaven a place,\nJust to be there and to look on His face,\nWill through the ages be glory for me.\n\nFriends will be there I have loved long ago,\nJoy like a river around me will flow,\nYet, just a smile from my Saviour, I know,\nWill through the ages be glory for me.",
+    "lyricsFr": "Il va venir, le Seigneur que j'adore;\nBientôt Sa voix retentira du ciel\nÀ mes regards l'horizon se colore\nDes purs rayons du soleil éternel.\n\nRefrain:\nGloire à Toi pour toujours,\nGloire à jamais, gloire à Ton nom!\nDe Ton retour je me souviens plus,\nEt pour toujours j'exalterai Ton nom.\n\nÀ la Maison du Père,\nOù mon Sauveur m'appelle,\nLes Saints,\nLes lieux qu'éclaire une gloire éternelle,\nMe sont ouverts par l'Oeuvre du Sauveur,\nOh! ô Jésus!\n\nBonheur ineffable! Quand dans Ta gloire,\nAux yeux des rachetés Tu paraîtras,\nJésus, avec Toi la victoire,\nPrès de Toi, pour toujours Tu me prendras."
+  },
+  {
+    "id": 93,
+    "number": "92",
+    "titleEn": "HE WAS NAILED TO THE CROSS",
+    "titleFr": "ATTACHÉ À LA CROIX",
+    "lyricsEn": "What a wonderful, wonderful Saviour,\nWho would die on the cross for me!\nFreely shedding His precious lifeblood,\nThat the sinner might be made free.\n\nChorus:\nHe was nailed to the cross for me,\nHe was nailed to the cross for me,\nOn the cross crucified for me He died,\nHe was nailed to the cross for me.\n\nThat He left His heavenly glory,\nTo accomplish His Father's plan;\nHe went up to the Mount of Calvary,\nTook upon Him the form of man.\n\nHe was wounded for our transgressions,\nAnd He bore all our sorrows, too;\nHe's the Healer of ev'ry sickness,\nThis He died on the world to do.\n\nSo He gave His life for others,\nIn Redeeming this world from sin,\nAnd He's gone to prepare a mansion,\nWhen He comes He will take us in.",
+    "lyricsFr": "Quel Sauveur merveilleux je possède,\nIl s'est sacrifié pour moi.\nEt c'est vie innocente, Il cède,\nPour mourir sur l'infâme bois.\n\nRefrain:\nAttaché à la croix pour moi,\nAttaché à la croix pour moi,\nIl a pris mon péché, il m'a délivré,\nAttaché à la croix pour moi.\n\nIl renonce un moment à son trône\nPour le plan rédempteur de Dieu.\nDéposant pour moi sa couronne,\nUn tel prix pour me rendre heureux!\n\nMéprisé, rejeté par les hommes,\nPour mes iniquités brisées,\nIl me dit, « vois combien je t'aime »,\nEt Il me a lavé pour me racheter.\n\nLe salut accomplit sur la terre,\nMon sauveur remonta au ciel,\nMais bientôt, Il va réapparaître,\nMon bonheur sera éternel."
   }
 ]
+

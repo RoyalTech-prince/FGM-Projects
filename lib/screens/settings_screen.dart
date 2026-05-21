@@ -1,152 +1,203 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:full_gospel_hymnal/providers/settings_provider.dart';
-import 'package:full_gospel_hymnal/utils/app_strings.dart';
+import 'package:full_gospel_hymnal/screens/about_screen.dart'; // Make sure to import the new screen file
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
+  // Helper calculation to spawn the dropdown popup precisely aligned to the right-hand margin of the screen
+  void _showRightAlignedMenu<T>({
+    required BuildContext context,
+    required List<PopupMenuEntry<T>> items,
+    required ValueChanged<T> onSelected,
+  }) {
+    final RenderBox button = context.findRenderObject() as RenderBox;
+    final RenderBox overlay = Navigator.of(context).overlay!.context.findRenderObject() as RenderBox;
+    
+    // Setting up position vectors forcing alignment constraints to the far right edge
+    final RelativeRect position = RelativeRect.fromRect(
+      Rect.fromPoints(
+        button.localToGlobal(button.size.topRight(Offset.zero), ancestor: overlay),
+        button.localToGlobal(button.size.bottomRight(Offset.zero), ancestor: overlay),
+      ),
+      Offset.zero & overlay.size,
+    );
+
+    showMenu<T>(
+      context: context,
+      position: position,
+      items: items,
+      color: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF1E1E1E) : Colors.white,
+    ).then((value) {
+      if (value != null) onSelected(value);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    // Listen to the SettingsProvider for any changes
-    final settings = context.watch<SettingsProvider>();
     final theme = Theme.of(context);
-    final lang = settings.defaultLanguage;
-
+    final settings = context.watch<SettingsProvider>();
+    
+    final isDark = theme.brightness == Brightness.dark;
+    final isBlackTheme = settings.selectedtheme == AppThemeType.black;
     final isRedTheme = settings.selectedtheme == AppThemeType.red;
-    final isWhiteTheme = settings.selectedtheme == AppThemeType.white;
-    final contentColor = isRedTheme ? Colors.white : (theme.brightness == Brightness.dark ? Colors.white : Colors.black);
+    final isEng = settings.defaultLanguage == AppLanguage.en;
+
+    final Color cardBg = isRedTheme ? Colors.white : theme.cardColor;
+    final Color itemTextColor = isRedTheme ? Colors.black : (isDark ? Colors.white : Colors.black87);
+    final Color sectionTextColor = isRedTheme ? const Color(0xFFD32F2F) : (isDark ? Colors.white70 : Colors.black54);
+    final Color dynamicIconColor = isBlackTheme ? Colors.white : const Color(0xFFD32F2F);
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
-      appBar: AppBar(
-        backgroundColor: isRedTheme ? const Color(0xFFD32F2F) : theme.scaffoldBackgroundColor,
-        elevation: 0,
-        iconTheme: IconThemeData(color: contentColor),
-        title: Text(AppStrings.settings(lang), style: TextStyle(color: contentColor)),
-      ),
-      body: ListView(
-        children: [
-          _buildSectionHeader(AppStrings.appearance(lang), 
-          isRedTheme ? Colors.white70 : const Color(0xFFD32F2F)
-          ),
-          // --- THEME SELECTION ---
-          ListTile(
-            leading: Icon(Icons.palette, color: contentColor),
-            title: Text(AppStrings.theme(lang), style: TextStyle(color: contentColor)),
-            subtitle: Text(_getThemeName(settings.selectedtheme, lang)),
-            onTap: () => _showThemeDialog(context, settings),
-          ),
-
-          // --- FONT SIZE ADJUSTMENT ---
-          ListTile(
-            leading: Icon(Icons.format_size, color: contentColor),
-            title: Text(lang == AppLanguage.en ? "Lyrics Font Size" : "Taille de la police"),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                IconButton(
-                  icon: Icon(Icons.remove_circle, color: isRedTheme ? Colors.white : Colors.red),
-                  onPressed: () => settings.updateFontSize(false),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Main Header Label
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
+                child: Text(
+                  isEng ? "Settings" : "Paramètres",
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: isRedTheme ? Colors.white : (isDark ? Colors.white : Colors.black87),
+                  ),
                 ),
-                Text(
-                  settings.fontSize.toInt().toString(), 
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
-                ),
-                IconButton(
-                  icon: Icon(Icons.add_circle, color: isRedTheme ? Colors.white : Colors.red),
-                  onPressed: () => settings.updateFontSize(true),
-                ),
-              ],
-            ),
-          ),
+              ),
 
-          Divider(
-            color: isWhiteTheme ? const Color.fromARGB(77, 14, 13, 13) : Colors.white,
-            thickness: 1,      // Optional: makes the line clearer
-            indent: 19,         // Optional: adds spacing from the left
-            endIndent: 19,      // Optional: adds spacing from the right
-          ),
-          _buildSectionHeader(AppStrings.language(lang), isRedTheme ? Colors.white70 : const Color(0xFFD32F2F)),
+              // SECTION 1: PREFERENCES
+              _buildSectionHeader(isEng ? "PREFERENCES" : "PRÉFÉRENCES", sectionTextColor),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                decoration: BoxDecoration(
+                  color: cardBg,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: [
+                    // 1. Language Row - Entire surface triggers right-aligned menu
+                    Builder(
+                      builder: (context) => ListTile(
+                        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+                        leading: Icon(Icons.language, color: dynamicIconColor),
+                        title: Text(isEng ? "App Language" : "Langue de l'application", style: TextStyle(color: itemTextColor, fontWeight: FontWeight.w600)),
+                        subtitle: Text(settings.defaultLanguage == AppLanguage.en ? "English" : "Français", style: const TextStyle(color: Colors.grey, fontSize: 13)),
+                        trailing: Icon(Icons.arrow_drop_down, color: itemTextColor.withOpacity(0.6)),
+                        onTap: () => _showRightAlignedMenu<AppLanguage>(
+                          context: context,
+                          onSelected: (newLang) => settings.updateDefaultLanguage(newLang),
+                          items: const [
+                            PopupMenuItem(value: AppLanguage.en, child: Text("English (EN)")),
+                            PopupMenuItem(value: AppLanguage.fr, child: Text("Français (FR)")),
+                          ],
+                        ),
+                      ),
+                    ),
+                    _buildDivider(isRedTheme, isDark),
+                    
+                    // 2. Theme Row - Entire surface triggers right-aligned menu
+                    Builder(
+                      builder: (context) => ListTile(
+                        leading: Icon(Icons.palette, color: dynamicIconColor),
+                        title: Text(isEng ? "Theme Mode" : "Mode Thème", style: TextStyle(color: itemTextColor, fontWeight: FontWeight.w600)),
+                        subtitle: Text(
+                          settings.selectedtheme == AppThemeType.red 
+                              ? (isEng ? "Red(default)" : "Rouge(defaut)") 
+                              : (settings.selectedtheme == AppThemeType.white ? (isEng ? "White" : "Blanc") : (isEng ? "Black" : "Noir")),
+                          style: const TextStyle(color: Colors.grey, fontSize: 13),
+                        ),
+                        trailing: Icon(Icons.arrow_drop_down, color: itemTextColor.withOpacity(0.6)),
+                        onTap: () => _showRightAlignedMenu<AppThemeType>(
+                          context: context,
+                          onSelected: (newTheme) => settings.updateTheme(newTheme),
+                          items: [
+                            PopupMenuItem(value: AppThemeType.red, child: Text(isEng ? "Red" : "Rouge")),
+                            PopupMenuItem(value: AppThemeType.white, child: Text(isEng ? "White" : "Blanc")),
+                            PopupMenuItem(value: AppThemeType.black, child: Text(isEng ? "Black" : "Noir")),
+                          ],
+                        ),
+                      ),
+                    ),
+                    _buildDivider(isRedTheme, isDark),
 
-          // --- DEFAULT LANGUAGE SELECTION ---
-          RadioListTile<AppLanguage>(
-            title: const Text("English"),
-            subtitle: const Text("Set as default language"),
-            value: AppLanguage.en,
-            groupValue: settings.defaultLanguage,
-            activeColor: isWhiteTheme ?const Color(0xFFD32F2F) : Colors.white,
-            onChanged: (val) {
-              if (val != null) settings.updateDefaultLanguage(val);
-            },
+                    // 3. Typography Size Selection Item Row
+                    ListTile(
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+                      leading: Icon(Icons.text_fields, color: dynamicIconColor),
+                      title: Text(isEng ? "Lyrics Font Size" : "Taille de la police", style: TextStyle(color: itemTextColor, fontWeight: FontWeight.w600)),
+                      subtitle: Text("${settings.fontSize.toInt()} pt", style: const TextStyle(color: Colors.grey, fontSize: 13)),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            icon: Icon(Icons.remove_circle_outline, color: dynamicIconColor),
+                            onPressed: () => settings.updateFontSize(false),
+                          ),
+                          IconButton(
+                            icon: Icon(Icons.add_circle_outline, color: dynamicIconColor),
+                            onPressed: () => settings.updateFontSize(true),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 20), 
+
+              // SECTION 2: ABOUT (Standalone Isolated Box Layout Screen Router)
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                decoration: BoxDecoration(
+                  color: cardBg,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: ListTile(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  leading: Icon(Icons.info_outline, color: dynamicIconColor),
+                  title: Text(
+                    isEng ? "About" : "À propos", 
+                    style: TextStyle(color: itemTextColor, fontWeight: FontWeight.w600)
+                  ),
+                  trailing: Icon(Icons.arrow_forward_ios, size: 16, color: itemTextColor.withOpacity(0.5)),
+                  // UPDATED: Navigates completely to an entirely standalone separate view layout screen
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AboutScreen()),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
-          RadioListTile<AppLanguage>(
-            title: const Text("Français"),
-            subtitle: const Text("Définir comme langue par défaut"),
-            value: AppLanguage.fr,
-            groupValue: settings.defaultLanguage,
-            activeColor: isWhiteTheme ?const Color(0xFFD32F2F) : Colors.white,
-            onChanged: (val) {
-              if (val != null) settings.updateDefaultLanguage(val);
-            },
-          ),
-        ],
+        ),
       ),
     );
   }
 
-  // Helper for Section Titles (APPEARANCE, LANGUAGE, etc.)
-  Widget _buildSectionHeader(String title, Color headerColor) {
+  Widget _buildSectionHeader(String title, Color color) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       child: Text(
-        title.toUpperCase(),
-        style: TextStyle(
-          color: headerColor,
-          fontWeight: FontWeight.bold,
-          fontSize: 13,
-          letterSpacing: 1.2,
-        ),
+        title,
+        style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: color, letterSpacing: 1.2),
       ),
     );
   }
 
-  // Maps the Enum to the String in AppStrings
-  String _getThemeName(AppThemeType type, AppLanguage lang) {
-    switch (type) {
-      case AppThemeType.red:
-        return AppStrings.themeRed(lang);
-      case AppThemeType.white:
-        return AppStrings.themeWhite(lang);
-      case AppThemeType.black:
-        return AppStrings.themeBlack(lang);
-    }
-  }
-
-  // Displays the Theme selection popup
-  void _showThemeDialog(BuildContext context, SettingsProvider settings) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(AppStrings.theme(settings.defaultLanguage)),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: AppThemeType.values.map((type) {
-            return RadioListTile<AppThemeType>(
-              title: Text(_getThemeName(type, settings.defaultLanguage)),
-              value: type,
-              groupValue: settings.selectedtheme, // Matches your getter
-              onChanged: (val) {
-                if (val != null) {
-                  settings.updateTheme(val);
-                  Navigator.pop(context); // Close dialog after selection
-                }
-              },
-            );
-          }).toList(),
-        ),
-      ),
+  Widget _buildDivider(bool isRedTheme, bool isDark) {
+    return Divider(
+      indent: 55,
+      endIndent: 15,
+      height: 1,
+      color: isRedTheme ? const Color(0xFFD32F2F).withOpacity(0.1) : (isDark ? Colors.white10 : Colors.black12),
     );
   }
 }

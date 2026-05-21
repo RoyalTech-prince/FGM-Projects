@@ -1,3 +1,5 @@
+import 'dart:io'; // Crucial for checking platform types (Linux vs Android)
+import 'package:flutter/foundation.dart'; // Crucial for kIsWeb check
 import 'package:flutter/material.dart';
 import 'package:full_gospel_hymnal/providers/hymn_provider.dart';
 import 'package:full_gospel_hymnal/screens/splash_screen.dart';
@@ -15,8 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final settings = context.watch<SettingsProvider>();
-    // Check if it's the first time the app is opened
-    //final bool isFirstRun = Hive.box('settings').get('isFirstRun', defaultValue: true);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -68,39 +68,48 @@ class MyApp extends StatelessWidget {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await windowManager.ensureInitialized();
-  await Hive.initFlutter();
-
-  //Make status bar transparent
+  
+  // Make status bar transparent on mobile devices
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
   ));
 
+  // Initialize Local Databases (Hive)
+  await Hive.initFlutter();
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
-  await Hive.box('settings').clear();
+  //await Hive.box('settings').clear();
   await Hive.deleteBoxFromDisk('hymnsBox');
   
-  //WakelockPlus keeps the screen on while the app is open
+  // WakelockPlus keeps the screen on while the app is open
   WakelockPlus.enable();
 
-  WindowOptions windowOptions = const WindowOptions(
-    size: Size(400, 700),
-    center: true,
-    title: "Full Gospel Hymnal",
+  // Create the core App runner widget structure
+  final appRoot = MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => SettingsProvider()),
+      ChangeNotifierProvider(create: (_) => HymnProvider()..initHymns()),
+    ],
+    child: const MyApp(),
   );
-  await windowManager.waitUntilReadyToShow(windowOptions,() async {
-    runApp(
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => SettingsProvider()),
-          ChangeNotifierProvider(create: (_) => HymnProvider()..initHymns()),
-        ],
-        child: const MyApp(),
-      ),
-      
-    );
-  });
-}
 
+  // PLATFORM CHECK FOR DESKTOP WINDOW INITIALIZATION
+  if (!kIsWeb && (Platform.isLinux || Platform.isMacOS || Platform.isWindows)) {
+    await windowManager.ensureInitialized();
+    
+    WindowOptions windowOptions = const WindowOptions(
+      size: Size(400, 700),
+      center: true,
+      title: "Full Gospel Hymnal",
+    );
+
+    await windowManager.waitUntilReadyToShow(windowOptions, () async {
+      await windowManager.show();
+      await windowManager.focus();
+    });
+  }
+
+  // Fallback / Main runner: Runs globally regardless of execution environment
+  runApp(appRoot);
+}

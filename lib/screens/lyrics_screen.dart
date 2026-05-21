@@ -48,7 +48,7 @@ class LyricsScreen extends StatelessWidget {
               child: _buildTopBarContent(context, theme, settings),
             ),
             
-            _buildHymnHeader(theme, settings),
+            _buildHymnHeader(context, theme, settings),
             
             _buildLyricsCard(context, theme, settings),
           ],
@@ -62,6 +62,9 @@ class LyricsScreen extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
     final Color iconColor = isRedTheme ? const Color(0xFFD32F2F) : (theme.brightness == Brightness.dark ? Colors.white : Colors.black);
 
+    // Check if the current hymn is favorited to determine the heart color
+    final bool isFav = settings.isFavorite(hymn.number);
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: Row(
@@ -74,6 +77,20 @@ class LyricsScreen extends StatelessWidget {
           _languageToggle(settings, isRedTheme, isDark),
           Row(
             children: [
+              // UPDATED: Dynamic Interactive Favorite Heart Button Action
+              IconButton(
+                icon: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 250),
+                  child: Icon(
+                    isFav ? Icons.favorite : Icons.favorite_border,
+                    key: ValueKey<bool>(isFav),
+                    color: isFav 
+                        ? const Color(0xFFE63946) // Striking crimson-pink filled heart
+                        : iconColor,
+                  ),
+                ),
+                onPressed: () => settings.toggleFavorite(hymn.number),
+              ),
               IconButton(
                 icon: Icon(Icons.remove, color: iconColor),
                 onPressed: () => settings.updateFontSize(false),
@@ -96,13 +113,12 @@ class LyricsScreen extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
         decoration: BoxDecoration(
-          //Giving a transparent background
           border: Border.all(
             color: isRedTheme ? const Color(0xFFD32F2F) : (isDark ? Colors.white54 : Colors.black26),
             width: 1.5,
           ),
           borderRadius: BorderRadius.circular(20),
-        ),
+         ),
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 200),
           child: Text(
@@ -120,66 +136,76 @@ class LyricsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildHymnHeader(ThemeData theme, SettingsProvider settings) {
+  Widget _buildHymnHeader(BuildContext context, ThemeData theme, SettingsProvider settings) {
     final isThemeRed = settings.selectedtheme == AppThemeType.red;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 12),
-      color: isThemeRed ? Colors.white : (theme.brightness == Brightness.dark ? Colors.black : const Color.fromARGB(255, 218, 216, 216)),
-      child: Text(
-        "${hymn.number.toString().padLeft(2, '0')}. ${settings.isEnglish ? hymn.titleEn : hymn.titleFr}",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontWeight: FontWeight.w900, 
-          fontSize: 18,
-          color: isThemeRed ? Colors.black : (theme.brightness == Brightness.dark ? Colors.white : const Color(0xFF2D3436)),
+    final isThemeWhite = settings.selectedtheme == AppThemeType.white;
+    
+    // SAFE FIX: Clean padding logic that gracefully formats strings (e.g. '01', '41a')
+    final String visualDisplayNumber = hymn.number.length < 2 
+        ? hymn.number.padLeft(2, '0') 
+        : hymn.number;
+
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarIconBrightness: isThemeRed || isThemeWhite ? Brightness.dark : Brightness.light,
+        statusBarBrightness: isThemeRed || isThemeWhite ? Brightness.light : Brightness.dark,
+      ),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        color: isThemeRed ? Colors.white : (theme.brightness == Brightness.dark ? Colors.black : const Color.fromARGB(255, 218, 216, 216)),
+        child: Text(
+          "$visualDisplayNumber. ${settings.isEnglish ? hymn.titleEn : hymn.titleFr}",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w900, 
+            fontSize: 18,
+            color: isThemeRed ? Colors.black : (theme.brightness == Brightness.dark ? Colors.white : const Color(0xFF2D3436)),
+          ),
         ),
       ),
     );
   }
 
- Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
-  final isBlackTheme = settings.selectedtheme == AppThemeType.black;
-  final isRedTheme = settings.selectedtheme == AppThemeType.red;
+  Widget _buildLyricsCard(BuildContext context, ThemeData theme, SettingsProvider settings) {
+    final isBlackTheme = settings.selectedtheme == AppThemeType.black;
+    final isRedTheme = settings.selectedtheme == AppThemeType.red;
 
-  return Expanded(
-    child: Container(
-      // 1. Forced width ensures the card doesn't change size with text
-      width: double.infinity, 
-      margin: const EdgeInsets.fromLTRB(15, 10, 15, 20),
-      decoration: BoxDecoration(
-        color: isRedTheme ? Colors.white : (isBlackTheme ? const Color(0xFF121212) : Colors.white),
-        borderRadius: BorderRadius.circular(15),
-        // Adding a subtle shadow makes the "fixed" area feel more grounded
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(15),
-        child: ScrollConfiguration(
-          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            // 2. Padding stays constant, font size only affects internal scrolling
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-            child: Text(
-              settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: settings.fontSize,
-                height: 1.6, // Increased line height for better readability
-                color: isBlackTheme ? Colors.white : Colors.black,
+    return Expanded(
+      child: Container(
+        width: double.infinity, 
+        margin: const EdgeInsets.fromLTRB(15, 10, 15, 20),
+        decoration: BoxDecoration(
+          color: isRedTheme ? Colors.white : (isBlackTheme ? const Color(0xFF121212) : Colors.white),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 5),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              child: Text(
+                settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: settings.fontSize,
+                  height: 1.6, 
+                  color: isBlackTheme ? Colors.white : Colors.black,
+                ),
               ),
             ),
           ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }

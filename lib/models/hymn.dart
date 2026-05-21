@@ -6,21 +6,25 @@ part 'hymn.g.dart';  // This will be generated
 @HiveType(typeId: 0)
 class Hymn {
   @HiveField(0)
-  final int number;
-  
+  final int id;
+
   @HiveField(1)
-  final String titleEn;
+  final String number;
   
   @HiveField(2)
-  final String titleFr;
+  final String titleEn;
   
   @HiveField(3)
-  final String lyricsEn;
+  final String titleFr;
   
   @HiveField(4)
+  final String lyricsEn;
+  
+  @HiveField(5)
   final String lyricsFr;
 
   Hymn({
+    required this.id,
     required this.number,
     required this.titleEn,
     required this.titleFr,
@@ -30,7 +34,8 @@ class Hymn {
 
   factory Hymn.fromJson(Map<String, dynamic> json) {
     return Hymn(
-      number: json['number'] as int,
+      id: json['id'] as int,
+      number: json['number'] as String,
       titleEn: json['titleEn'] as String,
       titleFr: json['titleFr'] as String,
       lyricsEn: json['lyricsEn'] as String,
@@ -41,6 +46,7 @@ class Hymn {
   // Convert to JSON if needed
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'number': number,
       'titleEn': titleEn,
       'titleFr': titleFr,

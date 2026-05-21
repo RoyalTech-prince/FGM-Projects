@@ -14,33 +14,37 @@ class HymnProvider extends ChangeNotifier {
 
   // Getters
   List<Hymn> get hymns => _searchQuery.isEmpty ? _hymns : _filteredHymns;
+  
+  // NEW: Exposes the full master list so the Favorites Screen works flawlessly
+  List<Hymn> get allHymns => _hymns;
+  
   bool get isLoading => _isLoading;
   String? get errorMessage => _errorMessage;
 
   /// Optimized search implementation for production
   void search(String query) {
-  _searchQuery = query.trim().toLowerCase();
-  
-  if (_searchQuery.isEmpty) {
-    _filteredHymns = [];
-  } else {
-    // Searching across number, titles, AND lyrics for full coverage
-    _filteredHymns = _hymns.where((hymn) {
-      final matchesNumber = hymn.number.toString().contains(_searchQuery);
-      
-      final matchesTitle = hymn.titleEn.toLowerCase().contains(_searchQuery) ||
-                           hymn.titleFr.toLowerCase().contains(_searchQuery);
-      
-      // Logic to check lyrics fields
-      final matchesLyrics = hymn.lyricsEn.toLowerCase().contains(_searchQuery) ||
-                            hymn.lyricsFr.toLowerCase().contains(_searchQuery);
+    _searchQuery = query.trim().toLowerCase();
+    
+    if (_searchQuery.isEmpty) {
+      _filteredHymns = [];
+    } else {
+      // Searching across number, titles, AND lyrics for full coverage
+      _filteredHymns = _hymns.where((hymn) {
+        final matchesNumber = hymn.number.toLowerCase().contains(_searchQuery);
+        
+        final matchesTitle = hymn.titleEn.toLowerCase().contains(_searchQuery) ||
+                             hymn.titleFr.toLowerCase().contains(_searchQuery);
+        
+        // Logic to check lyrics fields
+        final matchesLyrics = hymn.lyricsEn.toLowerCase().contains(_searchQuery) ||
+                              hymn.lyricsFr.toLowerCase().contains(_searchQuery);
 
-      return matchesNumber || matchesTitle || matchesLyrics;
-    }).toList();
+        return matchesNumber || matchesTitle || matchesLyrics;
+      }).toList();
+    }
+    
+    notifyListeners();
   }
-  
-  notifyListeners();
-}
 
   /// Initializing the local DB from assets if empty
   Future<void> initHymns() async {
@@ -57,9 +61,12 @@ class HymnProvider extends ChangeNotifier {
           final List<dynamic> jsonData = json.decode(jsonString);
           
           // Bulk insert for better performance on mobile devices
-          final Map<int, Hymn> hymnMap = {
-            for (var item in jsonData) item['number']: Hymn.fromJson(item)
-          };
+          // FIXED: Map registration keys use the integer ID now, not the alphanumeric number string
+          final Map<int, Hymn> hymnMap = {};
+          for (var item in jsonData) {
+            final parsedHymn = Hymn.fromJson(item);
+            hymnMap[parsedHymn.id] = parsedHymn;
+          }
           await _hymnsBox!.putAll(hymnMap);
           
         } catch (e) {
@@ -72,7 +79,9 @@ class HymnProvider extends ChangeNotifier {
       
       // Materialize list from Hive and sort
       _hymns = _hymnsBox!.values.toList();
-      _hymns.sort((a, b) => a.number.compareTo(b.number));
+      
+      // FIXED: Sort using the structural integer ID so 41a and 41b sit beautifully in line
+      _hymns.sort((a, b) => a.id.compareTo(b.id));
       
       _isLoading = false;
       notifyListeners();
@@ -98,8 +107,6 @@ class HymnProvider extends ChangeNotifier {
 
   @override
   void dispose() {
-    // Standard cleanup: we don't close the Box here because it's
-    // managed at the app lifecycle level in main.dart
     super.dispose();
   }
 }
