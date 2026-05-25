@@ -79,7 +79,7 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
-  //await Hive.box('settings').clear();
+  await Hive.box('settings').clear();
   await Hive.deleteBoxFromDisk('hymnsBox');
   
   // WakelockPlus keeps the screen on while the app is open

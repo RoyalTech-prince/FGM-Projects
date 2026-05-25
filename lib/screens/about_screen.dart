@@ -1,9 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:full_gospel_hymnal/providers/settings_provider.dart';
+import 'package:url_launcher/url_launcher.dart'; // Import to open mailing clients
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
+
+  // Helper method to safely format and trigger the system mailto URI intent
+  Future<void> _sendCorrectionEmail(bool isEng) async {
+    const String email = "royalprince@gmail.com"; 
+    final String subject = isEng 
+        ? "FULL GOSPEL HYMNAL CORRECTION" 
+        : "CORRECTION DES CANTIQUES DU PLEIN EVANGILE";
+    
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+      queryParameters: {
+        'subject': subject,
+      },
+    );
+
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri, mode: LaunchMode.externalApplication);
+      } else {
+        debugPrint("Could not find a valid email application client on this device.");
+      }
+    } catch (e) {
+      debugPrint("Error launching email client: $e");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +43,8 @@ class AboutScreen extends StatelessWidget {
     final isEng = settings.defaultLanguage == AppLanguage.en;
 
     final Color cardBg = isRedTheme ? Colors.white : theme.cardColor;
+    
+    // FIXED CONTRAST: Use dark text when on the white card background of Red Theme
     final Color itemTextColor = isRedTheme ? Colors.black : (isDark ? Colors.white : Colors.black87);
     final Color dynamicIconColor = isBlackTheme ? Colors.white : const Color(0xFFD32F2F);
 
@@ -34,15 +63,14 @@ class AboutScreen extends StatelessWidget {
           style: TextStyle(color: itemTextColor, fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ),
-      // UPDATED: Changed from Center() to Align() to pull content slightly upward
       body: Align(
-        alignment: const Alignment(0.0, -0.5), // X: 0.0 (centered horizontally), Y: -0.3 (shifted up slightly)
+        alignment: const Alignment(0.0, -0.4), // Positions content nicely pulled slightly upward
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
           physics: const BouncingScrollPhysics(),
           child: Column(
-            mainAxisSize: MainAxisSize.min, // Shrinks column to fit contents only
-            crossAxisAlignment: CrossAxisAlignment.center, // Keeps all elements centered horizontally
+            mainAxisSize: MainAxisSize.min, 
+            crossAxisAlignment: CrossAxisAlignment.center, 
             children: [
               const SizedBox(height: 10),
               // App Branding Graphic Context
@@ -73,6 +101,80 @@ class AboutScreen extends StatelessWidget {
                     : "Louange à l'Éternel des armées",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 15, height: 1.6, color: itemTextColor.withOpacity(0.8)),
+              ),
+
+              const SizedBox(height: 35),
+
+              // ADDED: Dropdown Accordion Contact Section
+              Theme(
+                data: theme.copyWith(dividerColor: Colors.transparent), // Removes the default expansion borders
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: cardBg,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: isDark ? Colors.white10 : Colors.black12,
+                      width: 1,
+                    ),
+                  ),
+                  child: ExpansionTile(
+                    iconColor: dynamicIconColor,
+                    collapsedIconColor: itemTextColor.withOpacity(0.6),
+                    leading: Icon(Icons.mail_outline, color: dynamicIconColor),
+                    title: Text(
+                      isEng ? "Contact Us" : "Contactez-nous",
+                      style: TextStyle(color: itemTextColor, fontWeight: FontWeight.bold, fontSize: 15),
+                    ),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Divider(height: 1, thickness: 1, color: Colors.black12),
+                            const SizedBox(height: 12),
+                            // Encouraging feedback text block
+                            Text(
+                              isEng
+                                  ? "Did you spot a typing error, an incorrect hymn number, or missing lyrics? Please let us know so we can fix it immediately!"
+                                  : "Avez-vous remarqué une faute de d'orthographe, un numéro de cantique incorrect ou des paroles manquantes ? Signalez-le nous pour correction immédiate !",
+                              style: TextStyle(color: itemTextColor.withOpacity(0.7), fontSize: 13, height: 1.4),
+                            ),
+                            const SizedBox(height: 15),
+                            // Interactive Clickable Email Button Card
+                            InkWell(
+                              onTap: () => _sendCorrectionEmail(isEng),
+                              borderRadius: BorderRadius.circular(12),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
+                                decoration: BoxDecoration(
+                                  color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFD32F2F).withOpacity(0.05),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        "royaltechprince@gmail.com",
+                                        style: TextStyle(
+                                          color: dynamicIconColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    ),
+                                    Icon(Icons.open_in_new, size: 16, color: dynamicIconColor),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
