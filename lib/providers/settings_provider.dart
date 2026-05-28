@@ -15,7 +15,7 @@ class SettingsProvider extends ChangeNotifier {
   //Reading hymn language
   AppLanguage _currentLanguage = AppLanguage.en;
 
-  AppThemeType _selectedTheme = AppThemeType.red;
+  AppThemeType _selectedTheme = AppThemeType.white;
 
   // NEW: List to keep track of favorited hymn numbers dynamically
   List<String> _favoriteHymnNumbers = [];
@@ -33,7 +33,7 @@ class SettingsProvider extends ChangeNotifier {
     _fontSize = _settingsBox.get('fontSize', defaultValue: 18.0);
     
     //Load Theme
-    final themeIndex = _settingsBox.get('themeIndex', defaultValue: AppThemeType.red.index);
+    final themeIndex = _settingsBox.get('themeIndex', defaultValue: AppThemeType.white.index);
     _selectedTheme = AppThemeType.values[themeIndex];
 
     // NEW: Load favorite hymns from disk (defaulting to an empty list if none exist)

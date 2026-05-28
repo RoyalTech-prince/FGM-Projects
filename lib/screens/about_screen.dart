@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:full_gospel_hymnal/providers/settings_provider.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import to open mailing clients
+import 'package:flutter/services.dart'; // Import for clipboard functionality
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
   // Helper method to safely format and trigger the system mailto URI intent
   Future<void> _sendCorrectionEmail(bool isEng) async {
-    const String email = "royalprince@gmail.com"; 
+    const String email = "royaltechprince@gmail.com"; 
     final String subject = isEng 
         ? "FULL GOSPEL HYMNAL CORRECTION" 
         : "CORRECTION DES CANTIQUES DU PLEIN EVANGILE";
@@ -86,7 +87,7 @@ class AboutScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 22, 
                   fontWeight: FontWeight.w700, 
-                  color: itemTextColor, 
+                  color: isRedTheme ? Colors.white : (isDark ? Colors.white : Colors.black87), 
                 ),
               ),
               const SizedBox(height: 8),
@@ -141,9 +142,30 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: itemTextColor.withOpacity(0.7), fontSize: 13, height: 1.4),
                             ),
                             const SizedBox(height: 15),
-                            // Interactive Clickable Email Button Card
+                            // Interactive Clickable & Copyable Email Button Card
                             InkWell(
                               onTap: () => _sendCorrectionEmail(isEng),
+                              onLongPress: () async {
+                                // Automatically copies the email to the Android/iOS clipboard
+                                await Clipboard.setData(
+                                  const ClipboardData(text: "royaltechprince@gmail.com"),
+                                );
+                                
+                                // Shows a quick confirmation snackbar to the user
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        isEng 
+                                            ? "Email address copied to clipboard!" 
+                                            : "Adresse e-mail copiée dans le presse-papiers !",
+                                      ),
+                                      backgroundColor: isDark ? Colors.grey[900] : const Color(0xFFD32F2F),
+                                      duration: const Duration(seconds: 2),
+                                    ),
+                                  );
+                                }
+                              },
                               borderRadius: BorderRadius.circular(12),
                               child: Container(
                                 padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
@@ -164,7 +186,12 @@ class AboutScreen extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Icon(Icons.open_in_new, size: 16, color: dynamicIconColor),
+                                    // The arrowed box icon also explicitly opens the email client when tapped
+                                    Icon(
+                                      Icons.open_in_new, 
+                                      size: 16, 
+                                      color: dynamicIconColor,
+                                    ),
                                   ],
                                 ),
                               ),

@@ -20,9 +20,9 @@ class LyricsScreen extends StatelessWidget {
 
     final statusBarTheme = SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      statusBarIconBrightness: theme.brightness == Brightness.dark 
-          ? Brightness.light 
-          : Brightness.dark,
+      statusBarIconBrightness: isRedTheme 
+          ? Brightness.dark
+          : (isWhiteTheme ? Brightness.dark : Brightness.light),
       statusBarBrightness: theme.brightness,
     );
 
