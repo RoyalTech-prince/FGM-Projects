@@ -34,13 +34,37 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+/// Custom physics class that safely restricts swipes to exactly one screen at a time
+class SinglePageScrollPhysics extends PageScrollPhysics {
+  const SinglePageScrollPhysics({super.parent});
+
+  @override
+  SinglePageScrollPhysics applyTo(ScrollPhysics? ancestor) {
+    return SinglePageScrollPhysics(parent: buildParent(ancestor));
+  }
+
+  @override
+  Simulation? createBallisticSimulation(ScrollMetrics position, double velocity) {
+    // If the user flings fast to the right (positive velocity) or left (negative velocity),
+    // we damp the speed down to a tiny number close to 0.
+    // This stops kinetic momentum from carrying the swipe across multiple screens!
+    if (velocity.abs() > 0.0) {
+      return super.createBallisticSimulation(
+        position, 
+        velocity.isNegative ? -0.000001 : 0.000001,
+      );
+    }
+    return super.createBallisticSimulation(position, velocity);
+  }
+}
+
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   late PageController _pageController;
-  double _dragStartX = 0.0;
-  bool _isSwiping = false;
+  
+  // Track the target page index during a swipe to prevent page-skipping
+  double _lastReportedPage = 0.0;
 
-  // NEW: Exactly 3 Screens ordered matching the bottom navbar tabs
   late final List<Widget> _screens;
 
   @override
@@ -50,9 +74,22 @@ class _HomeScreenState extends State<HomeScreen> {
     
     _screens = [
       const HymnListBody(),
-      const FavoritesScreen(), // Index 1: Inserted Favorites Screen
-      const SettingsScreen(),             // Index 2: Shifted Settings Screen
+      const FavoritesScreen(), 
+      const SettingsScreen(),             
     ];
+
+    // Listen to the page position dynamically as the user drags
+    _pageController.addListener(() {
+      final double currentPage = _pageController.page ?? 0.0;
+      
+      // If the user tries to jump past the immediate next screen in a single swipe,
+      // we gracefully clamp the position back to the safe boundary.
+      if ((currentPage - _lastReportedPage).abs() > 1.0) {
+        _pageController.position.correctPixels(
+          _lastReportedPage.roundToDouble() * _pageController.position.viewportDimension
+        );
+      }
+    });
   }
 
   @override
@@ -71,56 +108,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
       
-      body: GestureDetector(
-        // Intercept horizontal drag gestures manually to control page thresholds
-        onHorizontalDragStart: (details) {
-          _dragStartX = details.globalPosition.dx;
-          _isSwiping = true;
-        },
-        onHorizontalDragUpdate: (details) {
-          if (!_isSwiping) return;
-          
-          final dragDistance = details.globalPosition.dx - _dragStartX;
-          
-          // Swipe Left (Go to Next Page)
-          if (dragDistance < -60) { // 60 is the pixel threshold sensitivity
-            _isSwiping = false; // Lock out further movement during this gesture
-            if (_currentIndex < _screens.length - 1) {
-              final nextIndex = _currentIndex + 1;
-              setState(() {
-                _currentIndex = nextIndex;
-              });
-              _pageController.animateToPage(
-                nextIndex,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
-            }
+      body: NotificationListener<ScrollNotification>(
+        onNotification: (ScrollNotification notification) {
+          // As soon as the user finishes their drag gesture, we lock in the new reference baseline
+          if (notification is ScrollEndNotification) {
+            _lastReportedPage = _pageController.page ?? 0.0;
           }
-          
-          // Swipe Right (Go to Previous Page)
-          if (dragDistance > 60) {
-            _isSwiping = false;
-            if (_currentIndex > 0) {
-              final prevIndex = _currentIndex - 1;
-              setState(() {
-                _currentIndex = prevIndex;
-              });
-              _pageController.animateToPage(
-                prevIndex,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
-            }
-          }
-        },
-        onHorizontalDragEnd: (_) {
-          _isSwiping = false; // Reset gesture lock on release
+          return false;
         },
         child: PageView(
           controller: _pageController,
-          // CRITICAL: Disable standard momentum scrolling entirely so native physics won't skip pages
-          physics: const NeverScrollableScrollPhysics(), 
+          // BouncingScrollPhysics provides that instant, fluid WhatsApp touch-response
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()), 
           onPageChanged: (index) {
             setState(() {
               _currentIndex = index;
@@ -131,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // Keeps labels locked in place evenly
+        type: BottomNavigationBarType.fixed, 
         backgroundColor: isRedTheme ? Colors.white : (theme.brightness == Brightness.dark ? Colors.black : Colors.white),
         selectedItemColor: const Color(0xFFD32F2F),
         unselectedItemColor: Colors.grey,
@@ -139,8 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
+            _lastReportedPage = index.toDouble(); // Sync anchor on tab tap
           });
-          // Smooth animation sliding transition on navigation button tap
           _pageController.animateToPage(
             index,
             duration: const Duration(milliseconds: 300),
@@ -148,17 +147,14 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         },
         items: [
-          // Index 0
           BottomNavigationBarItem(
             icon: const Icon(Icons.home), 
             label: lang == AppLanguage.en ? 'Home' : 'Accueil',
           ),
-          // Index 1: Added Favorites 
           BottomNavigationBarItem(
             icon: const Icon(Icons.favorite), 
             label: lang == AppLanguage.en ? 'Favorites' : 'Favoris',
           ),
-          // Index 2: Shifted Settings
           BottomNavigationBarItem(
             icon: const Icon(Icons.settings), 
             label: AppStrings.settings(lang),
