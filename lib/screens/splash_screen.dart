@@ -24,9 +24,11 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(milliseconds: 2000));
 
     // 2. Start the spindle line expansion
-    setState(() {
-      _lineFactor = 1.0;
-    });
+    if (mounted) {
+      setState(() {
+        _lineFactor = 1.0;
+      });
+    }
 
     // 3. Wait for the animation to finish
     await Future.delayed(const Duration(milliseconds: 2500));
@@ -55,83 +57,91 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     const Color softBg = Color(0xFFF5F5F5);
     final double screenHeight = MediaQuery.of(context).size.height;
+    
+    // Check orientation to calculate optical balance adjustments
+    final bool isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
 
     return Scaffold(
       backgroundColor: softBg,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // 1. TOP MARGIN (Your original 80)
-            const SizedBox(height: 80),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // TOP BALANCER: Safe baseline spacing
+              const Spacer(flex: 3),
 
-            // 2. FRENCH TEXT
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                "Chantez des louanges de Dieu",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Limelight',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black87,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 60),
-
-            // 3. THE CENTER LOGO & NOTES (Using your exact coordinates)
-            Stack(
-              alignment: Alignment.bottomCenter,
-              clipBehavior: Clip.none,
-              children: [
-                // Bottom Layer: The Main Logo
-                Image.asset(
-                  'assets/images/FGM.png',
-                  width: 200,
-                  fit: BoxFit.contain,
-                ),
-                
-                // Top Layer: The Music Notes (Your restored offset)
-                Positioned(
-                  bottom: -(screenHeight * 0.05), 
-                  child: Image.asset(
-                    'assets/images/MusicNote.png',
-                    width: 180,
-                    height: 60,
-                    fit: BoxFit.contain,
+              // FRENCH TEXT
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  "Chantez des louanges de Dieu",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Limelight',
+                    fontSize: 22,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black87,
                   ),
                 ),
-              ],
-            ),
+              ),
 
-            const SizedBox(height: 40),
+              // Dynamic gap between text and core branding
+              const Spacer(flex: 1),
 
-            // 4. THE TAPERED ANIMATED LINE (Width 230)
-            _buildAnimatedLine(230),
+              // THE CENTER LOGO & NOTES
+              Stack(
+                alignment: Alignment.bottomCenter,
+                clipBehavior: Clip.none,
+                children: [
+                  Image.asset(
+                    'assets/images/FGM.png',
+                    width: 220,
+                    fit: BoxFit.contain,
+                  ),
+                  Positioned(
+                    bottom: -(screenHeight * 0.05), 
+                    child: Image.asset(
+                      'assets/images/MusicNote.png',
+                      width: 180,
+                      height: 60,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ],
+              ),
 
-            const SizedBox(height: 30),
+              // Spacing cushion to isolate music note offset overlap
+              const Spacer(flex: 1),
 
-            // 5. ENGLISH TEXT
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                "Sing Praises of the Lord",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Limelight',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black87,
+              // THE TAPERED ANIMATED LINE
+              _buildAnimatedLine(230),
+
+              // Dynamic gap before second text string
+              //const Spacer(flex: 1),
+              const SizedBox(height: 20), // Small fixed gap for visual breathing
+
+              // ENGLISH TEXT
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  "Sing Praises of the Lord",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Limelight',
+                    fontSize: 22,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black87,
+                  ),
                 ),
               ),
-            ),
 
-            // 6. BOTTOM BALANCE
-            const Spacer(),
-          ],
+              // BOTTOM BALANCER: Applies extra weight in portrait to create an 
+              // upward pull, accommodating human optical centering.
+              Spacer(flex: isPortrait ? 5 : 3),
+            ],
+          ),
         ),
       ),
     );
@@ -143,7 +153,7 @@ class _SplashScreenState extends State<SplashScreen> {
         duration: const Duration(milliseconds: 2500),
         curve: Curves.easeInOutSine,
         width: _lineFactor * maxWidth,
-        height: 8, // Thicker in the middle
+        height: 8,
         child: ClipPath(
           clipper: SpindleClipper(),
           child: Container(
@@ -163,16 +173,12 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-// CUSTOM CLIPPER FOR THE TAPERED SHAPE
 class SpindleClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
-    // Pointed at the left end
     path.moveTo(0, size.height / 2);
-    // Curve up to the thickest part in the middle, then to the right point
     path.quadraticBezierTo(size.width / 2, 0, size.width, size.height / 2);
-    // Curve back down through the bottom center to the starting point
     path.quadraticBezierTo(size.width / 2, size.height, 0, size.height / 2);
     path.close();
     return path;
