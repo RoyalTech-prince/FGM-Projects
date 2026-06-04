@@ -6,6 +6,9 @@ import 'package:full_gospel_hymnal/screens/lyrics_screen.dart';
 import 'package:full_gospel_hymnal/screens/settings_screen.dart';
 import 'package:full_gospel_hymnal/utils/app_strings.dart';
 import 'package:full_gospel_hymnal/screens/favorites_screen.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:full_gospel_hymnal/utils/update_checker.dart';
+
 
 // NEW: Keep this placeholder inline or import it if it's a separate file
 class FavoritesScreenPlaceholder extends StatelessWidget {
@@ -90,7 +93,68 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       }
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      UpdateChecker.checkForUpdates(_showUpdateDialog);
+    });
   }
+
+  //UI Dialog builder that is cleanly handled by the UpdateChecker background process
+  void _showUpdateDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false, // Force an interactive selection option
+      builder: (BuildContext context) {
+        final settings = context.read<SettingsProvider>();
+        final lang = settings.defaultLanguage;
+
+        return AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: Text(
+            lang == AppLanguage.en 
+                ? 'Update Available' 
+                : 'Mise à jour disponible',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: Text(
+            lang == AppLanguage.en
+                ? 'A new version of the Full Gospel Hymnal app is available. Update now for the better experience.'
+                : 'Une nouvelle version de l\'application Full Gospel Hymnal est disponible. Veuillez mettre à jour.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                // Save the current timestamp to Hive settings box to trigger a 5-day snooze cycle
+                final box = Hive.box('settings');
+                box.put('lastUpdateSnoozeDate', DateTime.now().toIso8601String());
+                
+                Navigator.of(context).pop(); // Dismiss window safely
+              },
+              child: Text(
+                lang == AppLanguage.en ? 'Remind me later' : 'Plus tard',
+                style: const TextStyle(color: Colors.grey),
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFD32F2F), // Matches app accent theme profile
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              ),
+              onPressed: () {
+                UpdateChecker.launchPlayStore();
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                lang == AppLanguage.en ? 'Update Now' : 'Mettre à jour',
+                style: const TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  
 
   @override
   void dispose() {
@@ -163,6 +227,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+
 }
 
 // --- Extracted Body for Tab 0 (The Search/Hymn List) ---
