@@ -1,16 +1,23 @@
-# full_gospel_hymnal
+# ------ROYAL TECH------
+# Full Gospel Mission Projects 🏢✨
 
-A new Flutter project.
+Welcome to the central development repository for Full Gospel Mission applications.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Featured Project: Full Gospel Hymnal
 
-A few resources to get you started if this is your first Flutter project:
+A beautiful, high-performance, bilingual (English & French) hymnal application built with Flutter. Designed for seamless offline worship, it features smooth navigation mechanics, robust theme management, and an adaptive layout optimized for both mobile phone and tablet form factors.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[![Flutter Version](https://img.shields.io/badge/Flutter-3.x-blue.svg)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### ✨ Core Application Features
+- **Fluid Bilingual Layout:** Instant transitions between English and French.
+- **Offline First Architecture:** Powered by Hive database storage for near-instant boot times and zero network dependency during service.
+- **Smart Adaptive UI:** Dynamically scales across compact mobile layouts and broad tablet viewports using human optical centering adjustments.
+- **Dynamic Theming:** High-contrast layout configuration supporting System, Light, and Dark modes.
+- **Remote Update Ingestion:** Lightweight background network checks that gracefully handle semantic app updates via GitHub Pages configuration endpoints.
+
+---

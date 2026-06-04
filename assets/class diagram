@@ -1,0 +1,67 @@
+classDiagram
+    direction TB
+
+    %% --- Presentation Layer ---
+    class SplashScreen {
+        +double lineFactor
+        +void initState()
+        -void startSequence()
+        -void navigateToNext()
+        +Widget build(BuildContext context)
+    }
+
+    class LanguageSelectionScreen {
+        +Widget build(BuildContext context)
+        -void selectLanguage(String langCode)
+    }
+
+    class HomeScreen {
+        -int currentIndex
+        -PageController pageController
+        +void initState()
+        -void showUpdateDialog()
+        +Widget build(BuildContext context)
+    }
+
+    %% --- Business Logic & Utilities ---
+    class UpdateChecker {
+        -String updateUrl$
+        -String playStoreUrl$
+        +checkForUpdates(BuildContext context, Function showDialogCallback)$
+        +launchPlayStore()$
+    }
+
+    class ThemeProvider {
+        -ThemeMode currentTheme
+        +ThemeMode getTheme()
+        +void toggleTheme(bool isDarkMode)
+    }
+
+    %% --- Data & Persistence Layer ---
+    class HiveDatabase {
+        +void initFlutter()$
+        +void openBox(String boxName)$
+    }
+
+    class SettingsBox {
+        +bool isFirstRun
+        +String lastUpdateSnoozeDate
+        +String selectedLanguage
+    }
+
+    class FavoritesBox {
+        +List~int~ favoriteHymnIds
+    }
+
+    %% --- Relationships & System Dependencies ---
+    SplashScreen ..> LanguageSelectionScreen : Transitions to (First Run)
+    SplashScreen ..> HomeScreen : Transitions to (Subsequent Runs)
+    HomeScreen ..> UpdateChecker : Invokes background thread check
+    HomeScreen ..> ThemeProvider : Listens for canvas changes
+    
+    UpdateChecker ..> SettingsBox : Reads lastSnoozeDate / Writes snooze
+    SplashScreen ..> SettingsBox : Assesses isFirstRun flag
+    LanguageSelectionScreen ..> SettingsBox : Mutates selectedLanguage
+    
+    SettingsBox --|> HiveDatabase : Persisted within
+    FavoritesBox --|> HiveDatabase : Persisted within
