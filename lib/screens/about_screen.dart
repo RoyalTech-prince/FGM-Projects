@@ -47,7 +47,7 @@ class AboutScreen extends StatelessWidget {
     
     // FIXED CONTRAST: Use dark text when on the white card background of Red Theme
     final Color itemTextColor = isRedTheme ? Colors.black : (isDark ? Colors.white : Colors.black87);
-    final Color dynamicIconColor = isBlackTheme ? Colors.white : const Color(0xFFD32F2F);
+    final Color dynamicIconColor = isBlackTheme ? Colors.white : (isRedTheme ? const Color(0xFFD32F2F):Colors.black);
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -75,11 +75,33 @@ class AboutScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               // App Branding Graphic Context
-              CircleAvatar(
-                radius: 45,
-                backgroundColor: const Color(0xFFD32F2F),
-                child: const Icon(Icons.auto_stories, size: 60, color: Colors.white),
+              Center(
+                child: Container(
+                  width: 90,
+                  height: 90,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white
+                  ),
+                  child: ClipOval(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        'assets/images/FGM.png',
+                        fit: BoxFit.contain, //Here the logo fits well in the white oval background
+                        errorBuilder: (context, error, stackTrace){
+                          return const Icon(
+                            Icons.auto_stories,
+                            size: 45,
+                            color: Colors.white,
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ),
               ),
+              
               const SizedBox(height: 25),
               Text(
                 isEng ? "Full Gospel Mission Hymnal" : "Cantiques de la Mission du Plein Évangile",
@@ -101,7 +123,7 @@ class AboutScreen extends StatelessWidget {
                     ? "PRAISE BE TO THE LORD OF HOST"
                     : "Louange à l'Éternel des armées",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 15, height: 1.6, color: itemTextColor.withOpacity(0.8)),
+                style: TextStyle(fontSize: 15, height: 1.6, color:isRedTheme ? Colors.white : (isDark ? Colors.white : Colors.black87)),
               ),
 
               const SizedBox(height: 35),

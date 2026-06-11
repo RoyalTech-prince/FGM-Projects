@@ -97,15 +97,16 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Image.asset(
                     'assets/images/FGM.png',
-                    width: 220,
+                    width: 200,
+                    height: 200,
                     fit: BoxFit.contain,
                   ),
                   Positioned(
                     bottom: -(screenHeight * 0.05), 
                     child: Image.asset(
                       'assets/images/MusicNote.png',
-                      width: 180,
-                      height: 60,
+                      width: 170,
+                      height: 58,
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -116,7 +117,7 @@ class _SplashScreenState extends State<SplashScreen> {
               const Spacer(flex: 1),
 
               // THE TAPERED ANIMATED LINE
-              _buildAnimatedLine(230),
+              _buildAnimatedLine(220),
 
               // Dynamic gap before second text string
               //const Spacer(flex: 1),

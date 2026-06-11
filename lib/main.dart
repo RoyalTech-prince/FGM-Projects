@@ -99,7 +99,7 @@ void main() async {
     await windowManager.ensureInitialized();
     
     WindowOptions windowOptions = const WindowOptions(
-      size: Size(400, 700),
+      size: Size(500, 900),
       center: true,
       title: "Full Gospel Hymnal",
     );

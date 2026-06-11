@@ -23,28 +23,61 @@ class HymnProvider extends ChangeNotifier {
 
   /// Optimized search implementation for production
   void search(String query) {
-    _searchQuery = query.trim().toLowerCase();
+  // Normalize the query once outside the loop for maximum performance
+    _searchQuery = _normalizeText(query);
     
     if (_searchQuery.isEmpty) {
       _filteredHymns = [];
-    } else {
-      // Searching across number, titles, AND lyrics for full coverage
-      _filteredHymns = _hymns.where((hymn) {
-        final matchesNumber = hymn.number.toLowerCase().contains(_searchQuery);
-        
-        final matchesTitle = hymn.titleEn.toLowerCase().contains(_searchQuery) ||
-                             hymn.titleFr.toLowerCase().contains(_searchQuery);
-        
-        // Logic to check lyrics fields
-        final matchesLyrics = hymn.lyricsEn.toLowerCase().contains(_searchQuery) ||
-                              hymn.lyricsFr.toLowerCase().contains(_searchQuery);
+      } else {
+        // Searching across numbers, titles, AND lyrics with accent/sign normalization
+        _filteredHymns = _hymns.where((hymn) {
+          // Numbers don't have accents, but we lower-case them for safety
+          final matchesNumber = hymn.number.toLowerCase().contains(_searchQuery);
+          
+          // Normalize titles
+          final normalizedTitleEn = _normalizeText(hymn.titleEn);
+          final normalizedTitleFr = _normalizeText(hymn.titleFr);
+          final matchesTitle = normalizedTitleEn.contains(_searchQuery) ||
+                              normalizedTitleFr.contains(_searchQuery);
+          
+          // Normalize lyrics
+          final normalizedLyricsEn = _normalizeText(hymn.lyricsEn);
+          final normalizedLyricsFr = _normalizeText(hymn.lyricsFr);
+          final matchesLyrics = normalizedLyricsEn.contains(_searchQuery) ||
+                                normalizedLyricsFr.contains(_searchQuery);
 
-        return matchesNumber || matchesTitle || matchesLyrics;
+          return matchesNumber || matchesTitle || matchesLyrics;
       }).toList();
     }
-    
-    notifyListeners();
-  }
+  
+  notifyListeners();
+}
+
+  String _normalizeText(String text) {
+  var normalized = text.toLowerCase();
+
+  // 1. Map common French accents manually to their base characters
+  // (Fastest, most reliable way in Dart without heavy external packages)
+  final accents = {
+    'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+    'à': 'e', 'â': 'e', 'ä': 'e',
+    'î': 'i', 'ï': 'i',
+    'ô': 'o', 'ö': 'o',
+    'ù': 'u', 'û': 'u', 'ü': 'u',
+    'ç': 'c',
+  };
+
+  accents.forEach((accent, base) {
+    normalized = normalized.replaceAll(accent, base);
+  });
+
+  // 2. Strip out apostrophes, hyphens, commas, and periods
+  // This turns "l'eternel" into "leternel" and "chante-haut" into "chantehaut"
+  normalized = normalized.replaceAll(RegExp(r"[‘’''`\-,\.]"), "");
+
+  // 3. Remove extra internal spaces and trim whitespace boundaries
+  return normalized.replaceAll(RegExp(r'\s+'), ' ').trim();
+}
 
   /// Initializing the local DB from assets if empty
   Future<void> initHymns() async {
@@ -61,7 +94,7 @@ class HymnProvider extends ChangeNotifier {
           final List<dynamic> jsonData = json.decode(jsonString);
           
           // Bulk insert for better performance on mobile devices
-          // FIXED: Map registration keys use the integer ID now, not the alphanumeric number string
+          //Map registration keys use the integer ID now, not the alphanumeric number string
           final Map<int, Hymn> hymnMap = {};
           for (var item in jsonData) {
             final parsedHymn = Hymn.fromJson(item);

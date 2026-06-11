@@ -54,7 +54,7 @@ class SinglePageScrollPhysics extends PageScrollPhysics {
     if (velocity.abs() > 0.0) {
       return super.createBallisticSimulation(
         position, 
-        velocity.isNegative ? -0.000001 : 0.000001,
+        velocity.isNegative ? -1.5 : 1.5,
       );
     }
     return super.createBallisticSimulation(position, velocity);
@@ -114,12 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
             lang == AppLanguage.en 
                 ? 'Update Available' 
                 : 'Mise à jour disponible',
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
           content: Text(
             lang == AppLanguage.en
-                ? 'A new version of the Full Gospel Hymnal app is available. Update now for the better experience.'
-                : 'Une nouvelle version de l\'application Full Gospel Hymnal est disponible. Veuillez mettre à jour.',
+                ? 'A new version of the Full Gospel Mission Hymnal is available. Update now for the better experience.'
+                : 'Une nouvelle version du cantique de la Mission du Plein Evangile est disponible. Veuillez mettre à jour.',
+            style: const TextStyle(color: Colors.white),
           ),
           actions: [
             TextButton(
