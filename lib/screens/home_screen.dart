@@ -54,7 +54,7 @@ class SinglePageScrollPhysics extends PageScrollPhysics {
     if (velocity.abs() > 0.0) {
       return super.createBallisticSimulation(
         position, 
-        velocity.isNegative ? -1.5 : 1.5,
+        velocity.isNegative ? -3 : 3,
       );
     }
     return super.createBallisticSimulation(position, velocity);
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
           });
           _pageController.animateToPage(
             index,
-            duration: const Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 200),
             curve: Curves.easeInOut,
           );
         },

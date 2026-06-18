@@ -77,7 +77,7 @@ class LyricsScreen extends StatelessWidget {
           _languageToggle(settings, isRedTheme, isDark),
           Row(
             children: [
-              // UPDATED: Dynamic Interactive Favorite Heart Button Action
+              // Dynamic Interactive Favorite Heart Button Action
               IconButton(
                 icon: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 250),
@@ -171,6 +171,9 @@ class LyricsScreen extends StatelessWidget {
     final isBlackTheme = settings.selectedtheme == AppThemeType.black;
     final isRedTheme = settings.selectedtheme == AppThemeType.red;
 
+    // Grab the specific language string target field from your asset model payload
+    final String rawLyrics = settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr;
+
     return Expanded(
       child: Container(
         width: double.infinity, 
@@ -193,14 +196,49 @@ class LyricsScreen extends StatelessWidget {
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-              child: Text(
-                settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: settings.fontSize,
-                  height: 1.6, 
-                  color: isBlackTheme ? Colors.white : Colors.black,
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: rawLyrics.split('\n').map((line) {
+                  final String trimmedLine = line.trim();
+
+                  // UPDATED PARSER ENGINE: Look for inline or wrapped HTML <b> text formatting tags 
+                  if (trimmedLine.contains('<b>') || trimmedLine.contains('</b>')) {
+                    // Instantly drop structural markup strings out of the canvas entirely
+                    final String cleanChorusText = trimmedLine
+                        .replaceAll('<b>', '')
+                        .replaceAll('</b>', '');
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 2.0),
+                      child: Text(
+                        cleanChorusText,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: settings.fontSize,
+                          fontWeight: FontWeight.bold, // Bolds all chorus lines flawlessly!
+                          height: 1.6,
+                          // Retains high text contrast depending on the active design mode context
+                          color: isBlackTheme ? const Color.fromARGB(255, 150, 3, 3) : const Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    );
+                  }
+
+                  // Standard structural Verse display layout mode
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 2.0),
+                    child: Text(
+                      line,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: settings.fontSize,
+                        fontWeight: FontWeight.normal,
+                        height: 1.6,
+                        color: isBlackTheme ? Colors.white : Colors.black,
+                      ),
+                    ),
+                  );
+                }).toList(),
               ),
             ),
           ),
