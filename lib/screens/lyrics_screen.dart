@@ -171,6 +171,8 @@ class LyricsScreen extends StatelessWidget {
     final isBlackTheme = settings.selectedtheme == AppThemeType.black;
     final isRedTheme = settings.selectedtheme == AppThemeType.red;
 
+    final double dynamicStrokeWidth = isBlackTheme ? 1.5 : 0.0;
+
     // Grab the specific language string target field from your asset model payload
     final String rawLyrics = settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr;
 
@@ -203,23 +205,46 @@ class LyricsScreen extends StatelessWidget {
 
                   // UPDATED PARSER ENGINE: Look for inline or wrapped HTML <b> text formatting tags 
                   if (trimmedLine.contains('<b>') || trimmedLine.contains('</b>')) {
-                    // Instantly drop structural markup strings out of the canvas entirely
                     final String cleanChorusText = trimmedLine
                         .replaceAll('<b>', '')
                         .replaceAll('</b>', '');
 
+                    // 1. Check if the outline layer should be visible (Only on Black theme)
+                    final bool showOutline = isBlackTheme;
+
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 2.0),
-                      child: Text(
-                        cleanChorusText,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: settings.fontSize,
-                          fontWeight: FontWeight.bold, // Bolds all chorus lines flawlessly!
-                          height: 1.6,
-                          // Retains high text contrast depending on the active design mode context
-                          color: isBlackTheme ? const Color.fromARGB(255, 150, 3, 3) : const Color.fromARGB(255, 0, 0, 0),
-                        ),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          // 2. The Outline Layer: Only render it if showOutline is true
+                          if (showOutline)
+                            Text(
+                              cleanChorusText,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: settings.fontSize,
+                                fontWeight: FontWeight.bold,
+                                height: 1.6,
+                                foreground: Paint()
+                                  ..style = PaintingStyle.stroke
+                                  ..strokeWidth = 1.95 // Perfect thickness for your Black theme
+                                  ..color = const Color.fromARGB(255, 131, 3, 3), 
+                              ),
+                            ),
+                            
+                          // 3. The Filled Text Layer (Always renders perfectly on top)
+                          Text(
+                            cleanChorusText,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: settings.fontSize,
+                              fontWeight: FontWeight.bold,
+                              height: 1.6,
+                              color: isBlackTheme ? const Color.fromARGB(255, 236, 236, 236) : const Color.fromARGB(255, 0, 0, 0), 
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   }

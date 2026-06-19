@@ -46,6 +46,20 @@ class SinglePageScrollPhysics extends PageScrollPhysics {
     return SinglePageScrollPhysics(parent: buildParent(ancestor));
   }
 
+  // --- ADD THIS METHOD to stop the long drag past the edges ---
+  @override
+  double applyBoundaryConditions(ScrollMetrics position, double value) {
+    // If trying to overscroll past the left edge (Home)
+    if (value < position.minScrollExtent && position.pixels <= position.minScrollExtent) {
+      return value - position.pixels;
+    }
+    // If trying to overscroll past the right edge (Settings)
+    if (value > position.maxScrollExtent && position.pixels >= position.maxScrollExtent) {
+      return value - position.pixels;
+    }
+    return super.applyBoundaryConditions(position, value);
+  }
+
   @override
   Simulation? createBallisticSimulation(ScrollMetrics position, double velocity) {
     // If the user flings fast to the right (positive velocity) or left (negative velocity),
@@ -54,7 +68,7 @@ class SinglePageScrollPhysics extends PageScrollPhysics {
     if (velocity.abs() > 0.0) {
       return super.createBallisticSimulation(
         position, 
-        velocity.isNegative ? -3 : 3,
+        velocity.isNegative ? -5 : 5,
       );
     }
     return super.createBallisticSimulation(position, velocity);
@@ -184,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: PageView(
           controller: _pageController,
           // BouncingScrollPhysics provides that instant, fluid WhatsApp touch-response
-          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()), 
+          physics: const SinglePageScrollPhysics(parent: ClampingScrollPhysics()), 
           onPageChanged: (index) {
             setState(() {
               _currentIndex = index;

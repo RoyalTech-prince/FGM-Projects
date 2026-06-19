@@ -13,7 +13,7 @@ def html_refrains_in_text(text):
     output_lines = []
     inside_refrain = False
 
-    refrain_marker_pattern = re.compile(r'^\s*(refrain|chorus)\s*:', re.IGNORECASE)
+    refrain_marker_pattern = re.compile(r'^\s*(refrain|refrain 2x|refrain 1:|refrain 2:|chorus|chorus 1:|chorus 2:|chorus:)\s*:', re.IGNORECASE)
     stanza_marker_pattern = re.compile(r'^\s*\d+\s*$', re.IGNORECASE)
 
     for line in lines:
