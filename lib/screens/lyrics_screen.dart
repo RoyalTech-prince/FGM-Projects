@@ -171,8 +171,6 @@ class LyricsScreen extends StatelessWidget {
     final isBlackTheme = settings.selectedtheme == AppThemeType.black;
     final isRedTheme = settings.selectedtheme == AppThemeType.red;
 
-    final double dynamicStrokeWidth = isBlackTheme ? 1.5 : 0.0;
-
     // Grab the specific language string target field from your asset model payload
     final String rawLyrics = settings.isEnglish ? hymn.lyricsEn : hymn.lyricsFr;
 
@@ -229,7 +227,7 @@ class LyricsScreen extends StatelessWidget {
                                 foreground: Paint()
                                   ..style = PaintingStyle.stroke
                                   ..strokeWidth = 1.95 // Perfect thickness for your Black theme
-                                  ..color = const Color.fromARGB(255, 131, 3, 3), 
+                                  ..color = const Color.fromARGB(255, 131, 1, 1), 
                               ),
                             ),
                             
@@ -241,7 +239,7 @@ class LyricsScreen extends StatelessWidget {
                               fontSize: settings.fontSize,
                               fontWeight: FontWeight.bold,
                               height: 1.6,
-                              color: isBlackTheme ? const Color.fromARGB(255, 236, 236, 236) : const Color.fromARGB(255, 0, 0, 0), 
+                              color: isBlackTheme ? const Color.fromARGB(255, 197, 196, 196) : const Color.fromARGB(255, 0, 0, 0), 
                             ),
                           ),
                         ],
