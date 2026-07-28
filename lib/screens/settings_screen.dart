@@ -19,7 +19,7 @@ class SettingsScreen extends StatelessWidget {
     final Color cardBg = isRedTheme ? Colors.white : theme.cardColor;
     final Color itemTextColor = isRedTheme ? Colors.black : (isDark ? Colors.white : Colors.black87);
     final Color sectionTextColor = isRedTheme ? const Color.fromARGB(255, 248, 247, 247) : (isDark ? Colors.white70 : Colors.black54);
-    final Color dynamicIconColor = isBlackTheme ? Colors.white : const Color(0xFFD32F2F);
+    final Color dynamicIconColor = isBlackTheme ? Colors.white : (isRedTheme ? Colors.black: const Color(0xFFD32F2F));
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -94,8 +94,8 @@ class SettingsScreen extends StatelessWidget {
                       iconColor: dynamicIconColor,
                       title: isEng ? "Theme Mode" : "Mode Thème",
                       currentSubtitle: settings.selectedtheme == AppThemeType.red 
-                          ? (isEng ? "Red(default)" : "Rouge(defaut)") 
-                          : (settings.selectedtheme == AppThemeType.white ? (isEng ? "White" : "Blanc") : (isEng ? "Black" : "Noir")),
+                          ? (isEng ? "Red" : "Rouge") 
+                          : (settings.selectedtheme == AppThemeType.white ? (isEng ? "White(Default)" : "Blanc(Defaut)") : (isEng ? "Black" : "Noir")),
                       textColor: itemTextColor,
                       // UPDATED: Theme menu background layer is ALWAYS locked to clean white
                       drawerBgColor: Colors.white,

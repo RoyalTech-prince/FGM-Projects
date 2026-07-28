@@ -17,7 +17,7 @@ def html_refrains_in_text(text):
     skip_mode = False  # For numbering skip
     
     # Pattern for refrain markers
-    refrain_marker_pattern = re.compile(r'^\s*(refrain|refrain 2x|refrain 1:|refrain 2:|réf\.?|réf\.?\s*:|choeur|chorus|chorus 1:|chorus 2:|chorus:)\s*', re.IGNORECASE)
+    refrain_marker_pattern = re.compile(r'^\s*(refrain|refrain 2x|refrain 1:|refrain 2:|réf\.?|réf\.?\s*:|choeur|chorus|chorus 1:|chorus 2:|chorus:|CHŒUR)\s*', re.IGNORECASE)
     # Pattern for existing stanza numbers
     stanza_marker_pattern = re.compile(r'^\s*\d+\s*$', re.IGNORECASE)
     

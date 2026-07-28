@@ -1,273 +1,236 @@
-"""
-Hymnal JSON Numbering Fixer & Validator
-========================================
-Steps:
-  1. Strip ALL existing stanza numbers from lyricsEn and lyricsFr
-  2. Re-number stanzas properly (choruses/refrains are never numbered)
-  3. Validate the result and report any errors
-
-Rules:
-  - Stanzas are numbered sequentially: 1, 2, 3 …
-  - Chorus / Refrain / Chorus 1: / Chorus 2: / Refrain 1: / Refrain 2: etc.
-    are NEVER numbered — they keep their <b>…</b> label lines as-is
-  - A hymn may START with a chorus before stanza 1
-  - Multiple distinct choruses (Chorus 1, Chorus 2 …) are allowed
-"""
-
 import json
 import re
-import sys
-import copy
-from pathlib import Path
 
+def is_chorus_or_refrain(line):
+    """Check if a line indicates a chorus or refrain (with or without HTML tags)."""
+    # First, strip HTML tags for detection
+    clean_line = re.sub(r'<[^>]+>', '', line).strip()
+    line_lower = clean_line.lower()
+    
+    # Check if the line contains any chorus/refrain keyword at the beginning
+    chorus_patterns = [
+        r'^chorus\s*:?\s*',           # "chorus" or "chorus:" at start
+        r'^chorus\s+\d+\s*:?\s*',     # "chorus 1" or "chorus 1:"
+        r'^refrain\s*:?\s*',          # "refrain" or "refrain:"
+        r'^refrain\s+\d+\s*:?\s*',    # "refrain 2" or "refrain 2:"
+        r'^r[eé]f\.?\s*:?\s*',        # "réf" or "réf." with accent
+        r'^chœur\s*:?\s*',            # "chœur" or "chœur:"
+        r'^choeur\s*:?\s*',           # "choeur" or "choeur:"
+        r'^\(chorus\)',               # "(chorus)"
+        r'^\(refrain\)',              # "(refrain)"
+        r'^\(chœur\)',                # "(chœur)"
+        r'^\(réf\)',                  # "(réf)"
+    ]
+    
+    for pattern in chorus_patterns:
+        if re.match(pattern, line_lower):
+            return True
+    
+    # Also check if the line contains "chorus:" or "refrain:" anywhere (not just at start)
+    if re.search(r'\bchorus\s*:?\s*', line_lower):
+        return True
+    if re.search(r'\brefrain\s*:?\s*', line_lower):
+        return True
+    if re.search(r'\bchœur\s*:?\s*', line_lower):
+        return True
+    if re.search(r'\bchoeur\s*:?\s*', line_lower):
+        return True
+    if re.search(r'\bréf\.?\s*:?\s*', line_lower):
+        return True
+    
+    return False
 
-# ── helpers ────────────────────────────────────────────────────────────────────
+def remove_existing_numbers(lines):
+    """Remove all existing stanza numbers (lines that are just a number)."""
+    result = []
+    for line in lines:
+        if not re.match(r'^\s*\d+\s*$', line):
+            result.append(line)
+    return result
 
-# Matches a line that is ONLY a stanza number (possibly with trailing spaces)
-STANZA_NUM_RE = re.compile(r'^\s*\d+\s*$')
-
-# Matches the opening bold tag of a chorus/refrain label — all known variants
-CHORUS_LABEL_RE = re.compile(
-    r'<b>\s*(refrain\s+\d+\s*:|refrain\s*:|réf\.?\s*:|choeur\s*:|chorus\s+\d+\s*:|chorus\s*:)\s*<\/b>',
-    re.IGNORECASE
-)
-
-
-def is_chorus_line(line: str) -> bool:
-    """Return True if this line is a bold chorus/refrain label."""
-    return bool(CHORUS_LABEL_RE.search(line))
-
-
-def is_bold_line(line: str) -> bool:
-    """Return True if this line is any <b>…</b> content (chorus body)."""
-    stripped = line.strip()
-    return stripped.startswith('<b>') and stripped.endswith('</b>')
-
-
-def split_into_blocks(lyrics: str):
+def number_stanzas(lyrics):
     """
-    Split a lyrics string into logical blocks.
-
-    Each block is a dict:
-      { 'type': 'stanza' | 'chorus', 'lines': [str, …] }
-
-    A block boundary occurs when we hit:
-      - A bare stanza-number line  → start of a stanza block
-      - A <b>Chorus:</b> label line → start of a chorus block
-    Blank lines between blocks are preserved inside blocks as separators
-    but NOT counted as block boundaries on their own.
+    Add stanza numbering (1, 2, 3, etc.) on separate lines above each stanza.
+    Skips chorus/refrain markers and their content.
     """
-    raw_lines = lyrics.split('\n')
-    blocks = []
-    current_block = None
-
-    i = 0
-    while i < len(raw_lines):
-        line = raw_lines[i]
-
-        if STANZA_NUM_RE.match(line):
-            # Save previous block
-            if current_block:
-                blocks.append(current_block)
-            # Start a new stanza block (drop the old number — we'll add fresh ones)
-            current_block = {'type': 'stanza', 'lines': []}
-            i += 1
-            continue
-
-        if is_chorus_line(line):
-            if current_block:
-                blocks.append(current_block)
-            # Chorus block starts with this label line
-            current_block = {'type': 'chorus', 'lines': [line]}
-            i += 1
-            continue
-
-        # Any other line: append to current block
-        if current_block is None:
-            # Content before the first explicit marker → treat as stanza
-            current_block = {'type': 'stanza', 'lines': []}
-        current_block['lines'].append(line)
-        i += 1
-
-    if current_block:
-        blocks.append(current_block)
-
-    return blocks
-
-
-def strip_leading_trailing_blanks(lines):
-    """Remove leading and trailing empty lines from a list."""
-    while lines and not lines[0].strip():
-        lines.pop(0)
-    while lines and not lines[-1].strip():
-        lines.pop()
-    return lines
-
-
-def rebuild_lyrics(blocks) -> str:
-    """
-    Given blocks, assign fresh stanza numbers and rebuild the lyrics string.
-    Choruses get NO number. Blocks are separated by a blank line.
-    """
-    stanza_counter = 0
-    parts = []
-
-    for block in blocks:
-        lines = strip_leading_trailing_blanks(list(block['lines']))
-        if not lines:
-            continue
-
-        if block['type'] == 'stanza':
-            stanza_counter += 1
-            parts.append(str(stanza_counter))          # fresh number on its own line
-            parts.extend(lines)
-        else:
-            # chorus — no number, just its lines (label already included)
-            parts.extend(lines)
-
-        parts.append('')   # blank line between blocks
-
-    # Remove trailing blank line
-    while parts and parts[-1] == '':
-        parts.pop()
-
-    return '\n'.join(parts)
-
-
-def fix_lyrics(lyrics: str) -> str:
-    if not lyrics:
+    if not lyrics or lyrics == "NO TRANSLATION IN THIS LANGUAGE" or lyrics == "PAS DE TRADUCTION EN CETTE LANGUE":
         return lyrics
-    blocks = split_into_blocks(lyrics)
-    return rebuild_lyrics(blocks)
+    
+    lines = lyrics.split('\n')
+    
+    # Step 1: Remove ALL existing stanza numbers
+    lines = remove_existing_numbers(lines)
+    
+    numbered_lines = []
+    stanza_counter = 1
+    skip_mode = False  # When True, we're inside a chorus/refrain and skip numbering
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        
+        # Check if this is a chorus/refrain marker
+        if is_chorus_or_refrain(line):
+            # Keep the marker as is
+            numbered_lines.append(line)
+            skip_mode = True
+            i += 1
+            continue
+        
+        # If we're in skip_mode, keep adding lines until we hit an empty line
+        if skip_mode:
+            numbered_lines.append(line)
+            # Check if this is the end of the chorus (empty line)
+            if stripped == '':
+                skip_mode = False
+            i += 1
+            continue
+        
+        # Skip empty lines
+        if not stripped:
+            numbered_lines.append(line)
+            i += 1
+            continue
+        
+        # Check if this starts a new stanza (after an empty line or at beginning)
+        is_new_stanza = (
+            i == 0 or 
+            (i > 0 and lines[i-1].strip() == '') or
+            (i > 0 and is_chorus_or_refrain(lines[i-1])) or
+            (i > 1 and lines[i-1].strip() == '' and is_chorus_or_refrain(lines[i-2]))
+        )
+        
+        if is_new_stanza:
+            # Add the number on its own line
+            numbered_lines.append(str(stanza_counter))
+            numbered_lines.append(line)
+            stanza_counter += 1
+        else:
+            numbered_lines.append(line)
+        
+        i += 1
+    
+    return '\n'.join(numbered_lines)
 
-
-# ── validation ─────────────────────────────────────────────────────────────────
-
-def validate_lyrics(hymn_id, lang, lyrics: str):
-    """
-    Check the fixed lyrics for numbering errors.
-    Returns a list of error strings (empty = all good).
-    """
+def validate_lyrics(lyrics, lang="EN"):
+    """Validate the numbered lyrics for consistency."""
+    if not lyrics or lyrics == "NO TRANSLATION IN THIS LANGUAGE" or lyrics == "PAS DE TRADUCTION EN CETTE LANGUE":
+        return []
+    
     errors = []
     lines = lyrics.split('\n')
-    seen_stanza_numbers = []
+    stanza_numbers = []
+    expected_next = 1
     inside_chorus = False
-
-    for lineno, line in enumerate(lines, 1):
+    
+    for i, line in enumerate(lines, 1):
         stripped = line.strip()
-
-        # Track chorus regions
-        if is_chorus_line(stripped):
+        
+        # Track if we're inside a chorus
+        if is_chorus_or_refrain(line):
             inside_chorus = True
             continue
-        if inside_chorus:
-            if not stripped:
-                inside_chorus = False      # blank line ends chorus
+        
+        if inside_chorus and stripped == '':
+            inside_chorus = False
             continue
-
-        if STANZA_NUM_RE.match(stripped):
+        
+        # Only check stanza numbers (lines that are just a number)
+        if re.match(r'^\s*\d+\s*$', stripped) and not inside_chorus:
             num = int(stripped)
-            # Rule 1: stanza numbers must start at 1
-            if not seen_stanza_numbers and num != 1:
-                errors.append(
-                    f"  [{lang}] Hymn {hymn_id}: first stanza number is {num}, expected 1 (line {lineno})"
-                )
-            # Rule 2: no duplicates
-            if num in seen_stanza_numbers:
-                errors.append(
-                    f"  [{lang}] Hymn {hymn_id}: duplicate stanza number {num} (line {lineno})"
-                )
-            # Rule 3: must be consecutive
-            if seen_stanza_numbers and num != seen_stanza_numbers[-1] + 1:
-                errors.append(
-                    f"  [{lang}] Hymn {hymn_id}: stanza number jumped from "
-                    f"{seen_stanza_numbers[-1]} to {num} (line {lineno})"
-                )
-            seen_stanza_numbers.append(num)
-
-    # Rule 4: at least one stanza
-    if not seen_stanza_numbers:
-        errors.append(
-            f"  [{lang}] Hymn {hymn_id}: no stanza numbers found at all"
-        )
-
+            stanza_numbers.append(num)
+            
+            # Check if numbers are consecutive starting from 1
+            if num != expected_next:
+                errors.append(f"  [{lang}] Expected stanza {expected_next}, got {num} at line {i}")
+                expected_next = num + 1
+            else:
+                expected_next += 1
+    
+    # Check if we have any stanzas
+    if not stanza_numbers:
+        errors.append(f"  [{lang}] No stanza numbers found!")
+    
     return errors
 
-
-# ── main ───────────────────────────────────────────────────────────────────────
-
-def process_file(input_path: str):
-    input_file = Path(input_path)
-    if not input_file.exists():
-        print(f"ERROR: file not found → {input_path}")
-        sys.exit(1)
-
-    # ── Backup original ──
-    backup_path = input_file.with_suffix('.backup.json')
-    backup_path.write_bytes(input_file.read_bytes())
-    print(f"Backup saved to '{backup_path}'")
-
-    with open(input_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    print(f"Loaded {len(data)} hymns from '{input_path}'")
-    print("=" * 60)
-
-    fixed_data = []
-    all_errors = []
-
-    for hymn in data:
-        hymn_copy = copy.deepcopy(hymn)
-        hid = hymn_copy.get('number', hymn_copy.get('id', '?'))
-
-        # ── Step 1 & 2: clear old numbers, renumber ──
-        hymn_copy['lyricsEn'] = fix_lyrics(hymn_copy.get('lyricsEn', ''))
-        hymn_copy['lyricsFr'] = fix_lyrics(hymn_copy.get('lyricsFr', ''))
-
-        # ── Step 3: validate ──
-        errs_en = validate_lyrics(hid, 'EN', hymn_copy['lyricsEn'])
-        errs_fr = validate_lyrics(hid, 'FR', hymn_copy['lyricsFr'])
-        all_errors.extend(errs_en + errs_fr)
-
-        fixed_data.append(hymn_copy)
-
-    # ── Overwrite original file ──
-    with open(input_file, 'w', encoding='utf-8') as f:
-        json.dump(fixed_data, f, ensure_ascii=False, indent=2)
-
-    print(f"'{input_path}' updated in place.")
-    print("=" * 60)
-
-    # ── Report ──
-    if all_errors:
-        print(f"\n⚠  VALIDATION ERRORS FOUND ({len(all_errors)}):\n")
-        for e in all_errors:
-            print(e)
-        print()
+def process_json_file(input_file="hymns.json"):
+    """Process hymns.json file directly."""
+    
+    print(f"📖 Reading {input_file}...")
+    
+    try:
+        with open(input_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print(f"❌ Error: '{input_file}' not found.")
+        return
+    except json.JSONDecodeError as e:
+        print(f"❌ Error: Invalid JSON in '{input_file}': {e}")
+        return
+    
+    # Handle both single object and array of objects
+    if isinstance(data, dict):
+        songs = [data]
     else:
-        print("\n✅  All hymns passed validation — numbering is consistent!\n")
+        songs = data
+    
+    print(f"📝 Processing {len(songs)} songs...")
+    print("=" * 60)
+    
+    # Create backup
+    backup_file = input_file.replace('.json', '.backup.json')
+    with open(backup_file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"💾 Backup saved to '{backup_file}'")
+    print("=" * 60)
+    
+    en_changes = 0
+    fr_changes = 0
+    all_errors = []
+    
+    for i, song in enumerate(songs):
+        hid = song.get('number', song.get('id', '?'))
+        
+        if 'lyricsEn' in song:
+            old = song['lyricsEn']
+            song['lyricsEn'] = number_stanzas(old)
+            if old != song['lyricsEn']:
+                en_changes += 1
+                print(f"  ✏️  Song {hid}: English lyrics updated")
+                errors = validate_lyrics(song['lyricsEn'], "EN")
+                all_errors.extend(errors)
+        
+        if 'lyricsFr' in song:
+            old = song['lyricsFr']
+            song['lyricsFr'] = number_stanzas(old)
+            if old != song['lyricsFr']:
+                fr_changes += 1
+                print(f"  ✏️  Song {hid}: French lyrics updated")
+                errors = validate_lyrics(song['lyricsFr'], "FR")
+                all_errors.extend(errors)
+    
+    # Save directly back to hymns.json
+    with open(input_file, 'w', encoding='utf-8') as f:
+        json.dump(songs if isinstance(data, list) else songs[0], f, indent=2, ensure_ascii=False)
+    
+    print("=" * 60)
+    print(f"✅ Done! Processed {len(songs)} songs. Saved to {input_file}")
+    print(f"📊 Summary: {en_changes} English updates, {fr_changes} French updates")
+    
+    # Report validation errors
+    if all_errors:
+        print("=" * 60)
+        print(f"⚠️  VALIDATION ERRORS FOUND ({len(all_errors)}):")
+        for error in all_errors:
+            print(error)
+    else:
+        print("✅ All validated - no numbering errors found!")
 
-    # ── Summary per hymn ──
-    print("Per-hymn summary:")
-    for hymn in fixed_data:
-        hid  = hymn.get('number', hymn.get('id', '?'))
-        titl = hymn.get('titleEn', '')
-        blocks_en = split_into_blocks(hymn['lyricsEn'])
-        blocks_fr = split_into_blocks(hymn['lyricsFr'])
-        stanzas_en = sum(1 for b in blocks_en if b['type'] == 'stanza')
-        stanzas_fr = sum(1 for b in blocks_fr if b['type'] == 'stanza')
-        chorus_en  = sum(1 for b in blocks_en if b['type'] == 'chorus')
-        chorus_fr  = sum(1 for b in blocks_fr if b['type'] == 'chorus')
-        print(
-            f"  #{hid:>4}  {titl[:40]:<40}  "
-            f"EN: {stanzas_en} stanza(s), {chorus_en} chorus(es)  |  "
-            f"FR: {stanzas_fr} stanza(s), {chorus_fr} chorus(es)"
-        )
-
-    print("\nDone.")
-
-
-if __name__ == '__main__':
-    # Usage: python fix_hymn_numbering.py [hymns.json]
-    input_json = sys.argv[1] if len(sys.argv) > 1 else 'hymns.json'
-    process_file(input_json)
+# Run the script
+if __name__ == "__main__":
+    import sys
+    
+    # Allow custom input file via command line
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "hymns.json"
+    process_json_file(input_file)
