@@ -80,7 +80,7 @@ void main() async {
   Hive.registerAdapter(HymnAdapter());
   await Hive.openBox('settings');
   //await Hive.box('settings').clear();
-  await Hive.deleteBoxFromDisk('hymnsBox');
+  //await Hive.deleteBoxFromDisk('hymnsBox');
   
   // WakelockPlus keeps the screen on while the app is open
   WakelockPlus.enable();
