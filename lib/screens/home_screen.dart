@@ -6,8 +6,7 @@ import 'package:full_gospel_hymnal/screens/lyrics_screen.dart';
 import 'package:full_gospel_hymnal/screens/settings_screen.dart';
 import 'package:full_gospel_hymnal/utils/app_strings.dart';
 import 'package:full_gospel_hymnal/screens/favorites_screen.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:full_gospel_hymnal/utils/update_checker.dart';
+import 'package:full_gospel_hymnal/utils/AppUpdateService.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -26,7 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     _pageController = PageController();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      UpdateChecker.checkForUpdates(_showUpdateDialog);
+      final settings = context.read<SettingsProvider>();
+      final isEng = settings.defaultLanguage == AppLanguage.en;
+
+      AppUpdateService.checkForUpdates(context, isEng: isEng);
     });
   }
 
@@ -42,55 +44,6 @@ class _HomeScreenState extends State<HomeScreen> {
       index,
       duration: const Duration(milliseconds: 280),
       curve: Curves.easeOutCubic,
-    );
-  }
-
-  void _showUpdateDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) {
-        final lang = context.read<SettingsProvider>().defaultLanguage;
-        return AlertDialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          title: Text(
-            lang == AppLanguage.en ? 'Update Available' : 'Mise à jour disponible',
-            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-          content: Text(
-            lang == AppLanguage.en
-                ? 'A new version of the Full Gospel Mission Hymnal is available. Update now for the better experience.'
-                : 'Une nouvelle version du cantique de la Mission du Plein Evangile est disponible. Veuillez mettre à jour.',
-            style: const TextStyle(color: Colors.white),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Hive.box('settings').put('lastUpdateSnoozeDate', DateTime.now().toIso8601String());
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                lang == AppLanguage.en ? 'Remind me later' : 'Plus tard',
-                style: const TextStyle(color: Colors.grey),
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD32F2F),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              ),
-              onPressed: () {
-                UpdateChecker.launchPlayStore();
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                lang == AppLanguage.en ? 'Update Now' : 'Mettre à jour',
-                style: const TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 

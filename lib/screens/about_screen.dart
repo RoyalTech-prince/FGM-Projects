@@ -3,9 +3,36 @@ import 'package:provider/provider.dart';
 import 'package:full_gospel_hymnal/providers/settings_provider.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import to open mailing clients
 import 'package:flutter/services.dart'; // Import for clipboard functionality
+import 'package:package_info_plus/package_info_plus.dart';
 
-class AboutScreen extends StatelessWidget {
+class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
+
+  @override
+  State<AboutScreen> createState() => _AboutScreenState();
+}
+
+class _AboutScreenState extends State<AboutScreen> {
+  String _appVersion = "1.0.0"; // Default version in case of failure
+
+  @override
+  void initState() {
+    super.initState();
+    _loadVersionInfo();
+  }
+
+  Future<void> _loadVersionInfo() async {
+    try{
+      final packageInfo = await PackageInfo.fromPlatform();
+      if (mounted){
+        setState(() {
+          _appVersion = packageInfo.version;
+        });
+      }
+    } catch (e) {
+      debugPrint("Failed to load app version: $e");
+    }
+  }
 
   // Helper method to safely format and trigger the system mailto URI intent
   Future<void> _sendCorrectionEmail(bool isEng) async {
@@ -114,7 +141,7 @@ class AboutScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                "Version 1.0.0",
+                "Version $_appVersion",
                 style: TextStyle(fontSize: 13, color: Colors.grey.withOpacity(0.8), letterSpacing: 0.5),
               ),
               const SizedBox(height: 30),

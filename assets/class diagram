@@ -1,67 +1,147 @@
 classDiagram
     direction TB
 
-    %% --- Presentation Layer ---
-    class SplashScreen {
-        +double lineFactor
-        +void initState()
-        -void startSequence()
-        -void navigateToNext()
-        +Widget build(BuildContext context)
+    %% ==========================================
+    %% PACKAGE 1: DOMAIN LAYER (Green)
+    %% ==========================================
+    namespace Domain_Layer {
+        class Language {
+            <<enumeration>>
+            ENGLISH
+            FRENCH
+        }
+
+        class AppThemePreset {
+            <<enumeration>>
+            WHITE
+            RED
+            BLACK
+        }
+
+        class Hymn {
+            +int id
+            +String number
+            +String titleEn
+            +String titleFr
+            +String lyricsEn
+            +String lyricsFr
+            +bool isFavorite
+            +getLyrics(Language lang) String
+            +getTitle(Language lang) String
+        }
+
+        class AppSettings {
+            +double fontSize
+            +AppThemePreset currentTheme
+            +Language selectedLanguage
+            +bool wakelockEnabled
+        }
     }
 
-    class LanguageSelectionScreen {
-        +Widget build(BuildContext context)
-        -void selectLanguage(String langCode)
+    %% ==========================================
+    %% PACKAGE 2: DATA & PERSISTENCE LAYER (Orange)
+    %% ==========================================
+    namespace Data_Layer {
+        class AssetDataParser {
+            +loadBundledHymns() List~Hymn~
+        }
+
+        class HymnRepository {
+            -Box~Hymn~ _hymnBox
+            -Box _settingsBox
+            +initDatabase() Future~void~
+            +getAllHymns() List~Hymn~
+            +toggleFavorite(int hymnId)
+            +getSettings() AppSettings
+            +saveSettings(AppSettings settings)
+        }
     }
 
-    class HomeScreen {
-        -int currentIndex
-        -PageController pageController
-        +void initState()
-        -void showUpdateDialog()
-        +Widget build(BuildContext context)
+    %% ==========================================
+    %% PACKAGE 3: STATE MANAGEMENT LAYER (Blue)
+    %% ==========================================
+    namespace State_Management_Layer {
+        class HymnProvider {
+            -List~Hymn~ _allHymns
+            -List~Hymn~ _filteredHymns
+            -HymnRepository _repository
+            +search(String query)
+            +toggleFavorite(Hymn hymn)
+            +get favorites List~Hymn~
+        }
+
+        class SettingsProvider {
+            -AppSettings _settings
+            -HymnRepository _repository
+            +adjustFontSize(double delta)
+            +setTheme(AppThemePreset theme)
+            +toggleLanguage()
+        }
     }
 
-    %% --- Business Logic & Utilities ---
-    class UpdateChecker {
-        -String updateUrl$
-        -String playStoreUrl$
-        +checkForUpdates(BuildContext context, Function showDialogCallback)$
-        +launchPlayStore()$
+    %% ==========================================
+    %% PACKAGE 4: PRESENTATION LAYER (Purple)
+    %% ==========================================
+    namespace Presentation_Layer {
+        class HymnListScreen {
+            +build(BuildContext context) Widget
+        }
+
+        class HymnDetailScreen {
+            +build(BuildContext context) Widget
+        }
+
+        class FavoritesScreen {
+            +build(BuildContext context) Widget
+        }
     }
 
-    class ThemeProvider {
-        -ThemeMode currentTheme
-        +ThemeMode getTheme()
-        +void toggleTheme(bool isDarkMode)
-    }
-
-    %% --- Data & Persistence Layer ---
-    class HiveDatabase {
-        +void initFlutter()$
-        +void openBox(String boxName)$
-    }
-
-    class SettingsBox {
-        +bool isFirstRun
-        +String lastUpdateSnoozeDate
-        +String selectedLanguage
-    }
-
-    class FavoritesBox {
-        +List~int~ favoriteHymnIds
-    }
-
-    %% --- Relationships & System Dependencies ---
-    SplashScreen ..> LanguageSelectionScreen : Transitions to (First Run)
-    SplashScreen ..> HomeScreen : Transitions to (Subsequent Runs)
-    HomeScreen ..> UpdateChecker : Invokes background thread check
-    HomeScreen ..> ThemeProvider : Listens for canvas changes
+    %% ==========================================
+    %% RELATIONSHIPS & DEPENDENCIES
+    %% ==========================================
     
-    UpdateChecker ..> SettingsBox : Reads lastSnoozeDate / Writes snooze
-    SplashScreen ..> SettingsBox : Assesses isFirstRun flag
-    LanguageSelectionScreen ..> SettingsBox : Mutates selectedLanguage
+    %% Domain Layer Associations
+    Hymn --> Language
+    AppSettings --> AppThemePreset
+    AppSettings --> Language
+
+    %% Data Layer Associations
+    HymnRepository ..> AssetDataParser : parses initial assets/hymns.json
+    HymnRepository o-- Hymn : stores & manages
+    HymnRepository o-- AppSettings : stores & manages
+
+    %% State Management Dependencies
+    HymnProvider --> HymnRepository : fetches data from
+    SettingsProvider --> HymnRepository : updates & fetches settings from
     
-    SettingsBox --|> HiveDatabase : Persisted within
-    FavoritesBox --|> HiveDatabase : Persisted within
+    HymnProvider o-- Hymn : manages active state
+    SettingsProvider o-- AppSettings : manages active state
+
+    %% Presentation Layer Consumers
+    HymnListScreen ..> HymnProvider : listens to
+    HymnDetailScreen ..> HymnProvider : listens to
+    HymnDetailScreen ..> SettingsProvider : listens to
+    FavoritesScreen ..> HymnProvider : listens to
+
+    %% ==========================================
+    %% COLOR STYLES FOR ARCHITECTURAL LAYERS
+    %% ==========================================
+    
+    %% Domain Layer (Soft Green)
+    style Language fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    style AppThemePreset fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    style Hymn fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    style AppSettings fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+
+    %% Data Layer (Warm Orange)
+    style AssetDataParser fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#e65100
+    style HymnRepository fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#e65100
+
+    %% State Management Layer (Soft Blue)
+    style HymnProvider fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    style SettingsProvider fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+
+    %% Presentation Layer (Soft Purple)
+    style HymnListScreen fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style HymnDetailScreen fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style FavoritesScreen fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
